@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./assets/App.scss";
+import WelcomePage from "./containers/WelcomePage";
+import ExpandableMenu from "./containers/ExpandableMenu";
+import line_img from "./assets/images/line_img.jpg";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h3 className="name-title">
+            <img className="welcome-line-img" src={line_img} alt="line image" />
+            Devon Darrow
+          </h3>
+          <ExpandableMenu />
         </header>
+
+        <WelcomePage />
       </div>
     );
   }
