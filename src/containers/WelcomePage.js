@@ -13,7 +13,7 @@ class WelcomePage extends Component {
   componentDidMount() {
     this.myTween = TweenLite.to(this.myElement, 2, {
       rotation: -90,
-      transformOrigin: "50% 10%",
+      transformOrigin: "70% 15%",
       opacity: 0.5
       // ease: 3
     });

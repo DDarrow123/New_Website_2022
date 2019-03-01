@@ -32,16 +32,16 @@ class ExpandableMenu extends Component {
       <div>
         <Menu isOpen={this.state.menuOpen} onClick={() => this.toggleMenu()}>
           <a id="home" className="menu-item" href="/">
-            Home
+            HOME
           </a>
           <a id="about" className="menu-item" href="/about">
-            About
+            ABOUT
           </a>
           <a id="contact" className="menu-item" href="/contact">
-            Contact
+            CONTACT
           </a>
           <a id="work" className="menu-item" href="/work">
-            Contact
+            WORK
           </a>
         </Menu>
       </div>

@@ -1,3 +1,8 @@
+@import url("https://fonts.google.com/?selection.family=Alfa+Slab+One");
+@import url("https://fonts.google.com/?selection.family=Archivo+Black");
+
+// font-family: "Alfa Slab One", cursive;
+
 .App {
   text-align: center;
 }
@@ -40,6 +45,7 @@
     }
   }
   .tag-line {
+    font-size: 30px;
     width: 20%;
     text-align: left;
     display: flex;
@@ -87,7 +93,8 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #ff2820;
+  opacity: 0.5;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden;
@@ -95,7 +102,7 @@
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #cc201a;
 }
 
 /* Wrapper for item list */
@@ -104,13 +111,15 @@
   padding: 4em;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: fixed;
-}
-
-/* Individual item */
-.bm-item {
-  // display: inline-block;
-  padding: 20px;
+  .bm-item {
+    font-family: "Archivo Black", sans-serif;
+    letter-spacing: 4px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 /* Styling of overlay */
