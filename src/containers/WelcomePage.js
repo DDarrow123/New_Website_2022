@@ -6,23 +6,27 @@ import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
 class WelcomePage extends Component {
   constructor(props) {
     super(props);
-    // this.myElement = null;
+    this.myElement = null;
+    // this.myTween = TimelineLite({ paused: true });
   }
 
-  // componentDidMount() {
-  //   this.myTween = TweenLite.to(this.myElement, 1, {
-  //     x: 100,
-  //     y: 100
-  //   });
-  // }
+  componentDidMount() {
+    this.myTween = TweenLite.to(this.myElement, 3, {
+      rotation: -90,
+      transformOrigin: "right 15%"
+      // x: 200
+      // y: 200
+    });
+    // .to(this.myElement, 0.5, {x: 100})
+    // .to(this.myElement, 0.5, {y: 100, rotation: 180})
+    // .play();
+  }
   render() {
     return (
       <>
         <div className="welcome-container">
           <div className="welcome-title">
-            <h3>Welcome</h3>
             <img
-              // ref={div => (this.myElement = div)}
               className="welcome-image"
               src={filler_img}
               alt="flower image"
@@ -31,6 +35,9 @@ class WelcomePage extends Component {
           <p className="tag-line">
             A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
           </p>
+          <h3 ref={div => (this.myElement = div)} className="welcome-sidebar">
+            WELCOME
+          </h3>
         </div>
       </>
     );
