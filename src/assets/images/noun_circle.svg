@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" x="0px" y="0px">
+  <title>Node outline</title>
+  <g>
+<rect x="13.65" y="15.3" width="3.41" height="0.12" transform="translate(-6.36 15.36) rotate(-45)"/>
+<polygon points="20.47 11.96 20.44 11.85 23.74 10.96 23.77 11.08 20.47 11.96"/>
+<polygon points="31.53 11.96 28.23 11.08 28.26 10.96 31.56 11.85 31.53 11.96"/>
+<rect x="36.58" y="13.65" width="0.12" height="3.41" transform="translate(-0.13 30.4) rotate(-44.99)"/><polygon points="40.92 23.77 40.04 20.47 40.15 20.44 41.03 23.74 40.92 23.77"/>
+<polygon points="40.15 31.56 40.04 31.53 40.92 28.23 41.03 28.26 40.15 31.56"/>
+<rect x="34.93" y="36.58" width="3.41" height="0.12" transform="translate(-15.18 36.64) rotate(-45)"/>
+<polygon points="28.26 41.03 28.23 40.92 31.53 40.04 31.56 40.15 28.26 41.03"/>
+<polygon points="23.74 41.03 20.44 40.15 20.47 40.04 23.77 40.92 23.74 41.03"/>
+<rect x="15.3" y="34.94" width="0.12" height="3.41" transform="translate(-21.41 21.59) rotate(-44.99)"/>
+<polygon points="11.85 31.56 10.96 28.26 11.08 28.23 11.96 31.53 11.85 31.56"/>
+<polygon points="11.08 23.77 10.96 23.74 11.85 20.44 11.96 20.47 11.08 23.77"/>
+</g>
+<g>
+  <circle cx="26" cy="11.02" r="2.25"/><circle cx="18.51" cy="13.03" r="2.25" transform="translate(-4.03 11) rotate(-30)"/><circle cx="13.03" cy="18.51" r="2.25" transform="translate(-9.52 20.54) rotate(-60)"/><circle cx="11.02" cy="26" r="2.25"/>
+  <circle cx="13.03" cy="33.49" r="2.25" transform="matrix(0.87, -0.5, 0.5, 0.87, -15, 11)"/>
+  <circle cx="18.51" cy="38.97" r="2.25" transform="translate(-24.49 35.52) rotate(-60)"/>
+  <circle cx="26" cy="40.98" r="2.25"/><circle cx="33.49" cy="38.97" r="2.25" transform="translate(-15 21.97) rotate(-30)"/><circle cx="38.97" cy="33.49" r="2.25" transform="translate(-9.52 50.49) rotate(-60)"/>
+  <circle cx="40.98" cy="26" r="2.25"/>
+  <circle cx="38.97" cy="18.51" r="2.25" transform="translate(-4.03 21.97) rotate(-30)"/>
+  <circle cx="33.49" cy="13.03" r="2.25" transform="translate(5.46 35.52) rotate(-60)"/>
+</g>
+</svg>

@@ -11,16 +11,14 @@ class WelcomePage extends Component {
   }
 
   componentDidMount() {
-    this.myTween = TweenLite.to(this.myElement, 3, {
+    this.myTween = TweenLite.to(this.myElement, 2, {
       rotation: -90,
-      transformOrigin: "right 15%"
-      // x: 200
-      // y: 200
+      transformOrigin: "50% 10%",
+      opacity: 0.5
+      // ease: 3
     });
-    // .to(this.myElement, 0.5, {x: 100})
-    // .to(this.myElement, 0.5, {y: 100, rotation: 180})
-    // .play();
   }
+
   render() {
     return (
       <>
@@ -32,6 +30,7 @@ class WelcomePage extends Component {
               alt="flower image"
             />
           </div>
+
           <p className="tag-line">
             A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
           </p>
@@ -45,3 +44,13 @@ class WelcomePage extends Component {
 }
 
 export default WelcomePage;
+
+// this.myTween = TweenLite.to(this.myElement, 2, {
+// rotation: -90,
+// transformOrigin: "40% 15%"
+// x: 200
+// y: 200
+// });
+// .to(this.myElement, 0.5, {x: 100})
+// .to(this.myElement, 0.5, {y: 100, rotation: 180})
+//
