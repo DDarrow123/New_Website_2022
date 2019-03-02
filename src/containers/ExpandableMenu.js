@@ -1,7 +1,18 @@
 import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
 import { TweenMax, Elastic, TimelineMax } from "gsap";
 import noun_circle from "../assets/images/noun_circle.svg";
 import { bubble as Menu } from "react-burger-menu";
+import WelcomePage from "./WelcomePage";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Work from "../components/Work";
 
 class ExpandableMenu extends Component {
   constructor(props) {
@@ -15,13 +26,13 @@ class ExpandableMenu extends Component {
     event.preventDefault();
   };
 
-  //  handleStateChange (state) {
-  //   this.setState({menuOpen: state.isOpen})
-  // }
+  handleStateChange = state => {
+    this.setState({ menuOpen: state.isOpen });
+  };
 
-  // closeMenu() {
-  //   this.setState({ menuOpen: false });
-  // }
+  closeMenu = () => {
+    this.setState({ menuOpen: false });
+  };
 
   toggleMenu = () => {
     this.setState({ menuOpen: !this.state.menuOpen });
@@ -29,34 +40,59 @@ class ExpandableMenu extends Component {
 
   render() {
     return (
-      <div>
-        <Menu isOpen={this.state.menuOpen} onClick={() => this.toggleMenu()}>
-          <a id="home" className="menu-item" href="/">
-            HOME
-          </a>
-          <a id="about" className="menu-item" href="/about">
-            ABOUT
-          </a>
-          <a id="contact" className="menu-item" href="/contact">
-            CONTACT
-          </a>
-          <a id="work" className="menu-item" href="/work">
-            WORK
-          </a>
-        </Menu>
-      </div>
+      <HashRouter>
+        <div>
+          <Menu
+            isOpen={this.state.menuOpen}
+            onStateChange={state => this.handleStateChange(state)}
+          >
+            <NavLink
+              className="menu-item"
+              to="/"
+              onClick={() => this.closeMenu()}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className="menu-item"
+              to="/about"
+              onClick={() => this.closeMenu()}
+            >
+              About
+            </NavLink>
+            <NavLink
+              className="menu-item"
+              to="/contact"
+              onClick={() => this.closeMenu()}
+            >
+              Contact
+            </NavLink>
+            <NavLink
+              className="menu-item"
+              to="/work"
+              onClick={() => this.closeMenu()}
+            >
+              Work
+            </NavLink>
+          </Menu>
+          <div>
+            <Route exact path="/" component={WelcomePage} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/work" component={Work} />
+          </div>
+        </div>
+      </HashRouter>
     );
   }
 }
 
 export default ExpandableMenu;
-//Circle by Qi studio from the Noun Project
-// <div className="menu">
-//   <img src={noun_circle} alt="menu circle icon" />
-// </div>
 
-// <a onClick={this.showSettings} className="menu-item--small" href="">
-//   Settings
-// </a>
-
-// customBurgerIcon={<img src={noun_circle} alt="menu circle icon" />}
+// <Switch>
+//   // <Route exact path="/" component={WelcomePage} />
+//   <Route path="/about" component={About} />
+//   <Route path="/contact" component={Contact} />
+//   <Route path="/work" component={Work} />
+//   // <Redirect to="/" />
+// </Switch>

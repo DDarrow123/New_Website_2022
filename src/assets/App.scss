@@ -1,5 +1,16 @@
-@import url("https://fonts.google.com/?selection.family=Alfa+Slab+One");
-@import url("https://fonts.google.com/?selection.family=Archivo+Black");
+@font-face {
+  font-family: "Archivo Black, sans-serif";
+  color: white;
+  src: url("https://fonts.google.com/?selection.family=Archivo+Black.woff2")
+      format("woff2"),
+    url("https://fonts.google.com/?selection.family=Archivo+Black.woff")
+      format("woff"),
+    url("https://fonts.google.com/?selection.family=Archivo+Black.ttf")
+      format("truetype");
+}
+
+// @import url("https://fonts.google.com/?selection.family=Alfa+Slab+One");
+// @import url("https://fonts.google.com/?selection.family=Archivo+Black");
 
 // font-family: "Alfa Slab One", cursive;
 
@@ -20,13 +31,16 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  // justify-content: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
 }
 
 .name-title {
-  width: 50%;
+  // width: 50%;
+  &:hover {
+    color: #cc201a;
+  }
   .welcome-line-img {
     margin-right: 10px;
     margin-bottom: 0;
@@ -82,7 +96,7 @@
 }
 
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #cc201a;
 }
 
 //Menu Styling//
@@ -100,7 +114,6 @@
   overflow: hidden;
 }
 
-/* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #cc201a;
 }
@@ -115,10 +128,13 @@
   position: fixed;
   .bm-item {
     font-family: "Archivo Black", sans-serif;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     padding: 20px;
     color: white;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline wavy red;
+    }
   }
 }
 

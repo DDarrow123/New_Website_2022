@@ -15,7 +15,6 @@ class WelcomePage extends Component {
       rotation: -90,
       transformOrigin: "70% 15%",
       opacity: 0.5
-      // ease: 3
     });
   }
 

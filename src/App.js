@@ -3,6 +3,7 @@ import "./assets/App.scss";
 import WelcomePage from "./containers/WelcomePage";
 import ExpandableMenu from "./containers/ExpandableMenu";
 import line_img from "./assets/images/line_img.jpg";
+import { Router, Link } from "@reach/router";
 
 class App extends Component {
   render() {
@@ -15,7 +16,6 @@ class App extends Component {
             Devon Darrow
           </h3>
         </header>
-        <WelcomePage />
       </div>
     );
   }
