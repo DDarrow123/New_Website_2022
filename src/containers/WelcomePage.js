@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import filler_img from "../assets/images/filler_img.jpg";
-// import flwr_img from "../assets/images/flwr_img.svg";
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
+import line_img from "../assets/images/line_img.jpg";
 
 class WelcomePage extends Component {
   constructor(props) {
@@ -21,6 +21,12 @@ class WelcomePage extends Component {
   render() {
     return (
       <>
+        <header className="App-header">
+          <h3 className="name-title">
+            <img className="welcome-line-img" src={line_img} alt="line image" />
+            Devon Darrow
+          </h3>
+        </header>
         <div className="welcome-container">
           <div className="welcome-title">
             <img
@@ -29,7 +35,6 @@ class WelcomePage extends Component {
               alt="flower image"
             />
           </div>
-
           <p className="tag-line">
             A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
           </p>

@@ -8,15 +8,9 @@ import { Router, Link } from "@reach/router";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <ExpandableMenu />
-        <header className="App-header">
-          <h3 className="name-title">
-            <img className="welcome-line-img" src={line_img} alt="line image" />
-            Devon Darrow
-          </h3>
-        </header>
-      </div>
+      </>
     );
   }
 }
