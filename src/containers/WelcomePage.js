@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import filler_img from "../assets/images/filler_img.jpg";
+import black_white_img from "../assets/images/black_white_img.jpg";
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
 import line_img from "../assets/images/line_img.jpg";
 
@@ -31,7 +31,7 @@ class WelcomePage extends Component {
           <div className="welcome-title">
             <img
               className="welcome-image"
-              src={filler_img}
+              src={black_white_img}
               alt="flower image"
             />
           </div>

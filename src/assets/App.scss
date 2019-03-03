@@ -1,19 +1,27 @@
-@font-face {
-  font-family: "Archivo Black, sans-serif";
-  color: white;
-  src: url("https://fonts.google.com/?selection.family=Archivo+Black.woff2")
-      format("woff2"),
-    url("https://fonts.google.com/?selection.family=Archivo+Black.woff")
-      format("woff"),
-    url("https://fonts.google.com/?selection.family=Archivo+Black.ttf")
-      format("truetype");
-}
+// @font-face {
+//   font-family: "Archivo Black, sans-serif";
+//   color: white;
+//   src: url("https://fonts.google.com/?selection.family=Archivo+Black.woff2")
+//       format("woff2"),
+//     url("https://fonts.google.com/?selection.family=Archivo+Black.woff")
+//       format("woff"),
+//     url("https://fonts.google.com/?selection.family=Archivo+Black.ttf")
+//       format("truetype"),
+//     url("https://fonts.google.com/?selection.family=Anton.woff2")
+//       format("woff2"),
+//     url("https://fonts.google.com/?selection.family=Anton.woff") format("woff"),
+//     url("https://fonts.google.com/?selection.family=Anton.ttf")
+//       format("truetype");
+// }
 
 // @import url("https://fonts.google.com/?selection.family=Alfa+Slab+One");
-// @import url("https://fonts.google.com/?selection.family=Archivo+Black");
+@import url("https://fonts.google.com/?selection.family=Archivo+Black");
+@import url("https://fonts.google.com/?selection.family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Bevan");
+@import url("https://fonts.googleapis.com/css?family=Poller+One");
+@import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Six+Caps");
 
 // font-family: "Alfa Slab One", cursive;
-
 .App {
   text-align: center;
 }
@@ -53,13 +61,15 @@
   .welcome-title {
     width: 50%;
     .welcome-image {
-      height: 750px;
-      width: 550px;
+      height: 700px;
+      width: 510px;
       margin: 10px 0 50px 60px;
     }
   }
   .tag-line {
-    font-size: 30px;
+    // font-family: "Bevan", cursive;
+    font-family: "Six Caps", sans-serif;
+    font-size: 50px;
     width: 20%;
     text-align: left;
     display: flex;
@@ -107,7 +117,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #ff2820;
+  background: #cc0c2f;
   opacity: 0.5;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
@@ -115,7 +125,8 @@
 }
 
 .bm-morph-shape {
-  fill: #cc201a;
+  fill: #7f071d;
+  opacity: 0.8;
 }
 
 /* Wrapper for item list */
@@ -143,9 +154,35 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.about-div {
+.about-title {
+  font-size: 50px;
+  margin: 1em 0 0 1em;
+  width: 10%;
+}
+
+.about-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
+  .profile-img {
+    width: 750px;
+    height: 600px;
+    margin: 0 0 0 8em;
+  }
+  .about-para {
+    // font-family: "Six Caps", sans-serif;
+    font-family: "Carrois Gothic SC", sans-serif;
+    letter-spacing: 3px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: lighter;
+    margin: 20em 3em 4em 1em;
+    width: 350px;
+    color: #625657;
+    &:hover {
+      color: black;
+    }
+  }
 }
