@@ -22,6 +22,19 @@
 @import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Six+Caps");
 
 // font-family: "Alfa Slab One", cursive;
+// font-family: 'Cormorant Garamond', serif;
+// font-family: 'Proza Libre', sans-serif;
+// font-family: 'Libre Franklin', sans-serif;
+// font-family: 'Libre Baskerville', serif;
+// font-family: 'Trirong', serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Work Sans', sans-serif;
+// font-family: 'Taviraj', serif;
+// font-family: 'Eczar', serif;
+// font-family: 'Gentium Basic', serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Condensed', sans-serif;
+
 .App {
   text-align: center;
 }
@@ -55,6 +68,30 @@
   }
 }
 
+.welcome-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 8em;
+  .welcome-btn {
+    // font-family: "Carrois Gothic SC", sans-serif;
+    height: 30px;
+    width: 100px;
+    margin: 5em 3em 5em 0;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+    &:hover {
+      background-color: #7f071d;
+      color: white;
+    }
+    &:focus,
+    input:focus {
+      outline: none;
+    }
+  }
+}
+
 .welcome-container {
   display: flex;
   flex-direction: row;
@@ -67,9 +104,8 @@
     }
   }
   .tag-line {
-    // font-family: "Bevan", cursive;
-    font-family: "Six Caps", sans-serif;
-    font-size: 50px;
+    font-family: "Trirong", serif;
+    font-size: 25px;
     width: 20%;
     text-align: left;
     display: flex;
@@ -77,11 +113,10 @@
     justify-content: flex-end;
     margin: 0 0 50px 30px;
   }
-}
-
-.welcome-sidebar {
-  font-size: 70px;
-  letter-spacing: 15px;
+  .welcome-sidebar {
+    font-size: 70px;
+    letter-spacing: 15px;
+  }
 }
 
 .bm-burger-button {
@@ -138,7 +173,7 @@
   align-items: center;
   position: fixed;
   .bm-item {
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Carrois Gothic SC", sans-serif;
     letter-spacing: 5px;
     padding: 20px;
     color: white;
@@ -155,8 +190,9 @@
 }
 
 .about-title {
-  font-size: 50px;
-  margin: 1em 0 0 1em;
+  font-size: 70px;
+  letter-spacing: 15px;
+  margin: 1em 0 0 0.5em;
   width: 10%;
 }
 
@@ -164,21 +200,21 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 0;
   .profile-img {
     width: 750px;
     height: 600px;
-    margin: 0 0 0 8em;
+    margin: 10em 0 0 8em;
   }
   .about-para {
     // font-family: "Six Caps", sans-serif;
-    font-family: "Carrois Gothic SC", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 3px;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 30px;
     font-weight: lighter;
-    margin: 20em 3em 4em 1em;
+    margin: 12em 3em 4em 2em;
     width: 350px;
     color: #625657;
     &:hover {

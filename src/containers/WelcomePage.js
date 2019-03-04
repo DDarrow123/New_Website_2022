@@ -6,16 +6,19 @@ import line_img from "../assets/images/line_img.jpg";
 class WelcomePage extends Component {
   constructor(props) {
     super(props);
-    this.myElement = null;
-    // this.myTween = TimelineLite({ paused: true });
+    // this.myElement = null;
+    this.logoContainer = null;
+    this.logoTween = null;
   }
 
   componentDidMount() {
-    this.myTween = TweenLite.to(this.myElement, 2, {
-      rotation: -90,
-      transformOrigin: "70% 15%",
-      opacity: 0.5
-    });
+    this.logoTween = new TimelineLite({ paused: true })
+      .to(this.logoContainer, 2, { x: 200 })
+      .to(this.logoContainer, 1, {
+        rotation: 90,
+        transformOrigin: "5% 15%",
+        opacity: 0.5
+      });
   }
 
   render() {
@@ -27,6 +30,17 @@ class WelcomePage extends Component {
             Devon Darrow
           </h3>
         </header>
+        <div className="welcome-btn-container">
+          <button className="welcome-btn" onClick={() => this.logoTween.play()}>
+            Play This
+          </button>
+          <button
+            className="welcome-btn"
+            onClick={() => this.logoTween.restart()}
+          >
+            Restart This
+          </button>
+        </div>
         <div className="welcome-container">
           <div className="welcome-title">
             <img
@@ -38,9 +52,12 @@ class WelcomePage extends Component {
           <p className="tag-line">
             A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
           </p>
-          <h3 ref={div => (this.myElement = div)} className="welcome-sidebar">
+          <div
+            ref={div => (this.logoContainer = div)}
+            className="welcome-sidebar"
+          >
             WELCOME
-          </h3>
+          </div>
         </div>
       </>
     );
@@ -57,4 +74,9 @@ export default WelcomePage;
 // });
 // .to(this.myElement, 0.5, {x: 100})
 // .to(this.myElement, 0.5, {y: 100, rotation: 180})
-//
+// this.myTween = TweenLite.to(this.myElement, 2, {
+//   rotation: -90,
+//   transformOrigin: "70% 15%",
+//   opacity: 0.5
+// });
+// ref={div => (this.myElement = div)}

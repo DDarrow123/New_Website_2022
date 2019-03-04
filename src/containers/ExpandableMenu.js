@@ -22,10 +22,6 @@ class ExpandableMenu extends Component {
     };
   }
 
-  showSettings = event => {
-    event.preventDefault();
-  };
-
   handleStateChange = state => {
     this.setState({ menuOpen: state.isOpen });
   };
@@ -34,9 +30,9 @@ class ExpandableMenu extends Component {
     this.setState({ menuOpen: false });
   };
 
-  toggleMenu = () => {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  };
+  // toggleMenu = () => {
+  //   this.setState({ menuOpen: !this.state.menuOpen });
+  // };
 
   render() {
     return (
