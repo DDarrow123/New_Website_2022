@@ -4,16 +4,17 @@ import devon_img from "../assets/images/devon_img.jpg";
 import small_flower_img from "../assets/images/small_flower_img.jpg";
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
 
+const lettersArray = ["A", "B", "O", "U", "T"];
+
 class About extends Component {
   constructor(props) {
     super(props);
     this.letters = [];
-    this.myTween = new TimelineLite({ paused: true });
-    this.lettersTween;
+    this.tl = new TimelineLite({ paused: true });
   }
 
   componentDidMount() {
-    this.myTween.staggerTo(this.letters, 0.5, { x: 100, autoAlpha: 1 }, 0.1);
+    this.tl.staggerTo(this.letters, 0.5, { x: 200, autoAlpha: 1 }, 0.2);
   }
 
   render() {
@@ -31,15 +32,17 @@ class About extends Component {
         <button className="welcome-btn" onClick={() => this.tl.pause()}>
           Pause
         </button>
+        <button className="welcome-btn" onClick={() => this.tl.restart()}>
+          Restart
+        </button>
         <div className="about-title">
-          <ul>
-            {elementsArray.map((element, index) => (
-              <li key={element.id} ref={li => (this.myElements[index] = li)}>
-                {element.name}
-              </li>
+          <div>
+            {lettersArray.map((element, index) => (
+              <div key={element.id} ref={div => (this.letters[index] = div)}>
+                {element}
+              </div>
             ))}
-            ABOUT
-          </ul>
+          </div>
         </div>
         <div className="about-container">
           <img
