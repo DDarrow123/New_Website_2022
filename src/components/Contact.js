@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import line_img from "../assets/images/line_img.jpg";
+import tall_flower_img from "../assets/images/tall_flower_img.jpg";
 
 class Contact extends Component {
   state = {
@@ -45,8 +46,8 @@ class Contact extends Component {
                 <h3 className="form-greeting">Say hello!</h3>
                 <div className="field half">
                   <label>
-                    Name
                     <input
+                      placeholder="your name"
                       className="user-input"
                       name="userName"
                       type="text"
@@ -57,8 +58,8 @@ class Contact extends Component {
                 </div>
                 <div className="field half">
                   <label>
-                    Email
                     <input
+                      placeholder="your email"
                       className="user-input"
                       name="userEmail"
                       type="email"
@@ -69,7 +70,7 @@ class Contact extends Component {
                 </div>
                 <div className="field">
                   <label>
-                    Category
+                    Inquiry
                     <select
                       name="category"
                       value={this.state.Category}
@@ -85,12 +86,13 @@ class Contact extends Component {
                 </div>
                 <div className="field">
                   <label>
-                    Message
                     <textarea
+                      placeholder="Write a Message Here"
                       name="message"
                       value={this.state.message}
                       onChange={this.handleInputChange}
-                      rows="5"
+                      rows="8"
+                      cols="50"
                     />
                   </label>
                 </div>
@@ -104,7 +106,6 @@ class Contact extends Component {
                 </div>
               </div>
             </form>
-            <div>Images will go here</div>
           </div>
         </div>
       </>
@@ -113,3 +114,11 @@ class Contact extends Component {
 }
 
 export default Contact;
+
+// <div>
+//   <img
+//     className="tall-flwr-img"
+//     src={tall_flower_img}
+//     alt="tall flower image"
+//   />
+// </div>
