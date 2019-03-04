@@ -43,7 +43,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  // margin-left: 18em;
 }
 
 .App-header {
@@ -58,7 +57,6 @@
 }
 
 .name-title {
-  // width: 50%;
   &:hover {
     color: #cc201a;
   }
@@ -114,7 +112,7 @@
     margin: 0 0 50px 30px;
   }
   .welcome-sidebar {
-    font-size: 70px;
+    font-size: 80px;
     letter-spacing: 15px;
   }
 }
@@ -189,10 +187,42 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
+///// ABOUT PAGE /////
+.about-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1em 0 0 5em;
+  background-color: #d6e7d8;
+  padding-left: 10px;
+  width: 40%;
+  opacity: 0.7;
+  .about-btn {
+    // font-family: "Carrois Gothic SC", sans-serif;
+    height: 30px;
+    width: 70px;
+    margin: 1em 3em 1em 0;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px ridge #887c80;
+    &:hover {
+      background-color: #887c80;
+      color: white;
+    }
+    &:focus,
+    input:focus {
+      outline: none;
+    }
+  }
+}
+
 .about-title {
-  font-size: 70px;
+  // color: #54535f;
+  display: flex;
+  flex-direction: row;
+  font-size: 100px;
   letter-spacing: 15px;
-  margin: 1em 0 0 0.5em;
+  margin: 10px 0 0 20px;
   width: 10%;
 }
 
@@ -201,11 +231,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 0;
   .profile-img {
     width: 750px;
     height: 600px;
-    margin: 10em 0 0 8em;
+    margin: 8em 0 0 8em;
   }
   .about-para {
     // font-family: "Six Caps", sans-serif;
@@ -216,7 +245,7 @@
     font-weight: lighter;
     margin: 12em 3em 4em 2em;
     width: 350px;
-    color: #625657;
+    color: #becbc4;
     &:hover {
       color: black;
     }

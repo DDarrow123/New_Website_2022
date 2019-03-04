@@ -32,13 +32,13 @@ class WelcomePage extends Component {
         </header>
         <div className="welcome-btn-container">
           <button className="welcome-btn" onClick={() => this.logoTween.play()}>
-            Play This
+            Play
           </button>
           <button
             className="welcome-btn"
             onClick={() => this.logoTween.restart()}
           >
-            Restart This
+            Restart
           </button>
         </div>
         <div className="welcome-container">

@@ -14,7 +14,7 @@ class About extends Component {
   }
 
   componentDidMount() {
-    this.tl.staggerTo(this.letters, 0.5, { x: 200, autoAlpha: 1 }, 0.2);
+    this.tl.staggerTo(this.letters, 0.5, { y: 250, autoAlpha: 1 }, 0.2);
   }
 
   render() {
@@ -26,23 +26,23 @@ class About extends Component {
             Devon Darrow
           </h3>
         </header>
-        <button className="welcome-btn" onClick={() => this.tl.play()}>
-          Play
-        </button>
-        <button className="welcome-btn" onClick={() => this.tl.pause()}>
-          Pause
-        </button>
-        <button className="welcome-btn" onClick={() => this.tl.restart()}>
-          Restart
-        </button>
+        <div className="about-btn-container">
+          <button className="about-btn" onClick={() => this.tl.play()}>
+            Play
+          </button>
+          <button className="about-btn" onClick={() => this.tl.pause()}>
+            Pause
+          </button>
+          <button className="about-btn" onClick={() => this.tl.restart()}>
+            Restart
+          </button>
+        </div>
         <div className="about-title">
-          <div>
-            {lettersArray.map((element, index) => (
-              <div key={element.id} ref={div => (this.letters[index] = div)}>
-                {element}
-              </div>
-            ))}
-          </div>
+          {lettersArray.map((element, index) => (
+            <div key={element.id} ref={div => (this.letters[index] = div)}>
+              {element}
+            </div>
+          ))}
         </div>
         <div className="about-container">
           <img
