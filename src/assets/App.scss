@@ -273,5 +273,43 @@
     }
   }
   .right-contact-bar {
+    // border: 0.5px solid grey;
+    // border-radius: 10px;
+    .form-greeting {
+      text-align: center;
+    }
+    .fields {
+      border: 0.5px solid grey;
+      border-radius: 10px;
+      padding: 20px;
+      height: 300px;
+      width: 400px;
+      margin-left: 40%;
+      .field {
+        text-align: center;
+        margin-top: 1em;
+        .user-input,
+        select,
+        textarea {
+          border: inset;
+          margin-left: 1em;
+          border-radius: 5px;
+          background: #f6f7f9;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 10px 2em 0 0;
+      .action-btn {
+        background-color: #748194;
+        border: 2px solid #748194;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
   }
 }

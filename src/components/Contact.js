@@ -3,21 +3,25 @@ import line_img from "../assets/images/line_img.jpg";
 
 class Contact extends Component {
   state = {
-    name: "",
-    email: "",
+    userName: "",
+    userEmail: "",
     category: "-",
     message: ""
   };
 
   handleInputChange = event => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
     this.setState({
-      value: event.target.value
+      [name]: value
     });
   };
 
   handleSubmit = event => {
-    alert("Message was submitted: " + this.state.value);
+    alert("Message was submitted: " + this.state);
   };
+
   render() {
     return (
       <>
@@ -38,12 +42,15 @@ class Contact extends Component {
               onSubmit={this.handleSubmit}
             >
               <div className="fields">
+                <h3 className="form-greeting">Say hello!</h3>
                 <div className="field half">
                   <label>
                     Name
                     <input
+                      className="user-input"
+                      name="userName"
                       type="text"
-                      value={this.state.value}
+                      value={this.state.userName}
                       onChange={this.handleInputChange}
                     />
                   </label>
@@ -51,13 +58,23 @@ class Contact extends Component {
                 <div className="field half">
                   <label>
                     Email
-                    <input type="email" />
+                    <input
+                      className="user-input"
+                      name="userEmail"
+                      type="email"
+                      value={this.state.userEmail}
+                      onChange={this.handleInputChange}
+                    />
                   </label>
                 </div>
                 <div className="field">
                   <label>
                     Category
-                    <select name="selection-category" id="selection-category">
+                    <select
+                      name="category"
+                      value={this.state.Category}
+                      onChange={this.handleInputChange}
+                    >
                       <option value="">-</option>
                       <option value="freelance inquiry">
                         Freelance Inquiry
@@ -70,18 +87,24 @@ class Contact extends Component {
                   <label>
                     Message
                     <textarea
-                      value={this.state.value}
+                      name="message"
+                      value={this.state.message}
                       onChange={this.handleInputChange}
                       rows="5"
                     />
                   </label>
                 </div>
-              </div>
-              <div className="actions">
-                <input type="submit" className="button submit" value="Submit" />
-                <input type="reset" value="Reset" />
+
+                <div className="actions">
+                  <input
+                    type="submit"
+                    className="action-btn submit"
+                    value="Submit"
+                  />
+                </div>
               </div>
             </form>
+            <div>Images will go here</div>
           </div>
         </div>
       </>
