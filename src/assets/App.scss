@@ -78,7 +78,7 @@
     margin: 5em 3em 5em 0;
     font-weight: bold;
     border-radius: 5px;
-    border: 1px solid black;
+    // border: 1px solid black;
     &:hover {
       background-color: #7f071d;
       color: white;
@@ -191,11 +191,11 @@
 .about-btn-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 1em 0 0 5em;
+  align-items: flex-end;
+  margin: 1em 0 0 8em;
   background-color: #d6e7d8;
   padding-left: 10px;
-  width: 40%;
+  width: 100%;
   opacity: 0.7;
   .about-btn {
     // font-family: "Carrois Gothic SC", sans-serif;
@@ -204,10 +204,10 @@
     margin: 1em 3em 1em 0;
     font-weight: bold;
     border-radius: 5px;
-    border: 1px ridge #887c80;
+
     &:hover {
-      background-color: #887c80;
-      color: white;
+      // background-color: #887c80;
+      color: #887c80;
     }
     &:focus,
     input:focus {
@@ -279,11 +279,11 @@
     // border-radius: 10px;
     .form-greeting {
       text-align: center;
+      color: white;
     }
     .fields {
-      background-color: #e0e0e0;
-      // border: 3px solid #e7d6db;
-      border-radius: 5px;
+      // background-color: #e0e0e0;
+      background-color: rgba(0, 0, 0, 0.2);
       padding: 20px;
       height: 350px;
       width: 350px;
@@ -295,9 +295,7 @@
         select,
         textarea {
           padding: 5px;
-          border: inset;
           margin-left: 1em;
-          border-radius: 5px;
           background: #f6f7f9;
         }
       }
@@ -308,9 +306,7 @@
       justify-content: center;
       margin: 10px 0 0 0;
       .action-btn {
-        border: inset;
         background-color: #ffffff;
-        border: 2px solid grey;
         border-radius: 5px;
         font-size: 15px;
         text-align: center;

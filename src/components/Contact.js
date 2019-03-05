@@ -43,6 +43,7 @@ class Contact extends Component {
               onSubmit={this.handleSubmit}
             >
               <div className="fields">
+                <div className="transparent-background" />
                 <h3 className="form-greeting">Say hello!</h3>
                 <div className="field half">
                   <label>

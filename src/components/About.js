@@ -27,15 +27,15 @@ class About extends Component {
           </h3>
         </header>
         <div className="about-btn-container">
-          <button className="about-btn" onClick={() => this.tl.play()}>
+          <h4 className="about-btn" onClick={() => this.tl.play()}>
             Play
-          </button>
-          <button className="about-btn" onClick={() => this.tl.pause()}>
+          </h4>
+          <h4 className="about-btn" onClick={() => this.tl.pause()}>
             Pause
-          </button>
-          <button className="about-btn" onClick={() => this.tl.restart()}>
+          </h4>
+          <h4 className="about-btn" onClick={() => this.tl.restart()}>
             Restart
-          </button>
+          </h4>
         </div>
         <div className="about-title">
           {lettersArray.map((element, index) => (
