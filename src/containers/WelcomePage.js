@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import black_white_img from "../assets/images/black_white_img.jpg";
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
 import line_img from "../assets/images/line_img.jpg";
+import play_icon from "../assets/images/play_icon.svg";
+import restart_icon from "../assets/images/restart_icon.svg";
+import pause_icon from "../assets/images/pause_icon.svg";
 
 class WelcomePage extends Component {
   constructor(props) {
@@ -13,11 +16,11 @@ class WelcomePage extends Component {
 
   componentDidMount() {
     this.logoTween = new TimelineLite({ paused: true })
-      .to(this.logoContainer, 2, { x: 200 })
+      .to(this.logoContainer, 1, { y: 120 })
       .to(this.logoContainer, 1, {
         rotation: 90,
-        transformOrigin: "5% 15%",
-        opacity: 0.5
+        transformOrigin: "center 30%",
+        color: "#7f071d"
       });
   }
 
@@ -25,22 +28,29 @@ class WelcomePage extends Component {
     return (
       <>
         <header className="App-header">
+          <div className="welcome-btn-container">
+            <img
+              className="welcome-btn"
+              src={play_icon}
+              onClick={() => this.logoTween.play()}
+            />
+            <img
+              className="welcome-btn"
+              src={pause_icon}
+              onClick={() => this.logoTween.pause()}
+            />
+            <img
+              className="welcome-btn"
+              src={restart_icon}
+              onClick={() => this.logoTween.restart()}
+            />
+          </div>
           <h3 className="name-title">
             <img className="welcome-line-img" src={line_img} alt="line image" />
             Devon Darrow
           </h3>
         </header>
-        <div className="welcome-btn-container">
-          <button className="welcome-btn" onClick={() => this.logoTween.play()}>
-            Play
-          </button>
-          <button
-            className="welcome-btn"
-            onClick={() => this.logoTween.restart()}
-          >
-            Restart
-          </button>
-        </div>
+
         <div className="welcome-container">
           <div className="welcome-title">
             <img

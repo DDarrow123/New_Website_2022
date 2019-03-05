@@ -3,6 +3,9 @@ import line_img from "../assets/images/line_img.jpg";
 import devon_img from "../assets/images/devon_img.jpg";
 import small_flower_img from "../assets/images/small_flower_img.jpg";
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
+import play_icon from "../assets/images/play_icon.svg";
+import restart_icon from "../assets/images/restart_icon.svg";
+import pause_icon from "../assets/images/pause_icon.svg";
 
 const lettersArray = ["A", "B", "O", "U", "T"];
 
@@ -21,22 +24,29 @@ class About extends Component {
     return (
       <>
         <header className="App-header">
+          <div className="about-btn-container">
+            <img
+              className="about-btn"
+              src={play_icon}
+              onClick={() => this.tl.play()}
+            />
+            <img
+              className="about-btn"
+              src={pause_icon}
+              onClick={() => this.tl.pause()}
+            />
+            <img
+              className="about-btn"
+              src={restart_icon}
+              onClick={() => this.tl.restart()}
+            />
+          </div>
           <h3 className="name-title">
             <img className="welcome-line-img" src={line_img} alt="line image" />
             Devon Darrow
           </h3>
         </header>
-        <div className="about-btn-container">
-          <h4 className="about-btn" onClick={() => this.tl.play()}>
-            Play
-          </h4>
-          <h4 className="about-btn" onClick={() => this.tl.pause()}>
-            Pause
-          </h4>
-          <h4 className="about-btn" onClick={() => this.tl.restart()}>
-            Restart
-          </h4>
-        </div>
+
         <div className="about-title">
           {lettersArray.map((element, index) => (
             <div key={element.id} ref={div => (this.letters[index] = div)}>
