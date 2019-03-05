@@ -1,13 +1,49 @@
 import React, { Component } from "react";
+import {
+  TweenMax,
+  Elastic,
+  TweenLite,
+  TimelineLite,
+  CSSPlugin,
+  Expo
+} from "gsap";
 import line_img from "../assets/images/line_img.jpg";
 import tall_flower_img from "../assets/images/tall_flower_img.jpg";
+import play_icon from "../assets/images/play_icon.svg";
+import restart_icon from "../assets/images/restart_icon.svg";
+import pause_icon from "../assets/images/pause_icon.svg";
 
 class Contact extends Component {
-  state = {
-    userName: "",
-    userEmail: "",
-    category: "-",
-    message: ""
+  constructor(props) {
+    super(props);
+    // this.myElement = null;
+    this.logoTween = null;
+    this.loaderWrap = null;
+    this.loaderTween = null;
+    this.toggleBtn = null;
+
+    this.state = {
+      userName: "",
+      userEmail: "",
+      category: "-",
+      message: ""
+    };
+  }
+
+  componentDidMount() {
+    this.logoTween = new TimelineLite({ paused: true });
+    this.loaderTween = TweenLite.to(this.loaderWrap, 1, {
+      x: "100%",
+      ease: Expo.easeInOut,
+      delay: 2,
+      onComplete: () => {
+        TweenLite.to(this.toggleBtn, 0.2, { autoAlpha: 1 });
+      }
+    });
+  }
+
+  toggleLoaderHandler = () => {
+    this.loaderTween.reversed(!this.loaderTween.reversed());
   };
 
   handleInputChange = event => {
@@ -19,14 +55,28 @@ class Contact extends Component {
     });
   };
 
-  handleSubmit = event => {
-    alert("Message was submitted: " + this.state);
-  };
-
   render() {
     return (
       <>
         <header className="App-header">
+          <div className="welcome-btn-container">
+            <img
+              className="welcome-btn"
+              src={play_icon}
+              ref={e => (this.toggleBtn = e)}
+            />
+            <img
+              className="welcome-btn"
+              src={pause_icon}
+              onClick={() => this.logoTween.pause()}
+            />
+            <img
+              className="welcome-btn"
+              src={restart_icon}
+              ref={e => (this.toggleBtn = e)}
+              onClick={this.toggleLoaderHandler}
+            />
+          </div>
           <h3 className="name-title">
             <img className="welcome-line-img" src={line_img} alt="line image" />
             Devon Darrow
@@ -34,9 +84,17 @@ class Contact extends Component {
         </header>
         <div className="contact-container">
           <div className="left-contact-bar">
-            <div className="contact-title">CONTACT</div>
+            <div
+              ref={div => (this.logoContainer = div)}
+              className="contact-title"
+            >
+              CONTACT
+            </div>
           </div>
-          <div className="right-contact-bar">
+          <div
+            ref={div => (this.loaderWrap = div)}
+            className="right-contact-bar"
+          >
             <form
               method="post"
               action="https://formspree.io/ddarrow.work@gmail.com"

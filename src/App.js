@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./assets/App.scss";
-import WelcomePage from "./containers/WelcomePage";
 import ExpandableMenu from "./containers/ExpandableMenu";
 import line_img from "./assets/images/line_img.jpg";
 import { Router, Link } from "@reach/router";
