@@ -275,8 +275,6 @@
   .right-contact-bar {
     background-image: url("./images/tall_flower_img.jpg");
     width: 70%;
-    // border: 0.5px solid grey;
-    // border-radius: 10px;
     .form-greeting {
       text-align: center;
       color: white;
@@ -284,36 +282,84 @@
     .fields {
       // background-color: #e0e0e0;
       background-color: rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      height: 350px;
-      width: 350px;
+      padding: 40px;
+      height: 450px;
+      width: 450px;
       margin: 15% 0 0 25%;
       .field {
         text-align: center;
         margin-top: 1em;
         .user-input,
-        select,
         textarea {
-          padding: 5px;
-          margin-left: 1em;
+          font-size: 15px;
+          border-style: none;
+          padding: 10px;
           background: #f6f7f9;
+          &:focus,
+          input:focus {
+            outline: none;
+          }
+        }
+
+        select {
+          border-radius: 0;
+          border: none;
+          background-color: white;
+          display: inline-block;
+          font: inherit;
+          line-height: 1.5em;
+          padding: 0.5em 4em 0.5em 1em;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          &.select-tag {
+            background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+              linear-gradient(135deg, gray 50%, transparent 50%),
+              radial-gradient(#ddd 70%, transparent 72%);
+            background-position: calc(100% - 20px) calc(1em + 2px),
+              calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+            background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+            background-repeat: no-repeat;
+            &:focus {
+              background-image: linear-gradient(
+                  45deg,
+                  white 50%,
+                  transparent 50%
+                ),
+                linear-gradient(135deg, transparent 52%, white 50%),
+                radial-gradient(gray 70%, transparent 72%);
+              background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+                calc(100% - 0.5em) 0.5em;
+              background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+              background-repeat: no-repeat;
+              outline: 0;
+            }
+          }
         }
       }
     }
-    .actions {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 10px 0 0 0;
-      .action-btn {
-        background-color: #ffffff;
-        border-radius: 5px;
-        font-size: 15px;
-        text-align: center;
-      }
+  }
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    input {
+      text-align: center;
+      background-color: #161616;
+      border-radius: 0px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+      padding: 8px;
+      width: 140px;
     }
-    .tall-flwr-img {
-      height: 800px;
-    }
+  }
+  .tall-flwr-img {
+    height: 800px;
   }
 }

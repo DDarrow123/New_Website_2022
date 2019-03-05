@@ -70,9 +70,9 @@ class Contact extends Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label>
-                    Inquiry
+                  <label className="inquiry-label">
                     <select
+                      className="select-tag"
                       name="category"
                       value={this.state.Category}
                       onChange={this.handleInputChange}
@@ -88,12 +88,12 @@ class Contact extends Component {
                 <div className="field">
                   <label>
                     <textarea
-                      placeholder="Write a Message Here"
+                      placeholder="write a message here"
                       name="message"
                       value={this.state.message}
                       onChange={this.handleInputChange}
                       rows="8"
-                      cols="50"
+                      cols="40"
                     />
                   </label>
                 </div>
