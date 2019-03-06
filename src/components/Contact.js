@@ -16,9 +16,7 @@ import pause_icon from "../assets/images/pause_icon.svg";
 class Contact extends Component {
   constructor() {
     super();
-    // this.myElement = null;
     this.loaderWrap = null;
-    // this.loaderTween = null;
     this.toggleBtn = null;
     this.tl = new TimelineLite({ paused: true });
 
@@ -63,7 +61,8 @@ class Contact extends Component {
             <img
               className="welcome-btn"
               src={pause_icon}
-              onClick={() => this.logoTween.pause()}
+              ref={e => (this.toggleBtn = e)}
+              onClick={() => this.tl.pause()}
             />
             <img
               className="welcome-btn"

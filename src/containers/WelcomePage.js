@@ -9,7 +9,6 @@ import pause_icon from "../assets/images/pause_icon.svg";
 class WelcomePage extends Component {
   constructor(props) {
     super(props);
-    // this.myElement = null;
     this.logoContainer = null;
     this.logoTween = null;
   }
@@ -42,7 +41,7 @@ class WelcomePage extends Component {
             <img
               className="welcome-btn"
               src={restart_icon}
-              onClick={() => this.logoTween.restart()}
+              onClick={() => this.logoTween.reverse()}
             />
           </div>
           <h3 className="name-title">
@@ -66,7 +65,7 @@ class WelcomePage extends Component {
             ref={div => (this.logoContainer = div)}
             className="welcome-sidebar"
           >
-            WELCOME
+            Welcome
           </div>
         </div>
       </>

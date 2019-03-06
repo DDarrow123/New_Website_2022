@@ -15,9 +15,6 @@
 //       format("truetype");
 // }
 
-// @import url("https://fonts.google.com/?selection.family=Alfa+Slab+One");
-@import url("https://fonts.google.com/?selection.family=Archivo+Black");
-@import url("https://fonts.google.com/?selection.family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Bevan");
 @import url("https://fonts.googleapis.com/css?family=Poller+One");
 @import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Six+Caps");
@@ -155,6 +152,7 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden;
+  font-family: "Carrois Gothic SC", sans-serif;
 }
 
 .bm-morph-shape {
@@ -247,7 +245,7 @@
 
 //// CONTACT PAGE ////
 .contact-container {
-  //place to refactor
+  //place to refactor - on all pages
   margin-top: 2em;
   display: flex;
   flex-direction: row;
@@ -318,5 +316,92 @@
   }
   .tall-flwr-img {
     height: 800px;
+  }
+}
+
+//// WORK PAGE ////
+//container mixin will eventually go here
+.left-work-bar {
+  width: 30%;
+  height: 900px;
+  .work-overlay {
+    background-color: rgba(141, 134, 141, 0.5);
+    height: 100px;
+    .work-title {
+      // color: #8d868d;
+      font-size: 150px;
+      font-weight: lighter;
+      margin-top: 5em;
+      text-align: center;
+    }
+  }
+}
+
+.right-work-bar {
+  width: 70%;
+  height: 900px;
+  background-color: #8d868d;
+  .project-title {
+    font-family: "Carrois Gothic SC", sans-serif;
+    margin: 8% 0 0 0;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+    .project-container {
+      display: flex;
+      flex-direction: row;
+      .card {
+        background-color: white;
+        width: 40%;
+        height: 250px;
+        margin-right: 0.5em;
+        img {
+          height: 250px;
+          width: 250px;
+        }
+      }
+    }
+  }
+  .implementation-title {
+    font-family: "Carrois Gothic SC", sans-serif;
+    margin: 10% 0 0 4%;
+    color: white;
+    font-size: 60px;
+    color: white;
+    font-weight: 500;
+    .implementation-container {
+      display: flex;
+      flex-direction: row;
+      .card {
+        margin-top: 10px;
+        background-color: white;
+        width: 40%;
+        height: 250px;
+        margin-right: 0.5em;
+        img {
+          height: 250px;
+          width: 249px;
+          &:hover {
+            opacity: 0.3;
+          }
+        }
+        .works-container {
+          background-color: rgba(0, 0, 0, 0.3);
+          width: 100px;
+          height: 190px;
+          margin: 0 1em 1em 1em;
+          .new-work {
+            color: black;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            margin-left: 1em;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -30,10 +30,6 @@ class ExpandableMenu extends Component {
     this.setState({ menuOpen: false });
   };
 
-  // toggleMenu = () => {
-  //   this.setState({ menuOpen: !this.state.menuOpen });
-  // };
-
   render() {
     return (
       <HashRouter>
@@ -84,11 +80,3 @@ class ExpandableMenu extends Component {
 }
 
 export default ExpandableMenu;
-
-// <Switch>
-//   // <Route exact path="/" component={WelcomePage} />
-//   <Route path="/about" component={About} />
-//   <Route path="/contact" component={Contact} />
-//   <Route path="/work" component={Work} />
-//   // <Redirect to="/" />
-// </Switch>
