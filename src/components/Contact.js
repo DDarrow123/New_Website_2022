@@ -14,13 +14,13 @@ import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     // this.myElement = null;
-    this.logoTween = null;
     this.loaderWrap = null;
-    this.loaderTween = null;
+    // this.loaderTween = null;
     this.toggleBtn = null;
+    this.tl = new TimelineLite({ paused: true });
 
     this.state = {
       userName: "",
@@ -31,20 +31,14 @@ class Contact extends Component {
   }
 
   componentDidMount() {
-    this.logoTween = new TimelineLite({ paused: true });
-    this.loaderTween = TweenLite.to(this.loaderWrap, 1, {
-      x: "100%",
+    this.tl.to(this.loaderWrap, 1, {
+      x: "150%",
       ease: Expo.easeInOut,
-      delay: 2,
       onComplete: () => {
         TweenLite.to(this.toggleBtn, 0.2, { autoAlpha: 1 });
       }
     });
   }
-
-  toggleLoaderHandler = () => {
-    this.loaderTween.reversed(!this.loaderTween.reversed());
-  };
 
   handleInputChange = event => {
     const target = event.target;
@@ -64,6 +58,7 @@ class Contact extends Component {
               className="welcome-btn"
               src={play_icon}
               ref={e => (this.toggleBtn = e)}
+              onClick={() => this.tl.play()}
             />
             <img
               className="welcome-btn"
@@ -74,7 +69,7 @@ class Contact extends Component {
               className="welcome-btn"
               src={restart_icon}
               ref={e => (this.toggleBtn = e)}
-              onClick={this.toggleLoaderHandler}
+              onClick={() => this.tl.reverse()}
             />
           </div>
           <h3 className="name-title">
@@ -84,17 +79,11 @@ class Contact extends Component {
         </header>
         <div className="contact-container">
           <div className="left-contact-bar">
-            <div
-              ref={div => (this.logoContainer = div)}
-              className="contact-title"
-            >
+            <div ref={div => (this.loaderWrap = div)} className="contact-title">
               CONTACT
             </div>
           </div>
-          <div
-            ref={div => (this.loaderWrap = div)}
-            className="right-contact-bar"
-          >
+          <div className="right-contact-bar">
             <form
               method="post"
               action="https://formspree.io/ddarrow.work@gmail.com"
@@ -125,22 +114,6 @@ class Contact extends Component {
                       value={this.state.userEmail}
                       onChange={this.handleInputChange}
                     />
-                  </label>
-                </div>
-                <div className="field">
-                  <label className="inquiry-label">
-                    <select
-                      className="select-tag"
-                      name="category"
-                      value={this.state.Category}
-                      onChange={this.handleInputChange}
-                    >
-                      <option value="">-</option>
-                      <option value="freelance inquiry">
-                        Freelance Inquiry
-                      </option>
-                      <option value="general inquiry">General Inquiry</option>
-                    </select>
                   </label>
                 </div>
                 <div className="field">
@@ -181,3 +154,4 @@ export default Contact;
 //     alt="tall flower image"
 //   />
 // </div>
+// this.loaderTween = TweenLite.to(this.loaderWrap, 1, {

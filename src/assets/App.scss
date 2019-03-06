@@ -256,15 +256,15 @@
     width: 30%;
     height: 900px;
     .contact-title {
-      margin: 4em 1em 0 0;
-      height: 485px;
+      margin: 2em 1em 0 1.5em;
+      height: 200px;
       font-size: 80px;
       font-weight: lighter;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      justify-content: flex-end;
-      transform: rotate(-90deg);
+      align-items: center;
+      justify-content: flex-start;
+      // transform: rotate(-90deg);
     }
   }
   .right-contact-bar {
@@ -276,11 +276,10 @@
       color: white;
     }
     .fields {
-      // background-color: #e0e0e0;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.1);
       padding: 40px;
       height: 450px;
-      width: 450px;
+      width: 400px;
       margin: 15% 0 0 25%;
       .field {
         text-align: center;
@@ -294,43 +293,6 @@
           &:focus,
           input:focus {
             outline: none;
-          }
-        }
-        select {
-          border-radius: 0;
-          border: none;
-          background-color: white;
-          display: inline-block;
-          font: inherit;
-          line-height: 1.5em;
-          padding: 0.5em 4em 0.5em 1em;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          &.select-tag {
-            background-image: linear-gradient(45deg, transparent 50%, gray 50%),
-              linear-gradient(135deg, gray 50%, transparent 50%),
-              radial-gradient(#ddd 70%, transparent 72%);
-            background-position: calc(100% - 20px) calc(1em + 2px),
-              calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
-            background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
-            background-repeat: no-repeat;
-            &:focus {
-              background-image: linear-gradient(
-                  45deg,
-                  white 50%,
-                  transparent 50%
-                ),
-                linear-gradient(135deg, transparent 52%, white 50%),
-                radial-gradient(gray 70%, transparent 72%);
-              background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
-                calc(100% - 0.5em) 0.5em;
-              background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
-              background-repeat: no-repeat;
-              outline: 0;
-            }
           }
         }
       }

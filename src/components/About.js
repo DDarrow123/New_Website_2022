@@ -38,7 +38,7 @@ class About extends Component {
             <img
               className="about-btn"
               src={restart_icon}
-              onClick={() => this.tl.restart()}
+              onClick={() => this.tl.reverse()}
             />
           </div>
           <h3 className="name-title">
