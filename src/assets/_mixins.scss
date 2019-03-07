@@ -51,3 +51,12 @@
   font-weight: lighter;
   letter-spacing: 0.3em;
 }
+
+@mixin button-container() {
+  @include flex-row;
+  margin-right: 15em;
+  height: 100px;
+  .site-btn {
+    @include animation-button;
+  }
+}

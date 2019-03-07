@@ -51,7 +51,7 @@ class Contact extends Component {
     return (
       <>
         <header className="App-header">
-          <div className="welcome-btn-container">
+          <div className="general-btn-container">
             <img
               className="site-btn"
               src={play_icon}

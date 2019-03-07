@@ -23,15 +23,7 @@
 
 // font-family: "Alfa Slab One", cursive;
 // font-family: 'Cormorant Garamond', serif;
-// font-family: 'Proza Libre', sans-serif;
-// font-family: 'Libre Franklin', sans-serif;
-// font-family: 'Libre Baskerville', serif;
-// font-family: 'Trirong', serif;
-// font-family: 'Rubik', sans-serif;
 // font-family: 'Work Sans', sans-serif;
-// font-family: 'Taviraj', serif;
-// font-family: 'Eczar', serif;
-// font-family: 'Gentium Basic', serif;
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Condensed', sans-serif;
 
@@ -66,13 +58,8 @@
   }
 }
 
-.welcome-btn-container {
-  @include flex-row;
-  margin-right: 15em;
-  height: 100px;
-  .site-btn {
-    @include animation-button;
-  }
+.general-btn-container {
+  @include button-container;
 }
 
 .welcome-container {
@@ -142,7 +129,7 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden;
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: $carrois-font;
 }
 
 .bm-morph-shape {
@@ -158,7 +145,7 @@
   align-items: center;
   position: fixed;
   .bm-item {
-    font-family: "Carrois Gothic SC", sans-serif;
+    font-family: $carrois-font;
     letter-spacing: 5px;
     padding: 20px;
     color: white;
@@ -177,13 +164,8 @@
 
 ///// ABOUT PAGE /////
 
-.about-btn-container {
-  @include flex-row;
-  margin-right: 15em;
-  height: 100px;
-  .site-btn {
-    @include animation-button;
-  }
+.general-btn-container {
+  @include button-container;
 }
 
 .about-title {
@@ -206,7 +188,7 @@
     margin: 2em 0 0 8em;
   }
   .about-para {
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto-font;
     letter-spacing: 3px;
     font-size: 20px;
     line-height: 30px;
@@ -330,12 +312,7 @@
     }
   }
   .implementation-title {
-    font-family: "Carrois Gothic SC", sans-serif;
     margin: 13% 0 0 4%;
-    color: white;
-    font-size: 60px;
-    color: white;
-    font-weight: 400;
     .implementation-container {
       @include straight-row;
       .work-name {
@@ -353,14 +330,13 @@
         margin: 0 1em 1em 0;
         div {
           color: black;
-          font-family: "Roboto", sans-serif;
+          font-family: $roboto-font;
           font-size: 25px;
           font-weight: 400;
           letter-spacing: 0.3em;
           line-height: 30px;
           margin-left: 1em;
           &:hover {
-            // opacity: 0.5;
             border: 2px solid rgba(217, 207, 217, 0.2);
           }
         }
