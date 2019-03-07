@@ -12,6 +12,9 @@ import tall_flower_img from "../assets/images/tall_flower_img.jpg";
 import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
+import twitter_icon from "../assets/images/twitter_icon.svg";
+import insta_icon from "../assets/images/insta_icon.svg";
+import github_icon from "../assets/images/github_icon.svg";
 
 class Contact extends Component {
   constructor() {
@@ -133,6 +136,11 @@ class Contact extends Component {
                     className="action-btn submit"
                     value="Submit"
                   />
+                </div>
+                <div className="social-container">
+                  <img className="twitter-media-btn" src={twitter_icon} />
+                  <img className="insta-media-btn" src={insta_icon} />
+                  <img className="github-media-btn" src={github_icon} />
                 </div>
               </div>
             </form>

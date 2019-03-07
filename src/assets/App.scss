@@ -254,6 +254,25 @@
         }
       }
     }
+    .social-container {
+      @include straight-row;
+      justify-content: center;
+      background-color: rgba(214, 231, 216, 0.4);
+      height: 50px;
+      margin: 1em 0 0 0;
+      .insta-media-btn {
+        width: 35px;
+        margin: 10px 0 0 0;
+      }
+      .twitter-media-btn {
+        width: 25px;
+        margin: 0 1em 0 5px;
+      }
+      .github-media-btn {
+        width: 25px;
+        margin: 2px 0 0 1em;
+      }
+    }
   }
   .actions {
     @include straight-row;
