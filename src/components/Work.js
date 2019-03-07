@@ -70,25 +70,31 @@ class Work extends Component {
               <div className="implementation-container">
                 <div className="work-name">
                   {" "}
-                  Festival Site
+                  <span>1</span> Festival Site
                   <div className="card">
-                    <a href="#">
+                    <a
+                      href="https://ddarrow123.github.io/Example_2/index.html"
+                      target="_blank"
+                    >
                       <img className="work-image" src={festival_img} />
                     </a>
                   </div>
                 </div>
                 <div className="work-name">
                   {" "}
-                  Beauty Site
+                  <span>2</span> Beauty Site
                   <div className="card">
-                    <a href="#">
+                    <a
+                      href="https://ddarrow123.github.io/Example_1/index.html"
+                      target="_blank"
+                    >
                       <img src={beauty_img} />
                     </a>
                   </div>
                 </div>
                 <div className="work-name">
                   {" "}
-                  Coming Soon...
+                  <span>3</span> Coming Soon...
                   <div className="card">
                     <div className="works-container">
                       <div className="new-work">
@@ -101,7 +107,7 @@ class Work extends Component {
               <div className="project-title">
                 <div className="project-container">
                   <div className="work-name">
-                    Fashion Lister
+                    <span>4</span> Fashion Lister
                     <div className="card">
                       <a
                         href="https://github.com/DDarrow123/Fashion_Lister"
@@ -112,7 +118,7 @@ class Work extends Component {
                     </div>
                   </div>
                   <div className="work-name">
-                    Fashion Reviews
+                    <span>5</span> Fashion Reviews
                     <div className="card">
                       <a
                         href="https://github.com/DDarrow123/Mod-3-Final-Project-Front-End"
@@ -123,7 +129,7 @@ class Work extends Component {
                     </div>
                   </div>
                   <div className="work-name">
-                    Fright-O-Matic
+                    <span>6</span> Fright-O-Matic
                     <div className="card">
                       <a
                         href="https://github.com/free2580/Fright-O-Matic"

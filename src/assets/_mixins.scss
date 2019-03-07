@@ -51,6 +51,10 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: lighter;
   letter-spacing: 0.3em;
+  span {
+    color: #c9cfc6;
+    font-weight: 600;
+  }
 }
 
 @mixin button-container() {
