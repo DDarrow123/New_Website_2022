@@ -70,7 +70,7 @@ class Work extends Component {
               <div className="implementation-container">
                 <div className="work-name">
                   {" "}
-                  Festival Page
+                  Festival Site
                   <div className="card">
                     <a href="#">
                       <img className="work-image" src={festival_img} />
@@ -79,7 +79,7 @@ class Work extends Component {
                 </div>
                 <div className="work-name">
                   {" "}
-                  Beauty Page
+                  Beauty Site
                   <div className="card">
                     <a href="#">
                       <img src={beauty_img} />
@@ -103,7 +103,10 @@ class Work extends Component {
                   <div className="work-name">
                     Fashion Lister
                     <div className="card">
-                      <a href="#">
+                      <a
+                        href="https://github.com/DDarrow123/Fashion_Lister"
+                        target="_blank"
+                      >
                         <img src={fashion_lister} />
                       </a>
                     </div>
@@ -111,13 +114,23 @@ class Work extends Component {
                   <div className="work-name">
                     Fashion Reviews
                     <div className="card">
-                      <img src={fashion_week} />
+                      <a
+                        href="https://github.com/DDarrow123/Mod-3-Final-Project-Front-End"
+                        target="_blank"
+                      >
+                        <img src={fashion_week} />
+                      </a>
                     </div>
                   </div>
                   <div className="work-name">
                     Fright-O-Matic
                     <div className="card">
-                      <img src={fright_matic} />
+                      <a
+                        href="https://github.com/free2580/Fright-O-Matic"
+                        target="_blank"
+                      >
+                        <img src={fright_matic} />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -131,3 +144,4 @@ class Work extends Component {
 }
 
 export default Work;
+//https://ddarrow123.github.io/Example_1/index.html
