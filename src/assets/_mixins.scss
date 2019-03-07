@@ -65,3 +65,14 @@
     @include animation-button;
   }
 }
+
+////MEDIA QUERIES////
+
+$tablet-width: 768px;
+$desktop-width: 900px;
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}

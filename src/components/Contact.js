@@ -138,9 +138,18 @@ class Contact extends Component {
                   />
                 </div>
                 <div className="social-container">
-                  <img className="twitter-media-btn" src={twitter_icon} />
-                  <img className="insta-media-btn" src={insta_icon} />
-                  <img className="github-media-btn" src={github_icon} />
+                  <a href="https://twitter.com/devoncdarrow" target="_blank">
+                    <img className="twitter-media-btn" src={twitter_icon} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/devondarrow"
+                    target="_blank"
+                  >
+                    <img className="insta-media-btn" src={insta_icon} />
+                  </a>
+                  <a href="https://github.com/DDarrow123" target="_blank">
+                    <img className="github-media-btn" src={github_icon} />
+                  </a>
                 </div>
               </div>
             </form>
