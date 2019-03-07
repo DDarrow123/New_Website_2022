@@ -12,6 +12,14 @@
   }
 }
 
+@mixin desktop-animation-button() {
+  width: 25px;
+}
+
+@mixin tablet-animation-button() {
+  width: 15px;
+}
+
 @mixin flex-row() {
   display: flex;
   flex-direction: row;
@@ -69,10 +77,16 @@
 ////MEDIA QUERIES////
 
 $tablet-width: 768px;
-$desktop-width: 900px;
+$desktop-width: 1024px;
 
 @mixin desktop {
   @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }

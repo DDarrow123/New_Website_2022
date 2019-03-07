@@ -44,26 +44,44 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
-  @include desktop {
-    display: block;
-  }
+  // @include desktop {
+  //   // display: block;
+  // }
 }
 
 ////WELCOME PAGE////
 
 .name-title {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 200;
+  @include desktop {
+    .name-title {
+      font-size: 20px;
+      font-weight: 300;
+      margin-right: 6em;
+    }
+  }
+  @include tablet {
+    .name-title {
+      font-size: 15px;
+      font-weight: 200;
+    }
+  }
   &:hover {
     color: #cc201a;
   }
   .welcome-line-img {
     margin-right: 10px;
     margin-bottom: 0;
-  }
-  @include desktop {
-    .welcome-line-img {
-      width: 130px;
+    @include desktop {
+      .welcome-line-img {
+        margin-right: 5em;
+      }
+    }
+    @include tablet {
+      .welcome-line-img {
+        margin-right: 6em;
+      }
     }
   }
 }
@@ -71,8 +89,14 @@
 .general-btn-container {
   @include button-container;
   @include desktop {
+    @include desktop-animation-button;
     display: block;
-    margin-left: 15em;
+    margin-left: 13em;
+  }
+  @include tablet {
+    @include tablet-animation-button;
+    display: block;
+    margin-left: 14em;
   }
 }
 
@@ -89,8 +113,15 @@
     @include desktop {
       .welcome-image {
         height: 500px;
+        width: 350px;
+        margin: 3em 0 50px 60px;
+      }
+    }
+    @include tablet {
+      .welcome-image {
+        height: 400px;
         width: 300px;
-        margin: 0 0 50px 60px;
+        margin: 4em 0 2em 2em;
       }
     }
   }
@@ -103,9 +134,16 @@
     justify-content: flex-end;
     margin: 0 0 50px 5px;
     @include desktop {
-      font-size: 20px;
-      margin: 8em 0 50px 20em;
+      font-size: 25px;
+      margin: 8em 0 50px 18em;
       position: fixed;
+    }
+    @include tablet {
+      // width: 5px;
+      font-size: 18px;
+      margin: 4em 0 30px 22em;
+      position: fixed;
+      font-weight: 200;
     }
   }
   .welcome-sidebar {
@@ -113,10 +151,15 @@
     font-weight: 200;
     letter-spacing: 15px;
     @include desktop {
-      font-size: 30px;
-      margin-left: 2em;
+      font-size: 50px;
+      margin-left: 1em;
       font-weight: 400;
       letter-spacing: 10px;
+    }
+    @include tablet {
+      font-size: 40px;
+      margin-left: 3em;
+      letter-spacing: 8px;
     }
   }
 }
@@ -201,6 +244,14 @@
 
 .general-btn-container {
   @include button-container;
+  @include desktop {
+    @include desktop-animation-button;
+    margin-left: 13em;
+  }
+  @include tablet {
+    @include tablet-animation-button;
+    margin-left: 14em;
+  }
 }
 
 .about-title {
@@ -211,6 +262,12 @@
   margin: 8px 0 0 20px;
   width: 10%;
   height: 100px;
+  @include desktop {
+    font-size: 65px;
+  }
+  @include tablet {
+    font-size: 45px;
+  }
 }
 
 .about-container {
@@ -221,6 +278,16 @@
     width: 750px;
     height: 600px;
     margin: 2em 0 0 8em;
+    @include desktop {
+      width: 550px;
+      height: 500px;
+      margin: 5em 0 0 0;
+    }
+    @include tablet {
+      width: 450px;
+      height: 400px;
+      margin: 4em 0 0 2em;
+    }
   }
   .about-para {
     font-family: $roboto-font;
@@ -231,6 +298,14 @@
     margin: 12em 3em 4em 2em;
     width: 350px;
     color: #becbc4;
+    @include desktop {
+      font-size: 18px;
+      width: 300px;
+    }
+    @include tablet {
+      font-size: 16px;
+      width: 230px;
+    }
     &:hover {
       color: black;
     }
