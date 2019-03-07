@@ -29,17 +29,17 @@ class WelcomePage extends Component {
         <header className="App-header">
           <div className="welcome-btn-container">
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={play_icon}
               onClick={() => this.logoTween.play()}
             />
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={pause_icon}
               onClick={() => this.logoTween.pause()}
             />
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={restart_icon}
               onClick={() => this.logoTween.reverse()}
             />

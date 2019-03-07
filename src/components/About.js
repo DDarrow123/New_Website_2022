@@ -26,17 +26,17 @@ class About extends Component {
         <header className="App-header">
           <div className="about-btn-container">
             <img
-              className="about-btn"
+              className="site-btn"
               src={play_icon}
               onClick={() => this.tl.play()}
             />
             <img
-              className="about-btn"
+              className="site-btn"
               src={pause_icon}
               onClick={() => this.tl.pause()}
             />
             <img
-              className="about-btn"
+              className="site-btn"
               src={restart_icon}
               onClick={() => this.tl.reverse()}
             />
@@ -46,7 +46,6 @@ class About extends Component {
             Devon Darrow
           </h3>
         </header>
-
         <div className="about-title">
           {lettersArray.map((element, index) => (
             <div key={element.id} ref={div => (this.letters[index] = div)}>

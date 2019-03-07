@@ -1,4 +1,5 @@
 @import "_mixins";
+@import "_variables";
 // @font-face {
 //   font-family: "Archivo Black, sans-serif";
 //   color: white;
@@ -34,26 +35,25 @@
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Condensed', sans-serif;
 
+////GENERAL STYLING////
 .App {
   text-align: center;
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  @include flex-row;
 }
 
 .App-header {
   background-color: white;
-  min-height: 20vh;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  min-height: 18vh;
+  @include flex-row;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
 }
+
+////WELCOME PAGE////
 
 .name-title {
   font-weight: 200;
@@ -67,26 +67,16 @@
 }
 
 .welcome-btn-container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10em;
-  .welcome-btn {
-    width: 50px;
-    margin: 0 1em 0 0;
-    font-weight: bold;
-    &:hover {
-      cursor: crosshair;
-    }
-    &:focus,
-    input:focus {
-      outline: none;
-    }
+  @include flex-row;
+  margin-right: 15em;
+  height: 100px;
+  .site-btn {
+    @include animation-button;
   }
 }
 
 .welcome-container {
-  display: flex;
-  flex-direction: row;
+  @include straight-row;
   margin-top: 5em;
   .welcome-title {
     width: 50%;
@@ -97,13 +87,11 @@
     }
   }
   .tag-line {
-    // font-family: "Oswald", sans-serif;
     font-size: 25px;
     width: 10%;
     font-weight: 200;
     text-align: left;
-    display: flex;
-    flex-direction: column;
+    @include straight-column;
     justify-content: flex-end;
     margin: 0 0 50px 5px;
   }
@@ -113,6 +101,8 @@
     letter-spacing: 15px;
   }
 }
+
+////BURGER MENU STYLING////
 
 .bm-burger-button {
   position: fixed;
@@ -133,19 +123,19 @@
 
 .bm-burger-bars {
   background: #373a47;
+  &-hover {
+    background: #cc201a;
+  }
 }
 
-.bm-burger-bars-hover {
-  background: #cc201a;
-}
+////MENU STYLING////
 
-//Menu Styling//
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
 }
 
-/* General sidebar styles */
+/* GEN SIDEBAR STYLES */
 .bm-menu {
   background: #cc0c2f;
   opacity: 0.5;
@@ -160,12 +150,11 @@
   opacity: 0.8;
 }
 
-/* Wrapper for item list */
+/* WRAPPER FOR ITEM LIST */
 .bm-item-list {
   color: #b8b7ad;
   padding: 4em;
-  display: flex;
-  flex-direction: column;
+  @include straight-column;
   align-items: center;
   position: fixed;
   .bm-item {
@@ -181,45 +170,34 @@
   }
 }
 
-/* Styling of overlay */
+/* STYLING OF OVERLAY */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
 
 ///// ABOUT PAGE /////
+
 .about-btn-container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10em;
-  // background-color: #d6e7d8;
-  .about-btn {
-    width: 50px;
-    margin: 0 1em 0 0;
-    font-weight: bold;
-    border-radius: 5px;
-    &:hover {
-      cursor: crosshair;
-    }
-    &:focus,
-    input:focus {
-      outline: none;
-    }
+  @include flex-row;
+  margin-right: 15em;
+  height: 100px;
+  .site-btn {
+    @include animation-button;
   }
 }
 
 .about-title {
   font-weight: 200;
-  display: flex;
-  flex-direction: row;
+  @include straight-row;
   font-size: 80px;
   letter-spacing: 15px;
-  margin: 10px 0 0 20px;
+  margin: 8px 0 0 20px;
   width: 10%;
+  height: 100px;
 }
 
 .about-container {
-  display: flex;
-  flex-direction: row;
+  @include straight-row;
   justify-content: center;
   align-items: flex-start;
   .profile-img {
@@ -228,7 +206,6 @@
     margin: 2em 0 0 8em;
   }
   .about-para {
-    // font-family: "Six Caps", sans-serif;
     font-family: "Roboto", sans-serif;
     letter-spacing: 3px;
     font-size: 20px;
@@ -244,22 +221,20 @@
 }
 
 //// CONTACT PAGE ////
-.contact-container {
-  //place to refactor - on all pages
+
+.split-page-container {
+  @include straight-row;
   margin-top: 2em;
-  display: flex;
-  flex-direction: row;
   .left-contact-bar {
     background-color: #d6e7d8;
     width: 30%;
     height: 900px;
     .contact-title {
-      margin: 2em 1em 0 1.5em;
+      margin: 2em 1em 0 1em;
       height: 200px;
       font-size: 80px;
       font-weight: lighter;
-      display: flex;
-      flex-direction: column;
+      @include straight-column;
       align-items: center;
       justify-content: flex-start;
       // transform: rotate(-90deg);
@@ -268,17 +243,19 @@
   .right-contact-bar {
     background-image: url("./images/tall_flower_img.jpg");
     width: 70%;
-    .form-greeting {
-      font-weight: lighter;
-      text-align: center;
-      color: white;
-    }
     .fields {
       background-color: rgba(0, 0, 0, 0.1);
       padding: 40px;
       height: 450px;
       width: 400px;
       margin: 15% 0 0 25%;
+      .form-greeting {
+        font-weight: lighter;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: 300;
+      }
       .field {
         text-align: center;
         margin-top: 1em;
@@ -297,8 +274,7 @@
     }
   }
   .actions {
-    display: flex;
-    flex-direction: row;
+    @include straight-row;
     justify-content: center;
     margin: 10px 0 0 0;
     input {
@@ -320,7 +296,7 @@
 }
 
 //// WORK PAGE ////
-//container mixin will eventually go here
+
 .left-work-bar {
   width: 30%;
   height: 900px;
@@ -328,7 +304,6 @@
   .work-overlay {
     background-color: rgba(141, 134, 141, 0.3);
     height: 600px;
-    // transform: rotate(90deg);
     .work-title {
       font-size: 100px;
       font-weight: lighter;
@@ -343,36 +318,14 @@
   height: 900px;
   background-color: #8d868d;
   .project-title {
-    font-family: "Carrois Gothic SC", sans-serif;
     margin: 10% 0 0 0;
-    color: white;
-    font-size: 60px;
-    font-weight: 400;
     .project-container {
-      display: flex;
-      flex-direction: row;
+      @include straight-row;
       .work-name {
-        font-style: italic;
-        font-family: sans-serif;
-        width: 36%;
-        font-size: 20px;
-        font-family: "Roboto Condensed", sans-serif;
-        font-weight: lighter;
-        letter-spacing: 0.3em;
+        @include work-project-name;
       }
       .card {
-        background-color: white;
-        width: 250px;
-        height: 250px;
-        margin: 1em 0.5em 0 0;
-        img {
-          height: 250px;
-          width: 250px;
-          &:hover {
-            // opacity: 0.5;
-            border: 5px solid #a9b1b4;
-          }
-        }
+        @include card-style;
       }
     }
   }
@@ -384,49 +337,31 @@
     color: white;
     font-weight: 400;
     .implementation-container {
-      display: flex;
-      flex-direction: row;
+      @include straight-row;
       .work-name {
-        font-style: italic;
-        font-family: sans-serif;
-        width: 36%;
-        font-size: 20px;
-        font-family: "Roboto Condensed", sans-serif;
-        font-weight: lighter;
-        letter-spacing: 0.3em;
+        @include work-project-name;
       }
       .card {
         margin-top: 10px;
-        background-color: white;
-        width: 250px;
-        height: 250px;
-        margin: 1em 0.5em 0 0;
-        img {
-          height: 250px;
-          width: 250px;
+        @include card-style;
+      }
+      .works-container {
+        background-color: rgba(169, 177, 180, 0.3);
+        width: 60%;
+        height: 200px;
+        padding-top: 10px;
+        margin: 0 1em 1em 0;
+        div {
+          color: black;
+          font-family: "Roboto", sans-serif;
+          font-size: 25px;
+          font-weight: 400;
+          letter-spacing: 0.3em;
+          line-height: 30px;
+          margin-left: 1em;
           &:hover {
-            // opacity: 0.3;
-            border: 5px solid #a9b1b4;
-          }
-        }
-        .works-container {
-          background-color: rgba(169, 177, 180, 0.3);
-          width: 60%;
-          height: 200px;
-          padding-top: 10px;
-          margin: 0 1em 1em 0;
-          div {
-            color: black;
-            font-family: "Roboto", sans-serif;
-            font-size: 25px;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            line-height: 30px;
-            margin-left: 1em;
-            &:hover {
-              // opacity: 0.5;
-              border: 2px solid #a9b1b4;
-            }
+            // opacity: 0.5;
+            border: 2px solid rgba(217, 207, 217, 0.2);
           }
         }
       }

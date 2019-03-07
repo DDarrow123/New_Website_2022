@@ -1,0 +1,53 @@
+@mixin animation-button() {
+  width: 35px;
+  margin: 0.5em 1em 0 0;
+  font-weight: bold;
+  // position: fixed;
+  &:hover {
+    cursor: crosshair;
+  }
+  &:focus,
+  input:focus {
+    outline: none;
+  }
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@mixin straight-row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin straight-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-style() {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin: 1em 0.5em 0 0;
+  img {
+    height: 250px;
+    width: 250px;
+    &:hover {
+      border: 5px solid #8a848a;
+    }
+  }
+}
+
+@mixin work-project-name() {
+  font-style: italic;
+  font-family: sans-serif;
+  width: 36%;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.3em;
+}

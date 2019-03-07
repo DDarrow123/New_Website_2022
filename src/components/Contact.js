@@ -53,19 +53,19 @@ class Contact extends Component {
         <header className="App-header">
           <div className="welcome-btn-container">
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={play_icon}
               ref={e => (this.toggleBtn = e)}
               onClick={() => this.tl.play()}
             />
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={pause_icon}
               ref={e => (this.toggleBtn = e)}
               onClick={() => this.tl.pause()}
             />
             <img
-              className="welcome-btn"
+              className="site-btn"
               src={restart_icon}
               ref={e => (this.toggleBtn = e)}
               onClick={() => this.tl.reverse()}
@@ -76,7 +76,7 @@ class Contact extends Component {
             Devon Darrow
           </h3>
         </header>
-        <div className="contact-container">
+        <div className="split-page-container">
           <div className="left-contact-bar">
             <div ref={div => (this.loaderWrap = div)} className="contact-title">
               CONTACT
@@ -91,7 +91,7 @@ class Contact extends Component {
               <div className="fields">
                 <div className="transparent-background" />
                 <h3 className="form-greeting">Say hello!</h3>
-                <div className="field half">
+                <div className="field">
                   <label>
                     <input
                       placeholder="your name"
@@ -103,7 +103,7 @@ class Contact extends Component {
                     />
                   </label>
                 </div>
-                <div className="field half">
+                <div className="field">
                   <label>
                     <input
                       placeholder="your email"
@@ -127,7 +127,6 @@ class Contact extends Component {
                     />
                   </label>
                 </div>
-
                 <div className="actions">
                   <input
                     type="submit"
@@ -145,12 +144,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-
-// <div>
-//   <img
-//     className="tall-flwr-img"
-//     src={tall_flower_img}
-//     alt="tall flower image"
-//   />
-// </div>
-// this.loaderTween = TweenLite.to(this.loaderWrap, 1, {

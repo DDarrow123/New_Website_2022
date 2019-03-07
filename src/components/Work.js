@@ -30,17 +30,17 @@ class Work extends Component {
         <header className="App-header">
           <div className="about-btn-container">
             <img
-              className="about-btn"
+              className="site-btn"
               src={play_icon}
               onClick={() => this.tl.play()}
             />
             <img
-              className="about-btn"
+              className="site-btn"
               src={pause_icon}
               onClick={() => this.tl.pause()}
             />
             <img
-              className="about-btn"
+              className="site-btn"
               src={restart_icon}
               onClick={() => this.tl.reverse()}
             />
@@ -50,7 +50,7 @@ class Work extends Component {
             Devon Darrow
           </h3>
         </header>
-        <div className="contact-container">
+        <div className="split-page-container">
           <div className="left-work-bar">
             <div className="work-overlay">
               <div className="work-title">
@@ -79,7 +79,7 @@ class Work extends Component {
                 </div>
                 <div className="work-name">
                   {" "}
-                  Beauty Ecommerce Page
+                  Beauty Page
                   <div className="card">
                     <a href="#">
                       <img src={beauty_img} />
@@ -109,7 +109,7 @@ class Work extends Component {
                     </div>
                   </div>
                   <div className="work-name">
-                    Fashion Week Reviews
+                    Fashion Reviews
                     <div className="card">
                       <img src={fashion_week} />
                     </div>
