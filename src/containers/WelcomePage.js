@@ -15,10 +15,10 @@ class WelcomePage extends Component {
 
   componentDidMount() {
     this.logoTween = new TimelineLite({ paused: true })
-      .to(this.logoContainer, 1, { y: 120 })
+      .to(this.logoContainer, 1, { y: 140 })
       .to(this.logoContainer, 1, {
         rotation: 90,
-        transformOrigin: "center 30%",
+        transformOrigin: "center 40%",
         color: "#7f071d"
       });
   }
@@ -74,18 +74,3 @@ class WelcomePage extends Component {
 }
 
 export default WelcomePage;
-
-// this.myTween = TweenLite.to(this.myElement, 2, {
-// rotation: -90,
-// transformOrigin: "40% 15%"
-// x: 200
-// y: 200
-// });
-// .to(this.myElement, 0.5, {x: 100})
-// .to(this.myElement, 0.5, {y: 100, rotation: 180})
-// this.myTween = TweenLite.to(this.myElement, 2, {
-//   rotation: -90,
-//   transformOrigin: "70% 15%",
-//   opacity: 0.5
-// });
-// ref={div => (this.myElement = div)}

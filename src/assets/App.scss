@@ -76,16 +76,19 @@
       height: 700px;
       width: 510px;
       margin: 0 0 50px 60px;
+      &:hover {
+        border: 3px solid #7f071d;
+      }
     }
   }
   .tag-line {
-    font-size: 25px;
-    width: 10%;
+    font-size: 30px;
+    width: 80px;
     font-weight: 200;
     text-align: left;
     @include straight-column;
     justify-content: flex-end;
-    margin: 0 0 50px 5px;
+    margin: 0 0 50px 3px;
   }
   .welcome-sidebar {
     font-size: 80px;
