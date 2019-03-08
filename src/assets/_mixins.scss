@@ -90,3 +90,19 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+@mixin bp($point) {
+  @if $point == largest-sz {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  } @else if $point == middle-sz {
+    @media (max-width: 1250px) {
+      @content;
+    }
+  } @else if $point == small-sz {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+}

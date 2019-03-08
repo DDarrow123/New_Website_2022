@@ -1,21 +1,5 @@
 @import "_mixins";
 @import "_variables";
-// @font-face {
-//   font-family: "Archivo Black, sans-serif";
-//   color: white;
-//   src: url("https://fonts.google.com/?selection.family=Archivo+Black.woff2")
-//       format("woff2"),
-//     url("https://fonts.google.com/?selection.family=Archivo+Black.woff")
-//       format("woff"),
-//     url("https://fonts.google.com/?selection.family=Archivo+Black.ttf")
-//       format("truetype"),
-//     url("https://fonts.google.com/?selection.family=Anton.woff2")
-//       format("woff2"),
-//     url("https://fonts.google.com/?selection.family=Anton.woff") format("woff"),
-//     url("https://fonts.google.com/?selection.family=Anton.ttf")
-//       format("truetype");
-// }
-
 @import url("https://fonts.googleapis.com/css?family=Bevan");
 @import url("https://fonts.googleapis.com/css?family=Poller+One");
 @import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Six+Caps");
@@ -44,56 +28,113 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
-  // @include desktop {
-  //   // display: block;
-  // }
+  @include bp(middle-sz) {
+    display: block;
+  }
 }
 
 ////WELCOME PAGE////
 
 .name-title {
-  font-size: 30px;
+  font-size: 2.5vw;
   font-weight: 200;
+  @include bp(middle-sz) {
+    @include straight-row;
+    font-size: 4vw;
+    justify-content: center;
+  }
+  @include bp(small-sz) {
+    @include straight-row;
+    font-size: 7vw;
+    justify-content: center;
+  }
   &:hover {
     color: #cc201a;
   }
   .welcome-line-img {
     margin-right: 10px;
     margin-bottom: 0;
+    @include bp(middle-sz) {
+      display: none;
+    }
   }
 }
 
 .general-btn-container {
   @include button-container;
+  @include bp(middle-sz) {
+    margin-left: 70%;
+  }
 }
 
 .welcome-container {
   @include straight-row;
   margin-top: 5em;
+  @include bp(small-sz) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .welcome-title {
     width: 50%;
+    @include bp(middle-sz) {
+      width: 45%;
+    }
+    @include bp(small-sz) {
+      width: 60%;
+    }
     .welcome-image {
-      height: 700px;
-      width: 510px;
+      height: 800px;
+      width: 500px;
+      max-width: 100%;
+      background-size: cover;
       margin: 0 0 50px 60px;
+      @include bp(middle-sz) {
+        height: 600px;
+        width: 100%;
+        background-size: contain;
+      }
+      @include bp(small-sz) {
+        height: 390px;
+        width: 430vw;
+      }
       &:hover {
         border: 3px solid #7f071d;
       }
     }
   }
   .tag-line {
-    font-size: 30px;
+    font-size: 5vh;
     width: 80px;
     font-weight: 200;
     text-align: left;
     @include straight-column;
     justify-content: flex-end;
     margin: 0 0 50px 3px;
+    @include bp(middle-sz) {
+      margin: 0 0 50px 3em;
+      font-size: 4vh;
+    }
+    @include bp(small-sz) {
+      margin: 0 0 50px 4em;
+      width: 210px;
+    }
   }
   .welcome-sidebar {
-    font-size: 80px;
+    font-size: 7vw;
     font-weight: 200;
     letter-spacing: 15px;
+    @include bp(middle-sz) {
+      font-size: 60px;
+      // text-align: center;
+    }
+    @include bp(small-sz) {
+      font-size: 40px;
+      width: 10em;
+      letter-spacing: 10px;
+      margin-bottom: 4em;
+      margin-left: 3em;
+      font-weight: 400;
+    }
   }
 }
 
