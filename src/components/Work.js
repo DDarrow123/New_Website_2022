@@ -73,7 +73,7 @@ class Work extends Component {
                   <span>1</span> Festival Site
                   <div className="card">
                     <a
-                      href="https://ddarrow123.github.io/Example_2/index.html"
+                      href="https://www.devondarrow.com/Example_2/index.html"
                       target="_blank"
                     >
                       <img className="work-image" src={festival_img} />
@@ -85,7 +85,7 @@ class Work extends Component {
                   <span>2</span> Beauty Site
                   <div className="card">
                     <a
-                      href="https://ddarrow123.github.io/Example_1/index.html"
+                      href="https://www.devondarrow.com/Example_1/index.html"
                       target="_blank"
                     >
                       <img src={beauty_img} />
