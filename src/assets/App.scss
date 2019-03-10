@@ -120,12 +120,11 @@
     }
   }
   .welcome-sidebar {
-    font-size: 7vw;
+    font-size: 6.5vw;
     font-weight: 200;
     letter-spacing: 15px;
     @include bp(middle-sz) {
       font-size: 60px;
-      // text-align: center;
     }
     @include bp(small-sz) {
       font-size: 40px;
@@ -229,21 +228,43 @@
 .about-title {
   font-weight: 200;
   @include straight-row;
-  font-size: 80px;
+  font-size: 8vw;
   letter-spacing: 15px;
   margin: 8px 0 0 20px;
   width: 10%;
   height: 100px;
+  @include bp(middle-sz) {
+    font-size: 9vw;
+    margin: 20px 0 10px 30px;
+  }
+  @include bp(small-sz) {
+    font-size: 12vw;
+    margin: 20px 0 0 30px;
+  }
 }
 
 .about-container {
   @include straight-row;
   justify-content: center;
   align-items: flex-start;
+  @include bp(middle-sz) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .profile-img {
     width: 750px;
     height: 600px;
-    margin: 3em 0 0 8em;
+    margin: 3em 0 0 6em;
+    @include bp(middle-sz) {
+      width: 80vw;
+      height: 90vh;
+      margin: 3em 0 2em 4em;
+    }
+    @include bp(small-sz) {
+      width: 85vw;
+      height: 45vh;
+      margin: 3em 0 2em 2em;
+    }
   }
   .about-para {
     font-family: $roboto-font;
@@ -252,8 +273,17 @@
     line-height: 30px;
     font-weight: lighter;
     margin: 10em 3em 4em 2em;
-    width: 325px;
+    width: 350vh;
     color: #becbc4;
+    @include bp(middle-sz) {
+      width: 90vw;
+      font-size: 18px;
+      margin: 15em 3em 4em 2em;
+    }
+    @include bp(small-sz) {
+      font-size: 15px;
+      margin: 15em 3em 4em 2em;
+    }
     &:hover {
       color: black;
     }
