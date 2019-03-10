@@ -437,6 +437,10 @@
     width: 40%;
     height: 350vh;
   }
+  @include bp(small-sz) {
+    width: 40%;
+    height: 275vh;
+  }
   .work-overlay {
     background-color: rgba(141, 134, 141, 0.3);
     height: 600px;
@@ -472,6 +476,10 @@
   @include bp(middle-sz) {
     width: 60%;
     height: 350vh;
+  }
+  @include bp(small-sz) {
+    width: 60%;
+    height: 275vh;
   }
   .project-title {
     margin: 10% 0 0 0;
