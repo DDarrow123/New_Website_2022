@@ -94,8 +94,9 @@
         background-size: contain;
       }
       @include bp(small-sz) {
-        height: 390px;
-        width: 430vw;
+        height: 380px;
+        width: 460vw;
+        margin: 0 0 50px 70px;
       }
       &:hover {
         border: 3px solid #7f071d;
@@ -120,7 +121,7 @@
     }
   }
   .welcome-sidebar {
-    font-size: 6.5vw;
+    font-size: 6vw;
     font-weight: 200;
     letter-spacing: 15px;
     @include bp(middle-sz) {
@@ -228,7 +229,7 @@
 .about-title {
   font-weight: 200;
   @include straight-row;
-  font-size: 8vw;
+  font-size: 6vw;
   letter-spacing: 15px;
   margin: 8px 0 0 20px;
   width: 10%;
@@ -277,11 +278,11 @@
     color: #becbc4;
     @include bp(middle-sz) {
       width: 90vw;
-      font-size: 18px;
+      font-size: 20px;
       margin: 15em 3em 4em 2em;
     }
     @include bp(small-sz) {
-      font-size: 15px;
+      font-size: 18px;
       margin: 15em 3em 4em 2em;
     }
     &:hover {
@@ -299,9 +300,6 @@
     background-color: #d6e7d8;
     width: 30%;
     height: 900px;
-    // @include bp(middle-sz) {
-    //
-    // }
     .contact-title {
       margin: 2em 1em 0 1em;
       height: 200px;
@@ -446,9 +444,6 @@
     height: 600px;
     @include bp(middle-sz) {
       height: 100vh;
-    }
-    @include bp(small-sz) {
-      // height: 200vh;
     }
     .work-title {
       font-size: 100px;
