@@ -59,13 +59,15 @@ class WelcomePage extends Component {
             />
           </div>
           <p className="tag-line">
-            A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
+            <span>
+              A WEB DEVELOPER CONQUERING THE WORLD ONE PERFECT PIXEL AT A TIME
+            </span>
           </p>
           <div
             ref={div => (this.logoContainer = div)}
             className="welcome-sidebar"
           >
-            <span>WELCOME</span>
+            WELCOME
           </div>
         </div>
       </>
