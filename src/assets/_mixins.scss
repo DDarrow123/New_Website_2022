@@ -76,9 +76,6 @@
 
 ////MEDIA QUERIES////
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-
 @mixin responsive-card-style() {
   background-color: white;
   width: 160px;
@@ -118,7 +115,7 @@ $desktop-width: 1024px;
       @content;
     }
   } @else if $point == small-sz {
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
       @content;
     }
   }
