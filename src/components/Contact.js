@@ -33,7 +33,7 @@ class Contact extends Component {
 
   componentDidMount() {
     this.tl.to(this.loaderWrap, 1, {
-      x: "150%",
+      x: "160%",
       ease: Expo.easeInOut,
       onComplete: () => {
         TweenLite.to(this.toggleBtn, 0.2, { autoAlpha: 1 });

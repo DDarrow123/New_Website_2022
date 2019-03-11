@@ -40,12 +40,12 @@
   font-weight: 200;
   @include bp(middle-sz) {
     @include straight-row;
-    font-size: 4vw;
+    font-size: 3vw;
     justify-content: center;
   }
   @include bp(small-sz) {
     @include straight-row;
-    font-size: 7vw;
+    font-size: 5vw;
     justify-content: center;
   }
   &:hover {
@@ -116,7 +116,7 @@
       font-size: 4vh;
     }
     @include bp(small-sz) {
-      margin: 0 0 50px 4em;
+      margin: 0 0 50px 3em;
       width: 210px;
     }
   }
@@ -128,12 +128,10 @@
       font-size: 60px;
     }
     @include bp(small-sz) {
-      font-size: 40px;
+      font-size: 50px;
       width: 10em;
       letter-spacing: 10px;
-      margin-bottom: 4em;
-      margin-left: 3em;
-      font-weight: 400;
+      margin: 0 2em 3em 1.5em;
     }
   }
 }
@@ -249,8 +247,7 @@
   justify-content: center;
   align-items: flex-start;
   @include bp(middle-sz) {
-    display: flex;
-    flex-direction: column-reverse;
+    @include straight-column;
   }
   .profile-img {
     width: 750px;
@@ -264,7 +261,7 @@
     @include bp(small-sz) {
       width: 85vw;
       height: 45vh;
-      margin: 3em 0 2em 2em;
+      margin: 2em 0 2em 2em;
     }
   }
   .about-para {
@@ -283,7 +280,7 @@
     }
     @include bp(small-sz) {
       font-size: 18px;
-      margin: 15em 3em 4em 2em;
+      margin: 2em 3em 4em 2em;
     }
     &:hover {
       color: black;
@@ -313,7 +310,7 @@
         margin: 2em 1em 0 1em;
       }
       @include bp(small-sz) {
-        font-size: 6vw;
+        font-size: 4vh;
         margin: 2em 1em 0 1em;
       }
     }
@@ -329,13 +326,13 @@
       margin: 15% 0 0 25%;
       @include bp(middle-sz) {
         height: 65vh;
-        width: 45vw;
+        width: 42vw;
         margin: 20% 0 0 12%;
       }
       @include bp(small-sz) {
         height: 60vh;
-        width: 45vw;
-        margin: 25% 10% 0 10%;
+        width: 42vw;
+        margin: 25% 12% 0 6%;
       }
       .form-greeting {
         font-weight: lighter;
@@ -386,14 +383,23 @@
       .insta-media-btn {
         width: 35px;
         margin: 10px 0 0 0;
+        @include bp(small-sz) {
+          width: 30px;
+        }
       }
       .twitter-media-btn {
         width: 25px;
         margin: 1em 1em 0 0;
+        @include bp(small-sz) {
+          width: 20px;
+        }
       }
       .github-media-btn {
         width: 25px;
         margin: 0.9em 0 0 1em;
+        @include bp(small-sz) {
+          width: 20px;
+        }
       }
     }
     .actions {
