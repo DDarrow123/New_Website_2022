@@ -113,29 +113,31 @@
     @include bp(middle-sz) {
       margin: 0 0 5px 3em;
       font-size: 4.5vh;
+      width: 12vh;
     }
     @include bp(small-sz) {
-      margin: 4em 0 1em 3em;
-      font-size: 6vw;
-      width: 40vh;
+      margin: 4em 0 1em 4em;
+      font-size: 4.5vh;
+      width: 18vh;
     }
   }
   .welcome-sidebar {
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 200;
     letter-spacing: 10px;
-    width: 40vw;
+    width: 25vw;
     font-family: $roboto-condensed;
     span {
       background: rgba(127, 7, 29, 0.08);
-      padding: 10px 20px 10px 20px;
+      padding: 10px 5px 10px 5px;
       margin: 10px;
       box-shadow: inset 0 0 0 3px 0, inset 0 0 0 15px white;
     }
     @include bp(middle-sz) {
       font-weight: 200;
       margin-bottom: 3em;
-      width: 28vw;
+      width: 26vw;
+      font-size: 4.5vw;
     }
     @include bp(small-sz) {
       font-size: 8vw;
