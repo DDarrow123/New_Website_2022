@@ -7,7 +7,7 @@ import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
 
-const lettersArray = ["A", "b", "o", "u", "t"];
+const lettersArray = ["A", "B", "O", "U", "T"];
 
 class About extends Component {
   constructor(props) {

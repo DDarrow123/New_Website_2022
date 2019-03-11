@@ -11,7 +11,7 @@ import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
 
-const lettersArray = ["W", "o", "r", "k"];
+const lettersArray = ["W", "O", "R", "K"];
 
 class Work extends Component {
   constructor(props) {

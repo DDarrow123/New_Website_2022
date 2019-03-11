@@ -18,7 +18,7 @@ class WelcomePage extends Component {
       .to(this.logoContainer, 1, { y: 140 })
       .to(this.logoContainer, 1, {
         rotation: 90,
-        transformOrigin: "center 40%",
+        transformOrigin: "center 30%",
         color: "#7f071d"
       });
   }
@@ -65,7 +65,7 @@ class WelcomePage extends Component {
             ref={div => (this.logoContainer = div)}
             className="welcome-sidebar"
           >
-            Welcome
+            <span>WELCOME</span>
           </div>
         </div>
       </>
