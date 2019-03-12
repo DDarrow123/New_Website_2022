@@ -43,13 +43,20 @@
   @include bp(middle-sz) {
     @include straight-row;
     font-size: 3vw;
-
     justify-content: center;
+    background-color: rgba(127, 7, 29, 0.08);
+    margin-right: 10em;
+    margin-left: 10em;
+    padding: 10px;
   }
   @include bp(small-sz) {
     @include straight-row;
     font-size: 5vw;
     justify-content: center;
+    background-color: rgba(127, 7, 29, 0.08);
+    margin-right: 4em;
+    margin-left: 4em;
+    padding: 10px;
   }
   &:hover {
     color: #cc201a;
@@ -77,11 +84,12 @@
   @include bp(small-sz) {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 2em;
   }
   .welcome-title {
     width: 45%;
     @include bp(middle-sz) {
-      width: 40%;
+      width: 30%;
     }
     @include bp(small-sz) {
       width: 60%;
@@ -121,7 +129,7 @@
     @include bp(middle-sz) {
       margin: 0 0 5px 4em;
       font-size: 4.5vh;
-      width: 14vh;
+      width: 16vh;
     }
     @include bp(small-sz) {
       margin: 4em 0 1em 4em;
@@ -129,7 +137,7 @@
     }
   }
   .welcome-sidebar {
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 200;
     letter-spacing: 8px;
     width: 20vw;
@@ -142,14 +150,14 @@
     @include bp(middle-sz) {
       font-weight: 200;
       margin-bottom: 3em;
-      width: 26vw;
-      font-size: 6vw;
+      width: 25vw;
+      font-size: 5vw;
     }
     @include bp(small-sz) {
       font-size: 9vw;
       width: 60vw;
       letter-spacing: 10px;
-      margin: 0 0 2em 4em;
+      margin: 0 0 3em 2em;
       font-weight: 200;
       span {
         background: rgba(0, 0, 0, 0.08);
@@ -277,16 +285,16 @@
   }
   .profile-img {
     width: 60vw;
-    height: 650px;
-    margin: 3em 0 0 6em;
+    height: 600px;
+    margin: 5em 0 0 6em;
     @include bp(middle-sz) {
       width: 80vw;
-      height: 90vh;
+      height: 70vh;
       margin: 3em 0 2em 4em;
     }
     @include bp(small-sz) {
       width: 80vw;
-      height: 45vh;
+      height: 42vh;
       margin: 2em 0 2em 2em;
     }
   }
@@ -337,9 +345,9 @@
         margin: 2em 1em 0 1em;
       }
       @include bp(small-sz) {
-        font-size: 7vw;
-        margin: 1.8em 0.5em 0 0.5em;
-        letter-spacing: 3px;
+        font-size: 7.5vw;
+        margin: 1.5em 0.5em 0 0.5em;
+        letter-spacing: 2px;
         font-weight: 200;
       }
     }
@@ -485,19 +493,19 @@
       height: 100vh;
     }
     .work-title {
-      font-size: 12vh;
+      font-size: 6vw;
       font-weight: lighter;
       margin-top: 1em;
       padding-top: 100px;
       text-align: center;
       font-family: $roboto-condensed;
       @include bp(middle-sz) {
-        font-size: 80px;
+        font-size: 6vw;
         margin-top: 2em;
         padding-top: 100px;
       }
       @include bp(small-sz) {
-        font-size: 60px;
+        font-size: 12vw;
         margin-top: 3em;
         padding-top: 100px;
       }
