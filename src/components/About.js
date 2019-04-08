@@ -18,6 +18,7 @@ class About extends Component {
 
   componentDidMount() {
     this.tl.staggerTo(this.letters, 0.5, { y: 250, autoAlpha: 1 }, 0.2);
+    //0.2 in this case is the delay between each letter animation
   }
 
   render() {

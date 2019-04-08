@@ -580,38 +580,38 @@
           @include responsive-card-style;
         }
       }
-      .works-container {
-        background-color: rgba(169, 177, 180, 0.3);
-        width: 60%;
-        height: 200px;
-        padding-top: 10px;
-        margin: 0 1em 1em 0;
-        @include bp(small-sz) {
-          width: 50%;
-          height: 150px;
-        }
-        div {
-          color: black;
-          font-family: $roboto-font;
-          font-size: 25px;
-          font-weight: 400;
-          letter-spacing: 0.3em;
-          line-height: 30px;
-          margin-left: 1em;
-          @include bp(small-sz) {
-            color: black;
-            font-family: $roboto-font;
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            line-height: 30px;
-            margin-left: 1em;
-          }
-          &:hover {
-            border: 2px solid rgba(217, 207, 217, 0.2);
-          }
-        }
-      }
+      // .works-container {
+      //   background-color: rgba(169, 177, 180, 0.3);
+      //   width: 60%;
+      //   height: 200px;
+      //   padding-top: 10px;
+      //   margin: 0 1em 1em 0;
+      //   @include bp(small-sz) {
+      //     width: 50%;
+      //     height: 150px;
+      //   }
+      //   div {
+      //     color: black;
+      //     font-family: $roboto-font;
+      //     font-size: 25px;
+      //     font-weight: 400;
+      //     letter-spacing: 0.3em;
+      //     line-height: 30px;
+      //     margin-left: 1em;
+      //     @include bp(small-sz) {
+      //       color: black;
+      //       font-family: $roboto-font;
+      //       font-size: 15px;
+      //       font-weight: 400;
+      //       letter-spacing: 0.3em;
+      //       line-height: 30px;
+      //       margin-left: 1em;
+      //     }
+      //     &:hover {
+      //       border: 2px solid rgba(217, 207, 217, 0.2);
+      //     }
+      //   }
+      // }
     }
   }
 }

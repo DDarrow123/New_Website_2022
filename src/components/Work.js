@@ -4,6 +4,7 @@ import line_img from "../assets/images/line_img.jpg";
 import festival_img from "../assets/images/festival_img.png";
 import question_img from "../assets/images/question_img.png";
 import beauty_img from "../assets/images/beauty_img.png";
+import gallery_img from "../assets/images/gallery_img.png";
 import fashion_lister from "../assets/images/fashion_lister.png";
 import fashion_week from "../assets/images/fashion_week.png";
 import fright_matic from "../assets/images/fright_matic.png";
@@ -81,7 +82,6 @@ class Work extends Component {
                   </div>
                 </div>
                 <div className="work-name">
-                  {" "}
                   <span>2</span> Beauty Site
                   <div className="card">
                     <a
@@ -93,14 +93,14 @@ class Work extends Component {
                   </div>
                 </div>
                 <div className="work-name">
-                  {" "}
-                  <span>3</span> Coming Soon...
+                  <span>3</span> Gallery Site
                   <div className="card">
-                    <div className="works-container">
-                      <div className="new-work">
-                        <h5>Something new in the works here</h5>
-                      </div>
-                    </div>
+                    <a
+                      href="https://www.devondarrow.com/Example_3"
+                      target="_blank"
+                    >
+                      <img src={gallery_img} />
+                    </a>
                   </div>
                 </div>
               </div>
