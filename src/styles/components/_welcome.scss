@@ -1,0 +1,157 @@
+////WELCOME PAGE////
+
+.name-title {
+    font-size: 2.5vw;
+    font-weight: 200;
+
+    @include bp(middle-sz) {
+        @include straight-row;
+        font-size: 3vw;
+        justify-content: center;
+        background-color: rgba(127, 7, 29, 0.08);
+        margin-right: 10em;
+        margin-left: 10em;
+        padding: 10px;
+    }
+
+    @include bp(small-sz) {
+        @include straight-row;
+        font-size: 5vw;
+        justify-content: center;
+        background-color: rgba(127, 7, 29, 0.08);
+        margin-right: 4em;
+        margin-left: 4em;
+        padding: 10px;
+    }
+
+    &:hover {
+        color: #cc201a;
+    }
+
+    .welcome-line-img {
+        margin-right: 10px;
+        margin-bottom: 0;
+
+        @include bp(middle-sz) {
+            display: none;
+        }
+    }
+}
+
+.general-btn-container {
+    @include button-container;
+
+    @include bp(middle-sz) {
+        justify-content: center;
+        margin-left: 65vw;
+    }
+}
+
+.welcome-container {
+    @include straight-row;
+    margin-top: 5em;
+
+    @include bp(small-sz) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2em;
+    }
+
+    .welcome-title {
+        width: 45%;
+
+        @include bp(middle-sz) {
+            width: 30%;
+        }
+
+        @include bp(small-sz) {
+            width: 60%;
+        }
+
+        .welcome-image {
+            height: 700px;
+            width: 500px;
+            max-width: 100%;
+            background-size: cover;
+            margin: 0 0 50px 60px;
+
+            @include bp(middle-sz) {
+                height: 100%;
+                width: 100%;
+            }
+
+            @include bp(small-sz) {
+                height: 100%;
+                width: 100%;
+                margin: 0 0 50px 70px;
+            }
+
+            &:hover {
+                border: 3px solid #7f071d;
+            }
+        }
+    }
+
+    .tag-line {
+        font-size: 5vh;
+        width: 30vh;
+        font-weight: 200;
+        text-align: left;
+
+        span {
+            background-color: rgba(127, 7, 29, 0.08);
+            width: 4vw;
+        }
+
+        @include straight-column;
+        justify-content: flex-end;
+        margin: 0 0 50px 0;
+
+        @include bp(middle-sz) {
+            margin: 0 0 5px 4em;
+            font-size: 4.5vh;
+            width: 16vh;
+        }
+
+        @include bp(small-sz) {
+            margin: 4em 0 1em 4em;
+            width: 18vh;
+        }
+    }
+
+    .welcome-sidebar {
+        font-size: 5vw;
+        font-weight: 200;
+        letter-spacing: 8px;
+        width: 20vw;
+        font-family: $roboto-condensed;
+
+        span {
+            padding: 10px 5px 10px 5px;
+            margin: 10px;
+            // box-shadow: inset 0 0 0 3px 0, inset 0 0 0 15px white;
+        }
+
+        @include bp(middle-sz) {
+            font-weight: 200;
+            margin-bottom: 3em;
+            width: 25vw;
+            font-size: 5vw;
+        }
+
+        @include bp(small-sz) {
+            font-size: 9vw;
+            width: 60vw;
+            letter-spacing: 10px;
+            margin: 0 0 3em 2em;
+            font-weight: 200;
+
+            span {
+                background: rgba(0, 0, 0, 0.08);
+                padding: 18px;
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    }
+}

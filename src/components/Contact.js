@@ -8,7 +8,7 @@ import {
   Expo
 } from "gsap";
 import line_img from "../assets/images/line_img.jpg";
-import tall_flower_img from "../assets/images/tall_flower_img.jpg";
+// import tall_flower_img from "../assets/images/tall_flower_img.jpg";
 import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";

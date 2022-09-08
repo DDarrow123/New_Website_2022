@@ -1,82 +1,90 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
+  Switch,
   Route,
-  Link,
-  NavLink,
-  HashRouter
+  Link
 } from "react-router-dom";
-import { TweenMax, Elastic, TimelineMax } from "gsap";
-import noun_circle from "../assets/images/noun_circle.svg";
-import { bubble as Menu } from "react-burger-menu";
-import WelcomePage from "./WelcomePage";
+// import { TweenMax, Elastic, TimelineMax } from "gsap";
+// import noun_circle from "../assets/images/noun_circle.svg";
+import { slide as Menu } from "react-burger-menu";
+import Home from "./Home";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Work from "../components/Work";
 
-class ExpandableMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuOpen: false
-    };
-  }
+const ExpandableMenu = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  handleStateChange = state => {
-    this.setState({ menuOpen: state.isOpen });
+  // const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // const handleStateChange = () => {
+  //   setMenuOpen(!menuOpen);
+  // };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
-  closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
-
-  render() {
-    return (
-      <HashRouter>
+  return (
+    <Router>
+      <div>
         <div>
           <Menu
-            isOpen={this.state.menuOpen}
-            onStateChange={state => this.handleStateChange(state)}
+          // menuOpen={menuOpen}
+          // onOpen={toggleMenu}
           >
-            <NavLink
+            <Link
               className="menu-item"
               to="/"
-              onClick={() => this.closeMenu()}
+            // onClose={toggleMenu}
             >
               Home
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               className="menu-item"
               to="/about"
-              onClick={() => this.closeMenu()}
+            // onClose={toggleMenu}
             >
               About
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               className="menu-item"
               to="/contact"
-              onClick={() => this.closeMenu()}
+            // onClose={toggleMenu}
             >
               Contact
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               className="menu-item"
               to="/work"
-              onClick={() => this.closeMenu()}
+            // onClose={toggleMenu}
             >
               Work
-            </NavLink>
+            </Link>
           </Menu>
-          <div>
-            <Route exact path="/" component={WelcomePage} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/work" component={Work} />
-          </div>
         </div>
-      </HashRouter>
-    );
-  }
+
+        <Switch>
+          {/* <Route path="/">
+            <Welcome />
+          </Route> */}
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/work">
+            <Work />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default ExpandableMenu;
