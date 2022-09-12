@@ -77,21 +77,6 @@
   height: 100%;
 }
 
-/* GENERAL SIDEBAR STYLES */
-
-.bm-menu {
-  background: #cc0c2f;
-  opacity: 0.5;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  overflow: hidden;
-}
-
-.bm-morph-shape {
-  fill: #7f071d;
-  opacity: 0.8;
-}
-
 /* WRAPPER FOR ITEM LIST */
 
 .bm-item-list {
@@ -114,12 +99,6 @@
       text-decoration: underline white;
     }
   }
-}
-
-/* STYLING OF OVERLAY */
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
 }
 
 ///// ABOUT PAGE /////

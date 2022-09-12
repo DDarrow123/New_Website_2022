@@ -1,0 +1,26 @@
+.bm-burger-button {
+    width: 60px;
+    height: auto;
+}
+
+
+
+/* GENERAL SIDEBAR STYLES */
+.bm-menu {
+    // background: #7e7a7b;
+    opacity: 0;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow: hidden;
+}
+
+.bm-morph-shape {
+    fill: #7f071d;
+    opacity: 0.8;
+}
+
+/* STYLING OF OVERLAY */
+.bm-overlay {
+    opacity: 1;
+    background: rgba(213, 209, 209, 0.1);
+}

@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { IconContext } from "react-icons";
+import { VscMenu } from "react-icons/vsc";
 // import { TweenMax, Elastic, TimelineMax } from "gsap";
 // import noun_circle from "../assets/images/noun_circle.svg";
 import { slide as Menu } from "react-burger-menu";
@@ -16,49 +18,66 @@ import Work from "../components/Work";
 const ExpandableMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
 
-  // const handleStateChange = () => {
-  //   setMenuOpen(!menuOpen);
-  // };
+  const handleStateChange = () => {
+    setMenuOpen(true);
+    console.log('after open:', menuOpen);
+  };
 
   const closeMenu = () => {
     setMenuOpen(false);
+    console.log('after close:', menuOpen);
   };
 
+  console.log(menuOpen);
   return (
     <Router>
       <div>
         <div>
           <Menu
-          // menuOpen={menuOpen}
-          // onOpen={toggleMenu}
+            isOpen={menuOpen}
+            onStateChange={handleStateChange}
+            customBurgerIcon={<div>
+              <IconContext.Provider
+                value={{ color: "#000000", className: "react-icon", size: 60 }}
+              >
+                <VscMenu />
+              </IconContext.Provider>
+            </div>}
+            className='bm-icon'
           >
             <Link
               className="menu-item"
               to="/"
-            // onClose={toggleMenu}
+              onClose={closeMenu}
+              key={1}
             >
               Home
             </Link>
             <Link
               className="menu-item"
               to="/about"
-            // onClose={toggleMenu}
+              onClose={closeMenu}
+              key={2}
             >
               About
             </Link>
             <Link
               className="menu-item"
               to="/contact"
-            // onClose={toggleMenu}
+              onClose={closeMenu}
+              key={3}
             >
               Contact
             </Link>
             <Link
               className="menu-item"
               to="/work"
-            // onClose={toggleMenu}
+              onClose={closeMenu}
+              key={4}
             >
               Work
             </Link>
@@ -66,9 +85,6 @@ const ExpandableMenu = () => {
         </div>
 
         <Switch>
-          {/* <Route path="/">
-            <Welcome />
-          </Route> */}
           <Route path="/about">
             <About />
           </Route>

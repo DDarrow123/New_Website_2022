@@ -23,3 +23,7 @@ https://www.merci-michel.com/contact/
 https://www.condenast.com/markets 
 
 https://aperture.org/70x70/?campaign_id=133&emc=edit_tmag_20220907&instance_id=71297&nl=the-t-list&regi_id=106205310&segment_id=105618&te=1&user_id=ab779d583d4e870f155a79ea10801995 
+
+https://fhcm.paris/en/paris-fashion-week-en/ 
+
+https://www.thearmoryshow.com/partners/media-partners (grid layout)

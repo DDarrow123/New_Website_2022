@@ -1,0 +1,58 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    //height: 100vw;
+    width: 100%;
+    gap: 50px;
+
+    &__intro {
+        margin: 150px 0 20px 0;
+        flex-basis: 50%;
+        font-family: $roboto-condensed;
+        font-weight: 600;
+        font-size: 30px;
+        letter-spacing: 3px;
+
+    }
+
+    &__name-wrapper {
+        flex-basis: 50%;
+        position: relative;
+    }
+
+    &__name {
+        font-family: $roboto-condensed;
+        position: absolute;
+        top: 50%;
+        color: $base-white-color;
+        font-size: 24px;
+        left: 15px;
+        letter-spacing: 1px;
+    }
+
+    &__tagline {
+        font-family: $roboto-condensed;
+        background-color: rgba(141, 141, 141, 0.1);
+        height: 150px;
+        position: relative;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    &__job-type {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+
+    }
+}
