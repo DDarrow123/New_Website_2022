@@ -3,18 +3,52 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    //height: 100vw;
     width: 100%;
-    gap: 50px;
 
     &__intro {
-        margin: 150px 0 20px 0;
+        margin: 150px 0 60px 0;
         flex-basis: 50%;
         font-family: $roboto-condensed;
-        font-weight: 600;
-        font-size: 30px;
+        font-weight: 900;
+        font-size: 36px;
         letter-spacing: 3px;
+        position: relative;
 
+        &:after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            bottom: -4px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            width: 48%;
+            background: rgba(141, 141, 141, 0.3);
+
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        &:hover:after {
+            width: 80%;
+        }
+
+        @media screen and (min-width: 600px) {
+            font-size: 46px;
+        }
+    }
+
+    &__welcome-info {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 960px) {
+            flex-direction: row;
+            padding: 0 20px 15px 20px;
+        }
     }
 
     &__name-wrapper {
@@ -23,13 +57,18 @@
     }
 
     &__name {
-        font-family: $roboto-condensed;
+        width: 100%;
+        font-family: $roboto-font;
         position: absolute;
         top: 50%;
         color: $base-white-color;
-        font-size: 24px;
-        left: 15px;
+        font-size: 28px;
         letter-spacing: 1px;
+        text-align: center;
+
+        @media screen and (min-width: 600px) {
+            font-size: 48px;
+        }
     }
 
     &__tagline {
@@ -39,15 +78,51 @@
         position: relative;
         width: 100%;
         letter-spacing: 1px;
+        margin-top: -5px;
+
+        @media screen and (min-width: 960px) {
+            flex-basis: 50%;
+            height: auto;
+            margin-top: 0;
+        }
     }
 
     &__job-type {
         position: absolute;
-        top: 50%;
+        top: 30%;
         text-align: center;
         width: 100%;
-        font-weight: 600;
-        font-size: 18px;
+        font-weight: 400;
+        font-size: 20px;
+
+        @media screen and (min-width: 600px) {
+            top: 20%;
+            font-size: 3vh;
+        }
+
+        @media screen and (min-width: 960px) {
+            top: 45%;
+            font-size: 4vh;
+        }
+    }
+
+    &__job-location {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        text-align: center;
+
+        @media screen and (min-width: 600px) {
+            top: 54%;
+            font-size: 20px;
+
+        }
+
+        @media screen and (min-width: 960px) {
+            top: 58%;
+            font-size: 20px;
+
+        }
     }
 
     &__image {

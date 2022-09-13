@@ -1,7 +1,15 @@
 .bm-burger-button {
+    position: fixed;
     width: 60px;
     height: auto;
+    left: 15px;
+    top: 36px;
+
+    & button:focus {
+        outline: none;
+    }
 }
+
 
 
 
