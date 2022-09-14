@@ -52,7 +52,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <>
+      <div key={'contact'}>
         <header className="App-header">
           <div className="general-btn-container">
             <img
@@ -155,7 +155,7 @@ class Contact extends Component {
             </form>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

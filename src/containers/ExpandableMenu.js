@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { IconContext } from "react-icons";
-import { VscMenu } from "react-icons/vsc";
+import { VscMenu, VscClose } from "react-icons/vsc";
 // import { TweenMax, Elastic, TimelineMax } from "gsap";
 // import noun_circle from "../assets/images/noun_circle.svg";
 import { slide as Menu } from "react-burger-menu";
@@ -15,87 +14,100 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Work from "../components/Work";
 
+// To-Do: Fix key issue
+
 const ExpandableMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
-
-  const handleStateChange = () => {
-    setMenuOpen(true);
-    console.log('after open:', menuOpen);
-  };
-
   const closeMenu = () => {
     setMenuOpen(false);
-    console.log('after close:', menuOpen);
   };
 
-  console.log(menuOpen);
+  const handleOnOpen = () => {
+    const burgerIcon = document.querySelector('.bm-burger-button');
+    burgerIcon.style = 'z-index: 0';
+    setMenuOpen(true);
+    console.log('burger icon', burgerIcon);
+    console.log('what is the state?', menuOpen);
+
+  }
+
+  const handleOnClose = () => {
+    const burgerIcon = document.querySelector('.bm-burger-button');
+    burgerIcon.style = 'z-index: 1000';
+    setMenuOpen(false);
+    console.log('what is the state?', menuOpen);
+  }
+
   return (
     <Router>
       <div>
         <div>
           <Menu
             isOpen={menuOpen}
-            onStateChange={handleStateChange}
+            onOpen={handleOnOpen}
+            onClose={handleOnClose}
             customBurgerIcon={<div>
               <IconContext.Provider
-                value={{ color: "#000000", className: "react-icon", size: 60 }}
+                value={{ color: "#000000", className: "react-icon", size: 40 }}
               >
                 <VscMenu />
               </IconContext.Provider>
             </div>}
+            customCrossIcon={
+              <div onClick={closeMenu}>
+                <IconContext.Provider
+                  value={{ color: "#000000", className: "react-icon", size: 40 }}
+                >
+                  <VscClose />
+                </IconContext.Provider>
+              </div>
+            }
             className='bm-icon'
           >
-            <Link
+            <a
               className="menu-item"
-              to="/"
-              onClose={closeMenu}
+              href="/"
               key={1}
             >
               Home
-            </Link>
-            <Link
+            </a>
+            <a
               className="menu-item"
-              to="/about"
-              onClose={closeMenu}
+              href="/about"
               key={2}
             >
               About
-            </Link>
-            <Link
+            </a>
+            <a
               className="menu-item"
-              to="/contact"
-              onClose={closeMenu}
+              href="/contact"
               key={3}
             >
               Contact
-            </Link>
-            <Link
+            </a>
+            <a
               className="menu-item"
-              to="/work"
-              onClose={closeMenu}
+              href="/work"
               key={4}
             >
               Work
-            </Link>
+            </a>
           </Menu>
         </div>
 
         <Switch>
           <Route path="/about">
-            <About />
+            <About onClick={closeMenu} />
           </Route>
           <Route path="/contact">
-            <Contact />
+            <Contact onClick={closeMenu} />
           </Route>
           <Route path="/work">
-            <Work />
+            <Work onClick={closeMenu} />
           </Route>
           <Route path="/">
-            <Home />
+            <Home onClick={closeMenu} />
           </Route>
         </Switch>
       </div>

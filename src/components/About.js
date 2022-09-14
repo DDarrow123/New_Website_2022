@@ -23,7 +23,7 @@ class About extends Component {
 
   render() {
     return (
-      <>
+      <div key={'about'}>
         <header className="App-header">
           <div className="general-btn-container">
             <img
@@ -73,7 +73,7 @@ class About extends Component {
             same time as building progressive applications and projects.
           </p>
         </div>
-      </>
+      </div>
     );
   }
 }

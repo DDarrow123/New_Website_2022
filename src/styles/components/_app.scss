@@ -1,12 +1,10 @@
 @import '../utils/core-utils';
 @import url("https://fonts.googleapis.com/css?family=Bevan");
-@import url("https://fonts.googleapis.com/css?family=Poller+One");
 @import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Six+Caps");
 @import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-// font-family: "Alfa Slab One", cursive;
-// font-family: 'Cormorant Garamond', serif;
-// font-family: 'Work Sans', sans-serif;
+
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Condensed', sans-serif;
 
@@ -32,59 +30,6 @@
     @include straight-column;
     justify-content: center;
     // display: block;
-  }
-}
-
-////BURGER MENU STYLING////
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-
-  & button:focus {
-    outline: none;
-  }
-}
-
-.bm-cross {
-  background: #bdc3c7;
-}
-
-.bm-burger-bars {
-  background: #373a47;
-
-  &-hover {
-    background: #cc201a;
-  }
-}
-
-////MENU STYLING////
-
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* WRAPPER FOR ITEM LIST */
-
-.bm-item-list {
-  background: rgba(0, 0, 0, 0.2);
-  margin-top: 2em;
-  color: #b8b7ad;
-  padding: 4em;
-  @include straight-column;
-  align-items: center;
-
-  .bm-item {
-    font-family: $carrois-font;
-    letter-spacing: 5px;
-    padding: 20px;
-    color: white;
-    text-decoration: none;
-    outline: none;
-
-    &:hover {
-      text-decoration: underline white;
-    }
   }
 }
 

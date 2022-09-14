@@ -27,7 +27,7 @@ class Work extends Component {
 
   render() {
     return (
-      <>
+      <div key={'work'}>
         <header className="App-header">
           <div className="general-btn-container">
             <img
@@ -144,7 +144,7 @@ class Work extends Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
