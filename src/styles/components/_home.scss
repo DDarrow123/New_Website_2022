@@ -63,10 +63,8 @@
 }
 
 .greeting {
-    // margin-top: 60px;
-    // margin-bottom: 40px;
     padding-top: 60px;
-    height: 75px;
+    height: 60px;
     width: 100%;
     font-family: "Roboto", sans-serif;
     font-size: 26px;
@@ -76,6 +74,7 @@
 
     @media screen and (min-width: 600px) {
         font-size: 42px;
+        height: 75px;
 
     }
 }
@@ -85,20 +84,19 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    // margin-top: 40px;
 
     @media screen and (min-width: 600px) {
         // height: 0;
     }
 
-    &__intro {
+    &__intro-mobile {
         margin: 40px 0 60px 0;
-        flex-basis: 50%;
         font-family: $roboto-condensed;
         font-weight: 400;
         font-size: 26px;
         letter-spacing: 3px;
         position: relative;
+        text-align: center;
 
         &:after {
             position: absolute;
@@ -108,7 +106,7 @@
             margin: 0 auto;
             left: 0;
             right: 0;
-            width: 48%;
+            width: 10%;
             background: rgba(141, 141, 141, 0.3);
 
             -o-transition: .5s;
@@ -119,19 +117,63 @@
         }
 
         &:hover:after {
-            width: 80%;
+            width: 20%;
         }
 
         &:hover {
             cursor: pointer;
         }
 
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 960px) {
+            display: none;
+        }
+    }
+
+    &__intro-desktop {
+        display: none;
+
+        @media screen and (min-width: 960px) {
+            display: block;
             font-size: 35px;
+            text-align: none;
+            flex-basis: 50%;
+
+            margin: 40px 0 60px 0;
+            font-family: $roboto-condensed;
+            font-weight: 400;
+            letter-spacing: 3px;
+            position: relative;
+            text-align: center;
 
             &:after {
-                // bottom: -4px;
+                width: 45%;
+                position: absolute;
+                content: '';
+                height: 3px;
+                bottom: 0;
+                top: 46px;
 
+                height: 3px;
+                bottom: -6px;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                width: 45%;
+                background: rgba(141, 141, 141, 0.3);
+
+                -o-transition: .5s;
+                -ms-transition: .5s;
+                -moz-transition: .5s;
+                -webkit-transition: .5s;
+                transition: .5s;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
     }
@@ -139,6 +181,7 @@
     &__welcome-info {
         display: flex;
         flex-direction: column;
+        height: 100vh;
 
         @media screen and (min-width: 960px) {
             flex-direction: row;
@@ -206,7 +249,7 @@
 
         &:hover {
             cursor: pointer;
-            font-size: 36px;
+            font-size: 30px;
         }
 
         @media screen and (min-width: 600px) {
@@ -231,6 +274,11 @@
         width: 100%;
         text-align: center;
         transition: all .5s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            font-size: 20px;
+        }
 
         @media screen and (min-width: 600px) {
             top: 54%;

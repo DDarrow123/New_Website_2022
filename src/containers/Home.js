@@ -35,8 +35,9 @@ const Home = () => {
                         <span className='home__job-location'>New York <span className='home__divider'></span> Paris</span>
                     </div>
                     {/* <div className='home__social'>Social</div> */}
+                    <div className='home__intro-mobile'>Welcome</div>
                 </div>
-                <div className='home__intro'>Welcome</div>
+                <div className='home__intro-desktop'>Welcome</div>
             </div>
         </div>
     )
