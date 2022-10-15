@@ -1,0 +1,141 @@
+//// WORK PAGE ////
+
+.work-container {
+
+}
+
+.left-work-bar {
+    width: 100%;
+    // background-color: rgb(207, 207, 207);
+  
+    @include bp(middle-sz) {
+    //   width: 40%;
+    }
+  
+    @include bp(small-sz) {
+    //   width: 40%;
+    }
+  
+    .work-overlay {
+    //   background-color: rgba(141, 134, 141, 0.3);
+      height: 600px;
+  
+      @include bp(middle-sz) {
+        // height: 100vh;
+      }
+  
+      .work-title {
+        display: flex;
+        font-weight: lighter;
+        justify-content: center;
+        font-family: $roboto-condensed;
+
+        @include bp(small-sz) {
+            font-size: 12vw;
+          //   padding-top: 100px;
+          }
+  
+        @include bp(middle-sz) {
+          font-size: 14vw;
+        //   padding-top: 100px;
+        }
+      }
+    }
+  }
+  
+//   .right-work-bar {
+//     width: 70%;
+//     background-color: #8d868d;
+//     display: flex;
+  
+//     @include bp(middle-sz) {
+//       width: 60%;
+//     }
+  
+//     @include bp(small-sz) {
+//       width: 60%;
+//     }
+    
+//     .right-container {
+//         display: flex;
+//         flex-direction: column;
+//         min-height: 100%;
+
+//         .project-title {
+//         margin: 10% 0 0 0;
+//         flex: 1;
+
+//         @include bp(middle-sz) {
+//             margin: 0 0 0 0;
+//         }
+
+//         .project-container {
+
+//             @include straight-row;
+
+//             @include bp(middle-sz) {
+//             @include straight-column;
+//             align-items: center;
+//             }
+
+//             .work-name {
+//             margin-top: 10px;
+//             @include work-project-name;
+
+//             @include bp(middle-sz) {
+//                 margin-top: 20px;
+//             }
+
+//             @include bp(small-sz) {
+//                 @include responsive-wrk-prjt-name;
+//             }
+//             }
+
+//             .card {
+//             margin-top: 10px;
+
+//             @include card-style;
+
+//             @include bp(small-sz) {
+//                 @include responsive-card-style;
+//             }
+
+//             }
+//         }
+//         }
+    
+        .implementation-container {
+          @include straight-row;
+
+        //   @include bp(middle-sz) {
+            // @include straight-column;
+            // margin-right: 0;
+            align-items: center;
+            min-height: 100%;
+            width: 100%;
+            justify-content: center;
+        }
+    
+//             .work-name {
+//               @include work-project-name;
+    
+//               @include bp(middle-sz) {
+//                 margin-top: 20px;
+//               }
+    
+//               @include bp(small-sz) {
+//                 @include responsive-wrk-prjt-name;
+//               }
+//             }
+    
+//             .card {
+//             margin-top: 10px;
+//             @include card-style;
+    
+//             @include bp(small-sz) {
+//                 @include responsive-card-style;
+//             }
+//             }
+//         }
+//     }
+//   }

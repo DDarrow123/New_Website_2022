@@ -181,7 +181,7 @@
     &__welcome-info {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        // height: 100vh;
 
         @media screen and (min-width: 960px) {
             flex-direction: row;
