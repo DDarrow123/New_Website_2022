@@ -38,15 +38,6 @@
     }
 }
 
-.general-btn-container {
-    @include button-container;
-
-    @include bp(middle-sz) {
-        justify-content: center;
-        margin-left: 65vw;
-    }
-}
-
 .welcome-container {
     @include straight-row;
     margin-top: 5em;

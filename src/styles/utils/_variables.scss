@@ -4,7 +4,12 @@ $roboto-font: 'Roboto', sans-serif;
 $roboto-condensed: 'Roboto Condensed', sans-serif;
 $roboto-slab: 'Roboto Slab', serif;
 
-
 // Base color defaults
-$base-white-color: #ffffff;
+$base-white-color: #fff;
 $base-text-color: #111;
+
+// Border
+$border-color: #d8d8d8 !default;
+$border-color-2: #dceaec !default;
+$border: 1px solid $border-color !default;
+$border-2: 1px solid $border-color-2 !default;

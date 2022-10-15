@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Scrollbar } from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/modules/scrollbar/scrollbar.scss';
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
 import line_img from "../assets/images/line_img.jpg";
 import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
+import gallery_img from "../assets/images/gallery_img.png";
+import festival_img from "../assets/images/festival_img.png";
+import bi_logo from "../assets/images/bi_logo.jpg";
+import georges_malher from "../assets/images/georges-malher-unsplash.jpg";
 
 const lettersArray = ["W", "O", "R", "K"];
 
@@ -21,7 +29,7 @@ class Work extends Component {
   render() {
     return (
       <div key={'work'}>
-        <header className="App-header">
+        <header className="App-header top-header">
           <div className="general-btn-container">
             <img
               className="site-btn"
@@ -42,13 +50,7 @@ class Work extends Component {
               onClick={() => this.tl.reverse()}
             />
           </div>
-          <h3 className="name-title">
-            <img 
-              className="welcome-line-img" 
-              src={line_img} 
-              alt="" />
-            Devon Darrow
-          </h3>
+          <div className='top-header__name'>Devon Darrow</div>
         </header>
         <div className="work-container">
           <div className="left-work-bar">
@@ -64,45 +66,70 @@ class Work extends Component {
                 ))}
               </div>
             </div>
+            <div className="image-wrapper">
+              <img
+              className="work-image" 
+              src={ georges_malher } 
+              alt=""
+              />
+            </div>
           </div>
           <div className="right-work-bar">
-            <div className="right-container">
-              <div className="implementation-container">
-                  <div className="work-name">
-                    <span>1</span> Front-end work at Insider
-                    <div className="card card-background">
+            {/* <div className="right-container"> */}
+              {/* <div className="right-inner-container"> */}
+              <Swiper
+              //  modules={[ Scrollbar ]}
+               spaceBetween={30}
+               scrollbar={{ draggable: true }}
+               slidesPerView={1}
+               onSlideChange={() => console.log('slide change')}
+               onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide>                  
+                  <div className="card-wrapper">
+                    <div className="card">
                       <a
                         href="https://www.businessinsider.com"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {/* <img
+                        <img
                           className="work-logo" 
-                          src={ work_logo } 
+                          src={ bi_logo } 
                           alt=""
-                        /> */}
+                        />
                       </a>
                     </div>
+                    <div className="card-desc">
+                      {/* <span className="number">1</span> */}
+                      <span className="card-name-desc">Front-end work at Insider</span>
+                    </div>
                   </div>
-                  <div className="work-name">
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="card-wrapper">
                     {" "}
-                    <span>2</span> Festival Site
                     <div className="card">
                       <a
                         href="https://www.devondarrow.com/Example_2/index.html"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {/* <img 
+                        <img 
                           className="work-image" 
                           src={ festival_img } 
                           alt=""
-                        /> */}
+                        />
                       </a>
                     </div>
+                    <div className="card-desc">
+                      {/* <span className="number">2</span> */}
+                      <span className="card-name-desc">Festival Site</span>
+                    </div>
                   </div>
-                  <div className="work-name">
-                    <span>3</span> Gallery Site
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="card-wrapper">
                     <div className="card">
                       <a
                         href="https://www.devondarrow.com/Example_3"
@@ -110,23 +137,30 @@ class Work extends Component {
                         target="_blank"
                         alt=""
                       >
-                        {/* <img 
+                        <img 
                           src={ gallery_img }
                           alt="" 
-                        /> */}
+                        />
                       </a>
                     </div>
+                    <div className="card-desc">
+                      {/* <span className="number">3</span> */}
+                      <span className="card-name-desc">Gallery Site - Desktop</span>
+                    </div>
                   </div>
-                  <div className="project-title">
-                <div className="project-container">
-                <div className="work-name">
-                  {" "}
-                  <span>...</span> More work coming soon
-                </div>
-                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="card-wrapper">
+                    <div className="card">
+                    </div>
+                    <div className="card-desc">
+                      <span className="card-name-desc">More Work Coming Soon...</span>
+                    </div>
                   </div>
-              </div>
-            </div>  
+                </SwiperSlide>
+              </Swiper>
+              {/* </div> */}
+            {/* </div>   */}
           </div>
         </div>
       </div>

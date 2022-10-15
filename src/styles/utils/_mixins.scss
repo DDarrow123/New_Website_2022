@@ -35,78 +35,68 @@
   flex-direction: column;
 }
 
-@mixin card-style() {
-  width: 250px;
-  height: 250px;
-
-  img {
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    &.work-logo {
-      margin-left: 16px;
-    }
-    &:hover {
-      border: 5px solid #8a848a;
-    }
-  }
-}
-
-@mixin work-project-name() {
-  font-style: italic;
-  font-family: sans-serif;
-  color: white;
-  width: 36%;
-  font-size: 20px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: lighter;
-  letter-spacing: 0.1em;
-  text-align: center;
-  span {
-    color: #c9cfc6;
-    font-weight: 600;
-  }
-}
-
-@mixin button-container() {
-  @include flex-row;
-  margin-right: 15em;
-  height: 100px;
-  .site-btn {
-    @include animation-button;
-  }
-}
-
 ////MEDIA QUERIES////
 
-@mixin responsive-card-style() {
-  width: 100%;
-  height: 100%;
-  img {
-    height: 180px;
-    width: 160px;
-    &:hover {
-      border: 5px solid #8a848a;
-    }
+/* Grid breakpoints
+ *
+ * Define the minimum and maximum dimensions
+ * where the layout will change, adapting to
+ * different screen sizes, for use in media queries.
+*/
+
+$grid-breakpoints: (
+  sm: 0,
+  sm-max: 599px,
+  md: 600px,
+  md-max: 959px,
+  lg: 960px,
+  lg-max: 1259px,
+  xl: 1260px
+);
+
+// Actual container widths
+// $container-max-widths: (
+//   md: 959px,
+//   lg: 960px,
+//   xl: 1260px
+// );
+
+// Breakpoint mins
+$screen-sm-min: map-get($grid-breakpoints, sm);
+$screen-md-min: map-get($grid-breakpoints, md);
+$screen-lg-min: map-get($grid-breakpoints, lg);
+$screen-xl-min: map-get($grid-breakpoints, xl);
+
+// Breakpoint maxes
+$screen-sm-max: map-get($grid-breakpoints, sm-max);
+$screen-md-max: map-get($grid-breakpoints, md-max);
+$screen-lg-max: map-get($grid-breakpoints, lg-max);
+
+@mixin breakpoint-small {
+  @media (min-width: $screen-sm-min) {
+    @content;
   }
 }
 
-@mixin responsive-wrk-prjt-name() {
-  font-style: italic;
-  font-family: sans-serif;
-  color: white;
-  width: 100%;
-  font-size: 18px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: lighter;
-  letter-spacing: 0.3em;
-  flex: 1;
-  span {
-    color: #c9cfc6;
-    font-weight: 600;
+@mixin breakpoint-medium {
+  @media (min-width: $screen-md-min) {
+    @content;
   }
 }
 
+@mixin breakpoint-large {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xlarge {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+// Need to depreciate these
 @mixin bp($point) {
   @if $point == small-sz {
     @media (max-width: 700px) {

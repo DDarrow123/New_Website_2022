@@ -5,137 +5,103 @@
 }
 
 .left-work-bar {
+    padding-top: 200px;
     width: 100%;
-    // background-color: rgb(207, 207, 207);
-  
-    @include bp(middle-sz) {
-    //   width: 40%;
-    }
-  
-    @include bp(small-sz) {
-    //   width: 40%;
-    }
-  
-    .work-overlay {
-    //   background-color: rgba(141, 134, 141, 0.3);
-      height: 600px;
-  
-      @include bp(middle-sz) {
-        // height: 100vh;
-      }
-  
-      .work-title {
-        display: flex;
-        font-weight: lighter;
-        justify-content: center;
-        font-family: $roboto-condensed;
+}
 
-        @include bp(small-sz) {
-            font-size: 12vw;
-          //   padding-top: 100px;
-          }
+.work-overlay {
+    position: absolute;
+    z-index: 1;
+    color: $base-white-color;
   
-        @include bp(middle-sz) {
-          font-size: 14vw;
-        //   padding-top: 100px;
-        }
-      }
-    }
+  .work-title {
+    margin: 15px 0 0 15px;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    font-family: $roboto-condensed;
+    font-size: 9vw;
   }
-  
-//   .right-work-bar {
-//     width: 70%;
-//     background-color: #8d868d;
-//     display: flex;
-  
-//     @include bp(middle-sz) {
-//       width: 60%;
-//     }
-  
-//     @include bp(small-sz) {
-//       width: 60%;
-//     }
+}
+
+.image-wrapper {
+    height: 600px;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-medium {
+        margin-top: 20px;
+    }
+
+    &:last-child {
+        :after {
+            background: white;
+        } 
+    }
+}
+
+.card-desc {
+    height: 50px;
+    font-style: italic;
+    color: $base-white-color;
+    font-size: 12px;
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 20px;
+
+    .number {
+        color: #c9cfc6;
+        font-weight: 600;
+    }
+}
+
+.card-name-desc {
+    font-size: 20px;
+    color: $base-text-color;
+}
+
+.card {
+    margin-top: 10px;
+    width: auto;
+    height: 150px;
     
-//     .right-container {
-//         display: flex;
-//         flex-direction: column;
-//         min-height: 100%;
+    img {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+    }
 
-//         .project-title {
-//         margin: 10% 0 0 0;
-//         flex: 1;
+    @include breakpoint-medium {
+        height: 250px;
+    }
+}
 
-//         @include bp(middle-sz) {
-//             margin: 0 0 0 0;
-//         }
+.swiper-slide {
+    &:after {
+        content: " ";
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        left: 51%;
+        transform: rotate(90deg);
+        background: red;
+        top: 75%;
+    }
+}
 
-//         .project-container {
-
-//             @include straight-row;
-
-//             @include bp(middle-sz) {
-//             @include straight-column;
-//             align-items: center;
-//             }
-
-//             .work-name {
-//             margin-top: 10px;
-//             @include work-project-name;
-
-//             @include bp(middle-sz) {
-//                 margin-top: 20px;
-//             }
-
-//             @include bp(small-sz) {
-//                 @include responsive-wrk-prjt-name;
-//             }
-//             }
-
-//             .card {
-//             margin-top: 10px;
-
-//             @include card-style;
-
-//             @include bp(small-sz) {
-//                 @include responsive-card-style;
-//             }
-
-//             }
-//         }
-//         }
-    
-        .implementation-container {
-          @include straight-row;
-
-        //   @include bp(middle-sz) {
-            // @include straight-column;
-            // margin-right: 0;
-            align-items: center;
-            min-height: 100%;
-            width: 100%;
-            justify-content: center;
-        }
-    
-//             .work-name {
-//               @include work-project-name;
-    
-//               @include bp(middle-sz) {
-//                 margin-top: 20px;
-//               }
-    
-//               @include bp(small-sz) {
-//                 @include responsive-wrk-prjt-name;
-//               }
-//             }
-    
-//             .card {
-//             margin-top: 10px;
-//             @include card-style;
-    
-//             @include bp(small-sz) {
-//                 @include responsive-card-style;
-//             }
-//             }
-//         }
-//     }
-//   }
+// .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+//     position: relative;
+// }

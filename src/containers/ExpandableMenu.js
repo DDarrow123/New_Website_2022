@@ -15,7 +15,6 @@ import Contact from "../components/Contact";
 import Work from "../components/Work";
 
 // To-Do: Fix key issue
-
 const ExpandableMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,8 +26,8 @@ const ExpandableMenu = () => {
     const burgerIcon = document.querySelector('.bm-burger-button');
     burgerIcon.style = 'z-index: 0';
     setMenuOpen(true);
-    console.log('burger icon', burgerIcon);
-    console.log('what is the state?', menuOpen);
+    // console.log('burger icon', burgerIcon);
+    // console.log('what is the state?', menuOpen);
 
   }
 
@@ -36,7 +35,7 @@ const ExpandableMenu = () => {
     const burgerIcon = document.querySelector('.bm-burger-button');
     burgerIcon.style = 'z-index: 1000';
     setMenuOpen(false);
-    console.log('what is the state?', menuOpen);
+    // console.log('what is the state?', menuOpen);
   }
 
   return (

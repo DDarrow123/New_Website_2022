@@ -18,26 +18,7 @@
   @include flex-row;
 }
 
-.App-header {
-  background-color: white;
-  min-height: 18vh;
-  @include flex-row;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-
-  @include bp(middle-sz) {
-    @include straight-column;
-    justify-content: center;
-    // display: block;
-  }
-}
-
 ///// ABOUT PAGE /////
-
-.general-btn-container {
-  @include button-container;
-}
 
 .about-title {
   font-weight: 200;
