@@ -31,15 +31,15 @@ class Contact extends Component {
     };
   }
 
-  componentDidMount() {
-    this.tl.to(this.loaderWrap, 1, {
-      x: "140%",
-      ease: Expo.easeInOut,
-      onComplete: () => {
-        TweenLite.to(this.toggleBtn, 0.2, { autoAlpha: 1 });
-      }
-    });
-  }
+  // componentDidMount() {
+  //   this.tl.to(this.loaderWrap, 1, {
+  //     x: "140%",
+  //     ease: Expo.easeInOut,
+  //     onComplete: () => {
+  //       TweenLite.to(this.toggleBtn, 0.2, { autoAlpha: 1 });
+  //     }
+  //   });
+  // }
 
   handleInputChange = event => {
     const target = event.target;
@@ -53,8 +53,8 @@ class Contact extends Component {
   render() {
     return (
       <div key={'contact'}>
-        <header className="App-header">
-          <div className="general-btn-container">
+        <header className="App-header top-header">
+          {/* <div className="general-btn-container">
             <img
               className="site-btn"
               src={play_icon}
@@ -73,19 +73,17 @@ class Contact extends Component {
               ref={e => (this.toggleBtn = e)}
               onClick={() => this.tl.reverse()}
             />
-          </div>
-          <h3 className="name-title">
-            <img className="welcome-line-img" src={line_img} alt="line image" />
-            Devon Darrow
-          </h3>
+          </div> */}
+          <div className='top-header__name'>Devon Darrow</div>
         </header>
         <div className="split-page-container">
           <div className="left-contact-bar">
-            <div ref={div => (this.loaderWrap = div)} className="contact-title">
+            {/* <div ref={div => (this.loaderWrap = div)} className="contact-title">
               CONTACT
-            </div>
+            </div> */}
           </div>
           <div className="right-contact-bar">
+            <div className="contact-title">Contact</div>
             <form
               method="post"
               action="https://formspree.io/ddarrow.work@gmail.com"

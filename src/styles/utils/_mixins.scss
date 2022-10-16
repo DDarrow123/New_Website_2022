@@ -2,9 +2,11 @@
   width: 35px;
   margin: 0.5em 1em 0 0;
   font-weight: bold;
+
   &:hover {
     cursor: crosshair;
   }
+
   &:focus,
    input:focus {
     outline: none;
@@ -96,7 +98,7 @@ $screen-lg-max: map-get($grid-breakpoints, lg-max);
   }
 }
 
-// Need to depreciate these
+// TO-DO: Need to depreciate these
 @mixin bp($point) {
   @if $point == small-sz {
     @media (max-width: 700px) {

@@ -68,7 +68,7 @@
     font-size: calc(10px + 2vmin);
     color: black;
     @include straight-column;
-  }
+}
 
 .general-btn-container {
     @include flex-row;
@@ -77,8 +77,4 @@
     .site-btn {
         @include animation-button;
       }
-
-    // @include breakpoint-medium {
-    //     margin-left: 65vw;
-    // }
 }

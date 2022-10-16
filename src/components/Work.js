@@ -11,6 +11,7 @@ import gallery_img from "../assets/images/deniz-demirci-2-unsplash.jpg";
 import festival_img from "../assets/images/aditya-ghosh-unsplash.jpg";
 import new_york from "../assets/images/anton-sjolander-unsplash.jpg";
 import georges_malher from "../assets/images/georges-malher-unsplash.jpg";
+import future from "../assets/images/ally-griffin-unsplash.jpg"
 
 const lettersArray = ["W", "O", "R", "K"];
 
@@ -160,6 +161,11 @@ class Work extends Component {
                 <SwiperSlide>
                 <div className="card-wrapper">
                     <div className="card">
+                      <img
+                        className="work-logo" 
+                        src={ future } 
+                        alt=""
+                      />
                     </div>
                     <div className="card-desc">
                       <span className="card-name-desc">More Work Coming Soon...</span>

@@ -17,61 +17,65 @@ class About extends Component {
   }
 
   componentDidMount() {
-    this.tl.staggerTo(this.letters, 0.5, { y: 250, autoAlpha: 1 }, 0.2);
+    this.tl.staggerTo(this.letters, 0.5, { y: 250, autoAlpha: 0.7 }, 0.2);
     //0.2 in this case is the delay between each letter animation
   }
 
   render() {
     return (
       <div key={'about'}>
-        <header className="App-header">
+        <header className="App-header top-header">
           <div className="general-btn-container">
             <img
               className="site-btn"
               src={play_icon}
               onClick={() => this.tl.play()}
+              alt=""
             />
             <img
               className="site-btn"
               src={pause_icon}
               onClick={() => this.tl.pause()}
+              alt=""
             />
             <img
               className="site-btn"
               src={restart_icon}
               onClick={() => this.tl.reverse()}
+              alt=""
             />
           </div>
-          <h3 className="name-title">
-            <img className="welcome-line-img" src={line_img} alt="line image" />
-            Devon Darrow
-          </h3>
+          <div className='top-header__name'>Devon Darrow</div>
         </header>
-        <div className="about-title">
-          {lettersArray.map((element, index) => (
-            <div key={element.id} ref={div => (this.letters[index] = div)}>
-              {element}
+        <div className="about-wrapper">
+          <div className="about-content">
+           <div className="about-image-wrapper">
+            <div className="about-title">
+              {lettersArray.map((element, index) => (
+                <div key={element.id} ref={div => (this.letters[index] = div)}>
+                  {element}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="about-container">
-          <img
-            className="profile-img"
-            src={small_flower_img}
-            alt="Small flower image"
-          />
-          <p className="about-para">
-            I am a web developer passionate about making dynamic front end
-            applications. I discovered web development through a love of Excel
-            and exposure to beautiful digital design while at an established
-            company with a large ecommerce presence.
-            <br />
-            <br />
-            On my journey with code, I gained experience in JavaScript, React,
-            Redux, Ruby, and Ruby on Rails. With my technical skills and drive,
-            I am dedicated to representing women in the tech industry at the
-            same time as building progressive applications and projects.
-          </p>
+            <img
+              className="profile-img"
+              src={devon_img}
+              alt=""
+            />
+           </div>
+           <div className="about-para">
+                <div className="about-para-wrapper">
+                  <span className="highlight">A web developer</span> passionate about making dynamic, beautiful front-end
+                  applications and features. J'aime beaucoup digital design, art, fasion, travel & media.
+                  <br />
+                  <br />
+                   Resident of fabulous New York the last 6 years.
+                  <br />
+                  <br />
+                  Currently chasing new adventures in glorious Paris with mon petit chien Raf et mon fiancé Charles. 
+                </div>
+           </div>
+          </div>
         </div>
       </div>
     );

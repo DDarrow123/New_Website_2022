@@ -21,10 +21,6 @@
     align-items: center;
     width: 100%;
 
-    @media screen and (min-width: 600px) {
-        // height: 0;
-    }
-
     &__intro-mobile {
         margin: 40px 0 60px 0;
         font-family: $roboto-condensed;
@@ -117,7 +113,6 @@
     &__welcome-info {
         display: flex;
         flex-direction: column;
-        // height: 100vh;
 
         @media screen and (min-width: 960px) {
             flex-direction: row;
@@ -160,7 +155,7 @@
 
     &__tagline {
         font-family: $roboto-condensed;
-        background-color: rgba(141, 141, 141, 0.1);
+        background-color: $base-background-color;
         height: 200px;
         position: relative;
         width: 100%;
