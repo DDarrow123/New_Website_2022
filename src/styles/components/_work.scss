@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.right-work-bar {
+    margin-top: 20px;
+}
+
 .work-overlay {
     position: absolute;
     z-index: 1;
@@ -35,10 +39,11 @@
 }
 
 .card-wrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: gre;
 
     @include breakpoint-medium {
         margin-top: 20px;
@@ -59,7 +64,7 @@
     font-family: "Roboto Condensed", sans-serif;
     letter-spacing: 0.1em;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0;
 
     .number {
         color: #c9cfc6;
@@ -90,18 +95,35 @@
 
 .swiper-slide {
     &:after {
-        content: " ";
+        // content: " ";
         display: block;
-        height: 3px;
+        height: 1px;
         width: 100%;
         position: absolute;
-        left: 51%;
+        left: 49%;
         transform: rotate(90deg);
-        background: red;
+        background: $border-color;
         top: 75%;
+    }
+
+    &:first-child {
+        &:before {
+            // content: " ";
+            display: block;
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            right: 50%;
+            transform: rotate(90deg);
+            background: $base-red-color;
+            top: 75%;
+        }
+
     }
 }
 
-// .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-//     position: relative;
-// }
+.right-work-bar {
+    & .swiper-pagination-bullet-active {
+        background-color: $base-red-color;
+    }
+}

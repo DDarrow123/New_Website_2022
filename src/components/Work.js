@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper';
+import { Pagination } from 'swiper';
 import 'swiper/swiper.scss';
-import 'swiper/modules/scrollbar/scrollbar.scss';
+import 'swiper/modules/pagination/pagination.scss';
 import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
-import line_img from "../assets/images/line_img.jpg";
 import play_icon from "../assets/images/play_icon.svg";
 import restart_icon from "../assets/images/restart_icon.svg";
 import pause_icon from "../assets/images/pause_icon.svg";
-import gallery_img from "../assets/images/gallery_img.png";
-import festival_img from "../assets/images/festival_img.png";
-import bi_logo from "../assets/images/bi_logo.jpg";
+import gallery_img from "../assets/images/deniz-demirci-2-unsplash.jpg";
+import festival_img from "../assets/images/aditya-ghosh-unsplash.jpg";
+import new_york from "../assets/images/anton-sjolander-unsplash.jpg";
 import georges_malher from "../assets/images/georges-malher-unsplash.jpg";
 
 const lettersArray = ["W", "O", "R", "K"];
@@ -75,13 +74,25 @@ class Work extends Component {
             </div>
           </div>
           <div className="right-work-bar">
-            {/* <div className="right-container"> */}
-              {/* <div className="right-inner-container"> */}
               <Swiper
-              //  modules={[ Scrollbar ]}
+               modules={[ Pagination ]}
                spaceBetween={30}
-               scrollbar={{ draggable: true }}
+               pagination={{ clickable: true }}
                slidesPerView={1}
+               breakpoints={{
+                600: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                960: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1260: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+              }}
                onSlideChange={() => console.log('slide change')}
                onSwiper={(swiper) => console.log(swiper)}
               >
@@ -95,13 +106,12 @@ class Work extends Component {
                       >
                         <img
                           className="work-logo" 
-                          src={ bi_logo } 
+                          src={ new_york } 
                           alt=""
                         />
                       </a>
                     </div>
                     <div className="card-desc">
-                      {/* <span className="number">1</span> */}
                       <span className="card-name-desc">Front-end work at Insider</span>
                     </div>
                   </div>
@@ -123,7 +133,6 @@ class Work extends Component {
                       </a>
                     </div>
                     <div className="card-desc">
-                      {/* <span className="number">2</span> */}
                       <span className="card-name-desc">Festival Site</span>
                     </div>
                   </div>
@@ -144,7 +153,6 @@ class Work extends Component {
                       </a>
                     </div>
                     <div className="card-desc">
-                      {/* <span className="number">3</span> */}
                       <span className="card-name-desc">Gallery Site - Desktop</span>
                     </div>
                   </div>
@@ -159,8 +167,6 @@ class Work extends Component {
                   </div>
                 </SwiperSlide>
               </Swiper>
-              {/* </div> */}
-            {/* </div>   */}
           </div>
         </div>
       </div>
