@@ -48,7 +48,7 @@ const ExpandableMenu = () => {
             onClose={handleOnClose}
             customBurgerIcon={<div>
               <IconContext.Provider
-                value={{ color: "#000000", className: "react-icon", size: 40 }}
+                value={{ color: "#000", className: "react-icon", size: 40 }}
               >
                 <VscMenu />
               </IconContext.Provider>
@@ -56,7 +56,7 @@ const ExpandableMenu = () => {
             customCrossIcon={
               <div onClick={closeMenu}>
                 <IconContext.Provider
-                  value={{ color: "#000000", className: "react-icon", size: 40 }}
+                  value={{ color: "#ff0000", className: "react-icon", size: 40 }}
                 >
                   <VscClose />
                 </IconContext.Provider>

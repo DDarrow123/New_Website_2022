@@ -1,0 +1,156 @@
+// @font-face {
+//     font-family: LabGrotesque;
+//     src: url(/public/fonts/subset/LabGrotesque-Regular-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/LabGrotesque-Regular-subset.woff) format("woff");
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: LabGrotesque;
+//     src: url(/public/fonts/subset/LabGrotesque-Italic-subset.woff2)
+//     format("woff2"),
+//     url(/public/fonts/subset/LabGrotesque-Italic-subset.woff) format("woff");
+//     font-weight: 400;
+//     font-style: italic;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: LabGrotesque;
+//     src: url(/public/fonts/subset/LabGrotesque-Black-subset.woff2) format("woff2"),
+//       url(/public/fonts/subset/LabGrotesque-Black-subset.woff) format("woff");
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: LabGrotesque;
+//     src: url(/public/fonts/subset/LabGrotesque-BlackItalic-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/LabGrotesque-BlackItalic-subset.woff)
+//         format("woff");
+//     font-weight: 900;
+//     font-style: italic;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: TiemposTextWeb;
+//     src: url(/public/fonts/subset/TiemposTextWeb-Regular-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/TiemposTextWeb-Regular-subset.woff) format("woff");
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: TiemposTextWeb;
+//     src: url(/public/fonts/subset/TiemposTextWeb-RegularItalic-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/TiemposTextWeb-RegularItalic-subset.woff)
+//         format("woff");
+//     font-weight: 400;
+//     font-style: italic;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: TiemposTextWeb;
+//     src: url(/public/fonts/subset/TiemposTextWeb-Bold-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/TiemposTextWeb-Bold-subset.woff) format("woff");
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+  
+//   @font-face {
+//     font-family: TiemposTextWeb;
+//     src: url(/public/fonts/subset/TiemposTextWeb-BoldItalic-subset.woff2)
+//         format("woff2"),
+//       url(/public/fonts/subset/TiemposTextWeb-BoldItalic-subset.woff)
+//         format("woff");
+//     font-weight: 600;
+//     font-style: italic;
+//     font-display: swap;
+//   }
+  
+/**
+* Font-family declarations
+*/
+
+// .headline-regular /* utility class */ {
+// font-family: LabGrotesque, Helvetica, Arial, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+// }
+  
+/* Use these utility classes instead of element selectors */
+
+.headline {
+    font-family: Helvetica Neue, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .headline-bold /* utility class */  {
+    font-family: Helvetica Neue, serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .headline-bold-italic /* utility class */ {
+    font-family: LabGrotesque, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  .body-regular /* utility class */ {
+    font-family: TiemposTextWeb, Georgia, Times, serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+//   .typography .blockquote:not(.ignore-typography .blockquote) {
+//     font-family: TiemposTextWeb, Georgia, Times, serif;
+//     font-weight: 400;
+//     font-style: italic;
+//   }
+  
+  .headline-italic /* utility class */,
+  .body-italic {
+    font-family: LabGrotesque, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .body-bold /* utility class */ {
+    font-family: LabGrotesque, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .body-bold-italic /* utility class */ {
+    font-family: LabGrotesque, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

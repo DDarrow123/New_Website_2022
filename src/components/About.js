@@ -69,10 +69,10 @@ class About extends Component {
                   applications and features. J'aime beaucoup digital design, art, fasion, travel & media.
                   <br />
                   <br />
-                   Resident of fabulous New York the last 6 years.
+                   Resident of NYC the last 6 years
                   <br />
                   <br />
-                  Currently chasing new adventures in glorious Paris with mon petit chien Raf et mon fiancé Charles. 
+                  Currently chasing new adventures in glorious Paris with mon petit chien Raf et mon fiancé Charles 
                 </div>
            </div>
           </div>
