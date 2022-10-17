@@ -18,9 +18,9 @@ const Home = () => {
                         <span className='home__job-type'>Front-end web developer</span>
                         <span className='home__job-location'>NYC <span className='home__divider'></span> PARIS</span>
                     </div>
-                    <div className='home__intro-mobile'>Welcome</div>
+                    {/* <div className='home__intro-mobile'>Welcome</div> */}
                 </div>
-                <div className='home__intro-desktop'>Welcome</div>
+                {/* <div className='home__intro-desktop'>Welcome</div> */}
             </div>
         </div>
     )

@@ -53,7 +53,7 @@ class Contact extends Component {
   render() {
     return (
       <div key={'contact'}>
-        <header className="App-header top-header">
+        <header className="top-header">
           {/* <div className="general-btn-container">
             <img
               className="site-btn"
@@ -84,7 +84,7 @@ class Contact extends Component {
           </div>
           <div className="right-contact-bar">
             <div className="contact-title">Contact</div>
-            <form
+            {/* <form
               method="post"
               action="https://formspree.io/ddarrow.work@gmail.com"
               onSubmit={this.handleSubmit}
@@ -150,7 +150,7 @@ class Contact extends Component {
                   </a>
                 </div>
               </div>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>

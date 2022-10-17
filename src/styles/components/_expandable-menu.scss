@@ -97,12 +97,6 @@
     }
 }
 
-
-// .bm-morph-shape {
-//     fill: #7f071d;
-//     opacity: 0.8;
-// }
-
 /* STYLING OF OVERLAY */
 .bm-overlay {
     opacity: 1;
@@ -110,6 +104,8 @@
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: left bottom !important;
+    top: 0;
+    left: 0;
 }
 
 .bm-overlay .bm-burger-button {
