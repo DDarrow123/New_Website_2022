@@ -79,7 +79,7 @@ class Contact extends Component {
         </header>
         <div className="contact">
           <div className="contact-wrapper">
-            <div className="contact-title">Contact Me</div>
+            <div className="contact-title">Contact</div>
             <div className="contact-image-wrapper">
               <img 
                 className="image"
