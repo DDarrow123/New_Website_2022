@@ -5,7 +5,7 @@ Hello!
 
 My site is currently in progress... 
 
-## Inspiration around the web: 
+## Inspiration from around the web: 
 https://www.artsy.net/ 
 
 https://knr.paris/?utm_source=topinteraciveagencies.com&utm_medium=referral&utm_campaign=click 
