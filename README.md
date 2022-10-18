@@ -1,11 +1,11 @@
 
 # New_Website_2022
+ 
+Hello! 
 
-Essentially, I was unhappy with my static site and desperate to try out some SVG animations and GSAP animations with the beautiful library that is React along with Sass coupled in there for styling purposes. 
+My site is currently in progress... 
 
-This is my site in progress... 
-
-Inspiration: 
+## Inspiration around the web: 
 https://www.artsy.net/ 
 
 https://knr.paris/?utm_source=topinteraciveagencies.com&utm_medium=referral&utm_campaign=click 
@@ -26,4 +26,4 @@ https://aperture.org/70x70/?campaign_id=133&emc=edit_tmag_20220907&instance_id=7
 
 https://fhcm.paris/en/paris-fashion-week-en/ 
 
-https://www.thearmoryshow.com/partners/media-partners (grid layout)
+https://www.thearmoryshow.com/partners/media-partners
