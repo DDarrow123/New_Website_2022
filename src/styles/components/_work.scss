@@ -1,9 +1,5 @@
 //// WORK PAGE ////
 
-// .work-container {
-
-// }
-
 .left-work-bar {
     padding-top: 200px;
     width: 100%;
@@ -38,7 +34,7 @@
     object-fit: cover;
 }
 
-.card-wrapper {
+.carousel-item-wrapper {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -80,7 +76,8 @@
 .card {
     margin-top: 10px;
     width: auto;
-    height: 150px;
+    height: 200px;
+    border: 1px solid whitesmoke;
     
     img {
         height: 100%;
@@ -92,35 +89,6 @@
         height: 250px;
     }
 }
-
-// .swiper-slide {
-//     &:after {
-//         // content: " ";
-//         display: block;
-//         height: 1px;
-//         width: 100%;
-//         position: absolute;
-//         left: 49%;
-//         transform: rotate(90deg);
-//         background: $border-color;
-//         top: 75%;
-//     }
-
-//     &:first-child {
-//         &:before {
-//             // content: " ";
-//             display: block;
-//             height: 1px;
-//             width: 100%;
-//             position: absolute;
-//             right: 50%;
-//             transform: rotate(90deg);
-//             background: $base-red-color;
-//             top: 75%;
-//         }
-
-//     }
-// }
 
 .right-work-bar {
     & .swiper-pagination-bullet-active {

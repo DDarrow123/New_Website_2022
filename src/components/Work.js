@@ -8,13 +8,13 @@ import 'swiper/modules/pagination/pagination.scss';
 // import play_icon from "../assets/images/play_icon.svg";
 // import restart_icon from "../assets/images/restart_icon.svg";
 // import pause_icon from "../assets/images/pause_icon.svg";
-import gallery_img from "../assets/images/deniz-demirci-2-unsplash.jpg";
-import festival_img from "../assets/images/aditya-ghosh-unsplash.jpg";
+import gallery from "../assets/images/deniz-demirci-2-unsplash.jpg";
+import festival from "../assets/images/aditya-ghosh-unsplash.jpg";
 import new_york from "../assets/images/anton-sjolander-unsplash.jpg";
 import georges_malher from "../assets/images/georges-malher-unsplash.jpg";
-import grid_img from "../assets/images/venice.jpeg";
-import ecommerce_img from "../assets/images/london.jpeg";
+import ecommerce from "../assets/images/marcella-marcella-unsplash.jpg";
 import future from "../assets/images/ally-griffin-unsplash.jpg"
+import grid from "../assets/images/marco-chilese-unsplash.jpg";
 
 // const lettersArray = ["W", "O", "R", "K"];
 
@@ -101,7 +101,7 @@ const Work = () => {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>                  
-              <div className="card-wrapper">
+              <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
                     id="insider"
@@ -120,8 +120,7 @@ const Work = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper">
-                {" "}
+              <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
                     id="festival"
@@ -129,7 +128,7 @@ const Work = () => {
                   >
                     <img 
                       className="work-image" 
-                      src={ festival_img } 
+                      src={ festival } 
                       alt=""
                     />
                   </Link>
@@ -140,7 +139,7 @@ const Work = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper">
+              <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
                     id="gallery"
@@ -148,7 +147,7 @@ const Work = () => {
                     alt=""
                   >
                     <img 
-                      src={ gallery_img }
+                      src={ gallery }
                       alt="" 
                     />
                   </Link>
@@ -159,7 +158,7 @@ const Work = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper">
+              <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
                     id="grid"
@@ -167,7 +166,7 @@ const Work = () => {
                     alt=""
                   >
                     <img 
-                      src={ grid_img }
+                      src={ grid }
                       alt="" 
                     />
                   </Link>
@@ -178,7 +177,7 @@ const Work = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper">
+              <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
                     id="ecommerce"
@@ -186,7 +185,7 @@ const Work = () => {
                     alt=""
                   >
                     <img 
-                      src={ ecommerce_img }
+                      src={ ecommerce }
                       alt="" 
                     />
                   </Link>
@@ -195,10 +194,9 @@ const Work = () => {
                   <span className="card-name-desc">Ecommerce Site</span>
                 </div>
               </div>
-            </SwiperSlide>
-            
+            </SwiperSlide>            
             <SwiperSlide>
-            <div className="card-wrapper">
+            <div className="carousel-item-wrapper">
                 <div className="card">
                   <img
                     className="work-logo" 
