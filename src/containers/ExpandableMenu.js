@@ -12,13 +12,6 @@ import { slide as Menu } from "react-burger-menu";
 const ExpandableMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // const closeMenu = () => {
-  //   const burgerIcon = document.querySelector('.bm-burger-button');
-  //   burgerIcon.style = 'z-index: 1000';
-  //   setMenuOpen(false);
-  //   console.log('did I close?');
-  // };
-
   const handleOnOpen = () => {
     const burgerIcon = document.querySelector('.bm-burger-button');
     burgerIcon.style = 'z-index: 0';

@@ -16,7 +16,7 @@
   }
   
   .card-parent {
-    padding: 15px 30px;
+    padding: 60px 30px 30px 30px;
     margin: 0 -15px;
     display: flex;
     flex-direction: 100%;
@@ -26,7 +26,7 @@
   
   @media screen and (min-width: 600px) {
     .card-parent {
-      padding: 40px 40px;
+      padding: 60px 40px 40px 40px;
     }
   }
   
@@ -151,9 +151,10 @@
     text-align: center;
     margin: 0 auto 30px auto;
     line-height: 15px;
+    font-family: Helvetica Neue, serif;
   }
   
-  @media screen and (min-width: 768px) {
+  @include breakpoint-large {
     .card-overlay .card-desc {
       font-size: 12px;
     }
@@ -182,9 +183,10 @@
     z-index: 10;
     color: white;
     font-size: 8px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: Helvetica Neue, serif;
   }
   
   @media screen and (min-width: 768px) {
@@ -199,6 +201,7 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 11px;
+    font-family: $roboto-condensed;
   }
   
   @media screen and (min-width: 768px) {
@@ -212,7 +215,7 @@
     color: white;
     text-align: center;
     width: 75%;
-    line-height: 18px;  
+    line-height: 18px; 
   }
   
   @media screen and (min-width: 768px) {
@@ -257,13 +260,13 @@
   .header-card {
     margin: 8px 0 5px 0;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 2em;
     color: white;
   }
   
   @media screen and (min-width: 768px) {
     .header-card {
-      font-size: 40px;
+    //   font-size: 40px;
     }
   }
   

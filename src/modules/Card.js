@@ -27,7 +27,7 @@ const cityConfig = {
     'Paris': 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture.'
   },
   NL: {
-    'Amsterdam': 'Amsterdam is the Netherlands\' capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades.'
+    'Amsterdam': 'Amsterdam is the Netherlands\' capital, known for its artistic heritage, elaborate canal system & houses with gabled facades.'
   },
   GB: {
     'London': 'London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.'
