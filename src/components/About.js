@@ -14,7 +14,10 @@ class About extends Component {
     super(props);
     this.letters = [];
     this.tl = new TimelineLite({ paused: true });
+
+    console.log('what is this?', this);
   }
+
 
   componentDidMount() {
     this.tl.staggerTo(this.letters, 0.5, { y: 250, autoAlpha: 0.7 }, 0.2);

@@ -89,10 +89,10 @@ class Contact extends Component {
             </div>
             <div className="contact-services">
               <div className="services-wrapper">
-                <h2 className="headline-bold">Services</h2>
-                <span className="headline">Front-end Web Development</span>
-                <span className="headline">Website Revamp</span>
-                <span className="headline">Website Consultation</span>
+                <h2 className="headline-bold">Devon Darrow</h2>
+                <span className="headline">Front-end Web Developer</span>
+                {/* <span className="headline">Website Revamp</span>
+                <span className="headline">Website Consultation</span> */}
               </div>
               <div className="social-wrapper">
                 <a 

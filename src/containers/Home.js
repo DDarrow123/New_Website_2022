@@ -5,7 +5,7 @@ import bridge from "../assets/images/daniel-verdugo-unsplash.jpg";
 const Home = () => {
     return (
         <div className="wrap" id="wrap">
-            <header class="top-header">
+            <header className="top-header">
               <div className='top-header__name'>Devon Darrow</div>
             </header>
             <div className='greeting'></div>
@@ -18,7 +18,6 @@ const Home = () => {
                         <span className='home__job-type'>Front-end web developer</span>
                         <span className='home__job-location'>NYC <span className='home__divider'></span> PARIS</span>
                     </div>
-                    {/* <div className='home__intro-mobile'>Welcome</div> */}
                 </div>
                 {/* <div className='home__intro-desktop'>Welcome</div> */}
             </div>
