@@ -5,7 +5,6 @@ import Home from "../containers/Home";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Work from "../components/Work";
-import Insider from "../components/Insider";
 
 const App = () => {
   return (
@@ -13,12 +12,12 @@ const App = () => {
       <div id="outer-container">
         <ExpandableMenu />
         <Routes>
+          {/* <Route 
+          index element={<Home />} 
+          /> */}
           <Route 
               path="/"
               element={<Home />}
-            />
-            <Route 
-            index element={<Home />} 
             />
             <Route
               path="/about" 
@@ -30,17 +29,9 @@ const App = () => {
             />
 
             <Route 
-              path="work"
+              path="/work/*"
               element={<Work />}
-            >
-              <Route 
-                path="insider" 
-                element={<Insider />}
-              />
-              {/* {/* <Route path="account" element={<Gallery />} /> */}
-              {/* <Route path="account" element={<Festival />} /> */}
-            </Route>
-              {/* </div> */}
+            />
             {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>
       </div>
