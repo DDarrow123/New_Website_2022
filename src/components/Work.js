@@ -4,10 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
-// import { TweenMax, Elastic, TweenLite, TimelineLite, CSSPlugin } from "gsap";
-// import play_icon from "../assets/images/play_icon.svg";
-// import restart_icon from "../assets/images/restart_icon.svg";
-// import pause_icon from "../assets/images/pause_icon.svg";
 import gallery from "../assets/images/deniz-demirci-2-unsplash.jpg";
 import festival from "../assets/images/aditya-ghosh-unsplash.jpg";
 import new_york from "../assets/images/anton-sjolander-unsplash.jpg";
@@ -16,65 +12,22 @@ import ecommerce from "../assets/images/marcella-marcella-unsplash.jpg";
 import future from "../assets/images/ally-griffin-unsplash.jpg"
 import grid from "../assets/images/marco-chilese-unsplash.jpg";
 
-// const lettersArray = ["W", "O", "R", "K"];
-
 const Work = () => {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.letters = [];
-  //   this.tl = new TimelineLite({ paused: true });
-  // }
-
-  // componentDidMount() {
-  //   this.tl.staggerTo(this.letters, 0.5, { y: 200, autoAlpha: 0.5 }, 0.5);
-  // }
 
   return (
     <div key={'work'}>
       <header className="App-header top-header">
-        {/* <div className="general-btn-container">
-          <img
-            className="site-btn"
-            src={play_icon}
-            alt=""
-            onClick={() => this.tl.play()}
-          />
-          <img
-            className="site-btn"
-            src={pause_icon}
-            alt=""
-            onClick={() => this.tl.pause()}
-          />
-          <img
-            className="site-btn"
-            src={restart_icon}
-            alt=""
-            onClick={() => this.tl.reverse()}
-          />
-        </div> */}
         <div className='top-header__name'>Devon Darrow</div>
       </header>
       <div className="work-container">
         <div className="left-work-bar">
-          <div className="work-overlay">
-            <div className="work-title">
-              {/* {lettersArray.map((element, index) => (
-                <div
-                  key={element.id}
-                  ref={div => (this.letters[index] = div)}
-                >
-                  {element}
-                </div>
-              ))} */}
-            </div>
-          </div>
           <div className="image-wrapper">
             <img
             className="work-image" 
             src={ georges_malher } 
             alt=""
             />
+            <div className="work-title">WORK</div>
           </div>
         </div>
         <div className="right-work-bar">

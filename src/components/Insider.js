@@ -14,6 +14,7 @@ const Insider = () => {
         <header className="top-header">
           <div className='top-header__name'>Devon Darrow</div>
         </header>
+        <div className="headline-bold intro">Work at <span className="intro-subtext">Insider</span></div>
         <section className="insider">
           <div className="insider-item">
             <video

@@ -8,24 +8,24 @@
 .right-work-bar {
     margin-top: 20px;
 }
-
-.work-overlay {
-    position: absolute;
-    z-index: 1;
-    color: $base-white-color;
   
-  .work-title {
+.work-title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
     margin: 15px 0 0 15px;
     display: flex;
     font-weight: 400;
     justify-content: center;
     font-family: $roboto-condensed;
-    font-size: 9vw;
+    font-size: 4.5em;
+    color: $base-white-color;
   }
-}
 
 .image-wrapper {
     height: 600px;
+    position: relative;
 }
 
 .work-image {
