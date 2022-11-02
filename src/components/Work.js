@@ -16,7 +16,7 @@ const Work = () => {
 
   return (
     <div key={'work'}>
-      <header className="App-header top-header">
+      <header className="top-header">
         <div className='top-header__name'>Devon Darrow</div>
       </header>
       <div className="work-container">

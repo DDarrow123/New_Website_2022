@@ -15,7 +15,7 @@ const Ecommerce = () => {
 
     return (
     <div classNameName="ecommerce">
-    <section className="l-main-content">
+    <section className="l-main-content-ecommerce">
     <section classNameName="container-fluid">
     <section className="row">
       <section className="l-content">
@@ -70,16 +70,8 @@ const Ecommerce = () => {
             className="buy-button buy-now btn btn-primary"
             onClick={() => setModalShow(true)}
           >
-            <span class="button-text"> Buy it now </span>
+            <span className="button-text"> Buy it now </span>
           </Button>
-          {/* <button
-        type="button"
-        class="buy-button buy-now btn btn-primary"
-        data-bs-toggle="modal" */}
-        {/* data-bs-target="#staticBackdrop"
-        > */}
-        {/* <span class="button-text"> Buy it now </span>
-        </button> */}
           <Popin
             show={modalShow}
             onHide={() => setModalShow(false)}
@@ -108,15 +100,15 @@ const Ecommerce = () => {
               <h5 className="caption monitor-caption">
                 The pudique (or je suis en pyjama et j'assume pas) effect
               </h5>
-              <paragraph className="subtext d-sm-block d-md-none"
+              <div className="subtext d-sm-block d-md-none"
                 >Start from zero, choose your background and create your new
                 life while impressing the collègues.
-              </paragraph>
+              </div>
               {/* <!-- <Desktop only> --> */}
-              <paragraph className="subtext d-none d-md-block">
+              <div className="subtext d-none d-md-block">
                 With our no camera mode, you can be wherever you want and be en
                 pyjama in totale discretion with professionnalisme.
-              </paragraph>
+              </div>
             </div>
           </div>
         </div>

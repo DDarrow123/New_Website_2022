@@ -29,10 +29,9 @@
 
 .buy-button {
   height: 46px;
-  width: 77px;
+  width: 100px;
   top: 30px;
   border-radius: 150px;
-  padding: 10px 18px 12px 18px;
   background: $base-color-red;
   padding: 0;
   border: none;
@@ -40,5 +39,5 @@
 
 .button-text {
   color: $base-color-white;
-  font: 16px;
+  font-size: 16px;
 }
