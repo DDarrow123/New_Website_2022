@@ -4,10 +4,6 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Roboto Condensed', sans-serif;
-
 ////GENERAL STYLING////
 
 .App {
@@ -18,14 +14,3 @@
   @include flex-row;
 }
 
-html {
-  font-size: 16px;
-    
-  @media screen and (min-width: 900px) {
-    font-size: 18px;
-  }
-    
-  @media screen and (min-width: 1200px) {
-    font-size: 20px;
-  }
-}

@@ -1,6 +1,6 @@
 .greeting {
     padding-top: 40px;
-    height: 60px;
+    height: 80px;
     width: 100%;
     font-family: "Roboto", sans-serif;
     font-size: 26px;
@@ -8,10 +8,9 @@
     text-align: center;
     position: relative;
 
-    @media screen and (min-width: 600px) {
+    @include breakpoint-large {
         font-size: 42px;
-        height: 75px;
-
+        height: 60px;
     }
 }
 
@@ -111,13 +110,20 @@
     }
 
     &__welcome-info {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 0;
+        row-gap: 0;
+        
 
-        @media screen and (min-width: 960px) {
-            flex-direction: row;
+        @include breakpoint-large {
+            // flex-direction: row;
+            grid-template-columns: repeat(2, 1fr);
             padding: 20px 20px 15px 20px;
-            height: 50vw;
+            height: 100vh;
         }
     }
 
@@ -237,7 +243,7 @@
         width: 100%;
         object-fit: cover;
 
-        @include breakpoint-medium {
+        @include breakpoint-large {
             height: 100%;
             width: 100%;
         }

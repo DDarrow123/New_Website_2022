@@ -1,7 +1,7 @@
 ///// ABOUT PAGE /////
 
 .about-wrapper {
-    padding-top: 212.40px;
+    padding-top: 212px;
     flex: 1 1 0;
 
     @include breakpoint-large {
@@ -11,6 +11,7 @@
 
 .about-title {
     @include straight-row;
+    align-items: center;
     font-weight: 600;
     font-size: 9vw;
     letter-spacing: 15px;
@@ -19,13 +20,15 @@
     height: 100px;
     font-family: $roboto-condensed;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5%;
+    left: 5%;
     color: $base-red-color;
     // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   
     @include breakpoint-medium {
       margin: 0 0 -12px 30px;
+      top: 10%;
+      left: 0;
     }
 
   }

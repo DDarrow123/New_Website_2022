@@ -66,9 +66,9 @@ const Work = () => {
                       alt=""
                     />
                   </Link>
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">Front-end work at Insider</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">Front-end work at Insider</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -85,9 +85,9 @@ const Work = () => {
                       alt=""
                     />
                   </Link>
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">Festival Site</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">Festival Site</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -104,9 +104,9 @@ const Work = () => {
                       alt="" 
                     />
                   </Link>
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">Gallery Site - Desktop</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">Gallery Site - Desktop</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -123,9 +123,9 @@ const Work = () => {
                       alt="" 
                     />
                   </Link>
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">Travel Grid</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">Travel Grid</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -142,9 +142,9 @@ const Work = () => {
                       alt="" 
                     />
                   </Link>
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">Ecommerce Site</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">Ecommerce Site</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>            
@@ -156,9 +156,9 @@ const Work = () => {
                     src={ future } 
                     alt=""
                   />
-                </div>
-                <div className="card-desc">
-                  <span className="card-name-desc">More Work Coming Soon...</span>
+                  <div className="card-desc">
+                    <span className="headline-bold">More Work Coming Soon...</span>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
