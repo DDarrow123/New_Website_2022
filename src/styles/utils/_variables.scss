@@ -11,14 +11,20 @@ $base-red-color: #ff0000;
 $base-grey-color: #d8d8d8;
 
 // Ecommerce site defaults
-// To:Do Merge applicable colors with the above
+// To-Do: Merge applicable colors with the above
 $base-color-gray: #f3f3f3;
 $base-color-lt-gray: #eaeaea;
 $base-color-red: #f0380f;
 $base-color-white: #fff;
 $base-color-black: #000;
 
-// Border
+// Festival site defaults
+$filter-blur: blur(12px);
+$filter-zero: blur(0px);
+$venus: #998099 !default;
+$nebula: #d2e1dd !default;
+
+// Border defaults
 $border-color: #d8d8d8 !default;
 $border-color-2: #dceaec !default;
 $border: 1px solid $border-color !default;

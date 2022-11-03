@@ -17,11 +17,12 @@
     z-index: 2;
     margin: 15px 0 0 15px;
     display: flex;
-    font-weight: 400;
+    font-weight: 900;
     justify-content: center;
     font-family: $roboto-condensed;
     font-size: 4.5em;
     color: $base-white-color;
+    letter-spacing: 15px;
   }
 
 .image-wrapper {
@@ -59,13 +60,14 @@
     margin: 20px 0;
     position: absolute;
     bottom: 5%;
-    right: 0;
+    right: 5%;
 
     & .headline-bold {
         color: $base-white-color;
         // color: ;
         margin-left: 10px;
         text-shadow: rgb(0 0 0 / 10%) 0 0 20px
+        // pointer-events: cursor ;
     }
 }
 

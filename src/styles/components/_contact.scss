@@ -14,12 +14,15 @@
 
 .contact-title {
     @include straight-column;
-    height: 200px;
     font-size: 2.5em;
-    font-weight: 400;
-    font-family: Helvetica Neue, serif;
+    font-weight: 900;
+    font-family: $roboto-condensed;
     align-items: center;
-    letter-spacing: 2px;
+    letter-spacing: 15px;
+}
+
+.contact-image-wrapper {
+    margin-top: 20px;
 }
 
 .image {

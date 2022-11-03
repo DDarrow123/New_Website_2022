@@ -27,7 +27,7 @@ const Work = () => {
             src={ georges_malher } 
             alt=""
             />
-            <div className="work-title">WORK</div>
+            <div className="work-title">Work</div>
           </div>
         </div>
         <div className="right-work-bar">
@@ -65,10 +65,10 @@ const Work = () => {
                       src={ new_york } 
                       alt=""
                     />
+                    <div className="card-desc">
+                      <span className="headline-bold">Front-end work at Insider</span>
+                    </div>
                   </Link>
-                  <div className="card-desc">
-                    <span className="headline-bold">Front-end work at Insider</span>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -84,10 +84,10 @@ const Work = () => {
                       src={ festival } 
                       alt=""
                     />
+                    <div className="card-desc">
+                      <span className="headline-bold">Festival Site</span>
+                    </div>
                   </Link>
-                  <div className="card-desc">
-                    <span className="headline-bold">Festival Site</span>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -103,10 +103,10 @@ const Work = () => {
                       src={ gallery }
                       alt="" 
                     />
+                    <div className="card-desc">
+                      <span className="headline-bold">Gallery Site - Desktop</span>
+                    </div>
                   </Link>
-                  <div className="card-desc">
-                    <span className="headline-bold">Gallery Site - Desktop</span>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -122,10 +122,10 @@ const Work = () => {
                       src={ grid }
                       alt="" 
                     />
+                    <div className="card-desc">
+                      <span className="headline-bold">Travel Grid</span>
+                    </div>
                   </Link>
-                  <div className="card-desc">
-                    <span className="headline-bold">Travel Grid</span>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -141,10 +141,10 @@ const Work = () => {
                       src={ ecommerce }
                       alt="" 
                     />
+                    <div className="card-desc">
+                      <span className="headline-bold">Ecommerce Site</span>
+                    </div>
                   </Link>
-                  <div className="card-desc">
-                    <span className="headline-bold">Ecommerce Site</span>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>            

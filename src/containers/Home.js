@@ -19,7 +19,6 @@ const Home = () => {
                         <span className='home__job-location'>NYC <span className='home__divider'></span> PARIS</span>
                     </div>
                 </div>
-                {/* <div className='home__intro-desktop'>Welcome</div> */}
             </div>
         </div>
     )

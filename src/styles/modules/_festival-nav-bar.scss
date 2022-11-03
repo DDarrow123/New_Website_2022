@@ -1,0 +1,62 @@
+.nav-bar {
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint-medium {
+      flex-direction: row;
+    }
+}
+
+.ticket-title {
+  position: relative;
+  margin: 20px 0px 0 0;
+
+  a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  :after {
+    content: "";
+    width: 130%;
+    position: absolute;
+    text-align: center;
+    left: -10px;
+    bottom: -6px;
+    border-width: 0 0 2px;
+    border-style: solid;
+  }
+
+  :visited {
+    color: black;
+  }
+
+  :hover {
+    color: $base-color-red;
+  }
+
+  @include breakpoint-medium {
+    margin: 20px 100px 0 0;
+  }
+}
+
+.lightening-bolt {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.festival-title {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 0 1px;
+
+    @include breakpoint-medium {
+        margin: 20px 0 0 100px; 
+    }
+}

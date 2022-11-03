@@ -37,6 +37,33 @@
   flex-direction: column;
 }
 
+@mixin text-focus() {
+  @-webkit-keyframes text-focus-in {
+    @content;
+  }
+  @keyframes text-focus-in {
+    @content;
+  }
+}
+
+@mixin jello-focus() {
+  @-webkit-keyframes jello-horizontal {
+    @content;
+  }
+  @keyframes jello-horizontal {
+    @content;
+  }
+}
+
+@mixin vibrate-focus() {
+  @-webkit-keyframes vibrate-1 {
+    @content;
+  }
+  @keyframes vibrate-1 {
+    @content;
+  }
+}
+
 ////MEDIA QUERIES////
 
 /* Grid breakpoints
