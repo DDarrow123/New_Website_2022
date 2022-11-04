@@ -9,6 +9,7 @@ const Festival = () => {
     <>
     <div id="left"></div>
     <div id="top"></div>
+    <div id="right">the arts - one minimal art festival</div>
     <div className="l-main-content-festival">
       <div>
         <NavBar />

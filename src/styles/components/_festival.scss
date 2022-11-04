@@ -7,16 +7,38 @@
 	position: fixed;
 }
 
-	#left {
-		top: 0; bottom: 0;
-		width: 15px;
-	}
+#left {
+    top: 0; 
+    bottom: 0;
+    width: 15px;
+}
 
-    #left { left: 0; }
-		
-	#top {
-		left: 0; right: 0;
-		height: 15px;
-	}
+#left { left: 0; }
+    
+#top {
+    left: 0; 
+    right: 0;
+    height: 15px;
+}
 
-    #top { top: 0; }
+#top { top: 0; }
+
+#right {
+    display: none;
+    @include breakpoint-medium {
+        display: block;
+        position: absolute;
+        width: 15px;
+        top: 150px;
+        right: 70px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        height: 104px;
+        white-space: nowrap;
+
+    }
+
+    @include breakpoint-large {
+        top: 500px;
+    }
+}

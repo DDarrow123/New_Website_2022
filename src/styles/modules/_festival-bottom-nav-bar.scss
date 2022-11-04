@@ -6,18 +6,11 @@
     white-space: nowrap;
     transform: translate(-50%, -50%);
     height: 10px;
+    display: block;
 
     @include breakpoint-medium {
-        bottom: 0;
-        right: -46px;
-        top: 90%;
-        left: 90%;
-        width: 300px;
-        -ms-transform: rotate(90deg); /* IE 9 */
-        -webkit-transform: rotate(90deg); /* Safari 3-8 */
-        transform: rotate(90deg);
+      display: none;
     }
-
 }
 
 .dates {
