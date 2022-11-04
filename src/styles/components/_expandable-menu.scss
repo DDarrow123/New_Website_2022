@@ -38,63 +38,52 @@
     align-items: center;
     flex-direction: column;
 
-    @media screen and (min-width: 600px) {
+    @include breakpoint-xlarge {
         flex-direction: row;
     }
 
     .bm-item {
+        --h: 5.2em;
+        line-height: var(--h);
+        color: $base-color-red;
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        )
+        bottom/50% calc(50% - var(--_i,1)*100%) no-repeat;
+        overflow: hidden;
+        transition: 0.3s;
+
         flex: .5;
         text-align: center;
         width: 100%;
-        font-family: $roboto-font;
-        letter-spacing: 5px;
-        padding: 20px;
-        color: red;
+        letter-spacing: 15px;
         font-weight: 900;
         text-decoration: none;
         outline: none;
         position: relative;
-        font-size: 20px;
-
-        @media screen and (min-width: 600px) {
-            font-size: 30px;
-        }
+        font-size: 2em;
 
         &:hover {
-            background: rgba(123, 100, 103, 0.3);
+            --_i: 0;
             color: $base-white-color;
             ;
         }
 
-        &:after {
-            position: absolute;
-            content: '';
-            height: 2px;
-            top: 48px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            width: 10%;
-            background: #b8b7ad;
-
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-
-            @include breakpoint-medium {
-                top: 60px;
-            }
-        }
-
-        &:hover:after {
-            width: 30%;
+        @include breakpoint-xlarge {
+          --h: 1.2em;
+          background: 
+          linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+          )
+          bottom/100% calc(100% - var(--_i,1)*100%) no-repeat;
         }
     }
 }
 
-/* STYLING OF OVERLAY */
+/* STYLING OF MENU OVERLAY */
 .bm-overlay {
     opacity: 1;
     background: url('../../assets/images/deniz-demirci-unsplash.jpg') !important;
