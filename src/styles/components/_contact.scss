@@ -4,12 +4,13 @@
     @include straight-column;
     margin-top: 2em;
     font-size: 1.5rem;
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 .contact-wrapper {
     display: grid;
-    grid-template-rows: 100px 1fr 400px;
+    grid-template-rows: 1fr 400px;
+    position: relative;
 }
 
 .contact-title {
@@ -17,8 +18,13 @@
     font-size: 2.5em;
     font-weight: 900;
     font-family: $roboto-condensed;
-    align-items: center;
+    align-items: flex-start;
     letter-spacing: 15px;
+    margin-left: 20px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: $base-color-white;
 }
 
 .contact-image-wrapper {
@@ -41,6 +47,22 @@
   margin-top: 60px;
   padding: 0 20px;
   gap: 100px;
+
+  & .headline {
+    transition: all .5s ease-in-out;
+    &:hover {
+       font-size: 1.5em; 
+       cursor: pointer;
+    }
+  }
+
+  & .headline-bold {
+    transition: all .5s ease-in-out;
+    &:hover {
+       font-size: 2.5em; 
+       cursor: pointer;
+    }
+  }
 }
 
 .social-wrapper {
@@ -49,8 +71,13 @@
     align-items: center;
     width: 100%;
     gap: 60px;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+
+    svg {
+      &:hover {
+            color: $base-red-color !important;
+        }
+    }
 }
 
 .services-wrapper {
@@ -58,8 +85,5 @@
   margin-left: 40px;
   justify-content: space-between;
   gap: 20px;
-
-  @include breakpoint-large {
- }
 }
   

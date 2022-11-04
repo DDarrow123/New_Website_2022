@@ -1,11 +1,11 @@
 ///// ABOUT PAGE /////
 
 .about-wrapper {
-    padding-top: 212px;
+    padding-top: 153px;
     flex: 1 1 0;
 
     @include breakpoint-large {
-        padding: 212.40px 20px 20px 20px;
+        padding: 153px 20px 20px 20px;
     }
 }
 
@@ -13,7 +13,7 @@
     @include straight-row;
     align-items: center;
     font-weight: 600;
-    font-size: 9vw;
+    font-size: 4.5em;
     letter-spacing: 15px;
     margin: 0 0 -12px 20px;
     width: 10%;

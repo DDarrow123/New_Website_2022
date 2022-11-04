@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
-import gallery from "../assets/images/deniz-demirci-2-unsplash.jpg";
+// import gallery from "../assets/images/deniz-demirci-2-unsplash.jpg";
 import festival from "../assets/images/aditya-ghosh-unsplash.jpg";
 import new_york from "../assets/images/anton-sjolander-unsplash.jpg";
 import georges_malher from "../assets/images/georges-malher-unsplash.jpg";
@@ -27,7 +27,7 @@ const Work = () => {
             src={ georges_malher } 
             alt=""
             />
-            <div className="work-title">Work</div>
+            <div className="work-title">WORK</div>
           </div>
         </div>
         <div className="right-work-bar">
@@ -91,7 +91,7 @@ const Work = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="carousel-item-wrapper">
                 <div className="card">
                   <Link
@@ -109,7 +109,7 @@ const Work = () => {
                   </Link>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <div className="carousel-item-wrapper">
                 <div className="card">

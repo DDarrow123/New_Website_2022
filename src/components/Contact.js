@@ -79,7 +79,7 @@ class Contact extends Component {
         </header>
         <div className="contact">
           <div className="contact-wrapper">
-            <div className="contact-title">Contact</div>
+            <div className="contact-title">CONTACT</div>
             <div className="contact-image-wrapper">
               <img 
                 className="image"
@@ -94,6 +94,7 @@ class Contact extends Component {
                 {/* <span className="headline">Website Revamp</span>
                 <span className="headline">Website Consultation</span> */}
               </div>
+            </div>
               <div className="social-wrapper">
                 <a 
                   href="https://twitter.com/devoncdarrow"    
@@ -132,7 +133,6 @@ class Contact extends Component {
                   </IconContext.Provider>
                 </a>
               </div>
-            </div>
           </div>
         </div>
       </div>

@@ -83,8 +83,8 @@
             -webkit-transition: .5s;
             transition: .5s;
 
-            @media screen and (min-width: 600px) {
-                top: 56px;
+            @include breakpoint-medium {
+                top: 60px;
             }
         }
 
