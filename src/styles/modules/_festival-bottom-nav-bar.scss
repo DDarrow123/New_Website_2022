@@ -1,15 +1,31 @@
 .vertical-text-bar {
     position: absolute;
     bottom: 0px;
-    top: 50%;
+    top: 25%;
     left: 50%;
     white-space: nowrap;
     transform: translate(-50%, -50%);
+    height: 10px;
+
+    @include breakpoint-medium {
+        bottom: 0;
+        right: -46px;
+        top: 90%;
+        left: 90%;
+        width: 300px;
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari 3-8 */
+        transform: rotate(90deg);
+    }
 
 }
 
 .dates {
-margin: 0 0 40px 50px;
+  margin: 0 0 40px 0;
+
+  @include breakpoint-medium {
+    margin: 0 0 40px 50px;
+  }
 }
 
 .bottom-nav {
@@ -21,59 +37,53 @@ margin: 0 0 40px 50px;
     padding-bottom: 20px;
     align-items: center;
 
-    .topics {
-        flex-basis: 70%;
-        margin-left: 0;
-    }
+    .festival-info {
+        display: block;
 
-    .cities {
-        flex-basis: 20%;
-        margin-right: 0;
-    }
-
-    @include breakpoint-medium {
-        flex-direction: row;
-        // align-items: ;
-        width: 100%;
-
-        .topics {
-            // flex-basis: 70%;
-            margin-left: 50px;
-            // width: 100%;
+        @include breakpoint-medium {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
         }
+    }
 
-        .cities {
-            // flex-basis: 20%;
-            margin-right: 50px;
+    .festival-topics {
+        // flex-basis: 70%;
+        margin-left: 0;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @include breakpoint-medium {
+            margin-bottom: 0;
+            font-size: 2em;
+            margin-left: 50px;
+            flex-basis: 50%;
+            text-align: left;
+        }
+    }
+
+    .festival-cities {
+        // flex-basis: 20%;
+        margin-right: 0;
+        font-size: 1.25em;
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: 2em;
+            margin-right: 35px;
+            flex-basis: 50%;
+            text-align: right;
         }
     }
 }
 
 
   @include breakpoint-medium {
-      .vertical-text-bar {
-        bottom: 0;
-        right: -46px;
-        top: 600px;
-        left: 0;
-        bottom: 80px;
-        width: 240px;
-        transform: translate(-50%, -50%);
-        -ms-transform: rotate(90deg); /* IE 9 */
-        -webkit-transform: rotate(90deg); /* Safari 3-8 */
-        transform: rotate(90deg);
-      }
-
       .dates {
         margin-bottom: 50px;
         margin-left: 50px;
-      }
-
-      .bottom-nav {
-
-        .cities {
-          width: 350px;
-          margin: 50px 50px;
-        }
+        align-self: flex-start;
       }
     }

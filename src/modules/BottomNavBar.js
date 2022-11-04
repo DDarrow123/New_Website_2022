@@ -6,14 +6,20 @@ const BottomNavBar = () => {
       <div className="vertical-text-bar">
         the arts - one minimal art festival
       </div>
-      <h4 className="dates">15-16 of April</h4>
       <footer className="bottom-nav">
-        <h3 className="topics">
-          CINEMA-ART-
-          <br />
-          MUSIC-DESIGN
-        </h3>
-        <h3 className="cities">PARIS-HAMBURG-MELBURN</h3>
+        <h3 className="dates">15-16 of April</h3>
+        <div className="festival-info">
+          <div className="festival-topics headline-bold">
+            CINEMA-ART-
+            <br />
+            MUSIC-DESIGN
+          </div>
+          <div className="festival-cities headline-bold">
+            PARIS-HAMBURG-
+            <br />
+            MELBURN
+          </div>
+        </div>
       </footer>
     </>
   );
