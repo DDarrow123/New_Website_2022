@@ -1,5 +1,6 @@
 {
   "name": "new_website_2022",
+  "homepage": "https://www.devondarrow.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,8 @@
     "react-error-overlay": "6.0.9"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
