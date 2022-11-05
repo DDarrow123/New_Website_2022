@@ -94,10 +94,11 @@
     opacity: 1;
     background: url('../../assets/images/deniz-demirci-unsplash.jpg') !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
     background-position: left bottom !important;
     top: 0;
     left: 0;
+    right: 0;
+    background-color: whitesmoke;
 
     &:after {
       content: '';
