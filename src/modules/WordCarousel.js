@@ -55,52 +55,54 @@ class WordCarousel extends Component {
 
   render() {
     return (
-      <div className="carousel-container" onWheel={this.scrollHorizontally}>
-        <div className="carousel-slider">
-          <div className="slide" id="slide-1">
-            One
-          </div>
-          <div className="slide" id="slide-2">
-            Minimal
-          </div>
-          <div className="slide" id="slide-3">
-            Festival:
-          </div>
-          <div
-            className={
-              this.state.slideOneAnimate ? "slide text-focus-in" : "slide"
-            }
-            id="slide-4"
-            onMouseEnter={this.hoverOn}
-            onMouseLeave={this.hoverOff}
-          >
-            Cinema.
-          </div>
-          <div className="slide" id="slide-5">
-            Art.
-          </div>
-          <div
-            className={
-              this.state.slideTwoAnimate ? "slide jello-horizontal" : "slide"
-            }
-            id="slide-6"
-            onMouseEnter={this.hoverOn}
-            onMouseLeave={this.hoverOff}
-          >
-            Music.
-          </div>
-          <div
-            className={
-              this.state.slideThreeAnimate ? "slide vibrate-1" : "slide"
-            }
-            id="slide-7"
-            onMouseEnter={this.hoverOn}
-            onMouseLeave={this.hoverOff}
-          >
-            Design
+      <>
+        <div className="carousel-container" onWheel={this.scrollHorizontally}>
+          <div className="carousel-slider">
+            <div className="slide" id="slide-1">
+              One
+            </div>
+            <div className="slide" id="slide-2">
+              Minimal
+            </div>
+            <div className="slide" id="slide-3">
+              Festival:
+            </div>
+            <div
+              className={
+                this.state.slideOneAnimate ? "slide text-focus-in" : "slide"
+              }
+              id="slide-4"
+              onMouseEnter={this.hoverOn}
+              onMouseLeave={this.hoverOff}
+            >
+              Cinema.
+            </div>
+            <div className="slide" id="slide-5">
+              Art.
+            </div>
+            <div
+              className={
+                this.state.slideTwoAnimate ? "slide jello-horizontal" : "slide"
+              }
+              id="slide-6"
+              onMouseEnter={this.hoverOn}
+              onMouseLeave={this.hoverOff}
+            >
+              Music.
+            </div>
+            <div
+              className={
+                this.state.slideThreeAnimate ? "slide vibrate-1" : "slide"
+              }
+              id="slide-7"
+              onMouseEnter={this.hoverOn}
+              onMouseLeave={this.hoverOff}
+            >
+              Design
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

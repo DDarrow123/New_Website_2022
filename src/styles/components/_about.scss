@@ -1,11 +1,10 @@
 ///// ABOUT PAGE /////
 
 .about-wrapper {
-    padding-top: 153px;
     flex: 1 1 0;
 
     @include breakpoint-large {
-        padding: 153px 20px 20px 20px;
+      padding: 20px 20px 20px 20px;
     }
 }
 
@@ -13,57 +12,52 @@
     @include straight-row;
     align-items: center;
     font-weight: 600;
-    font-size: 4.5em;
+    font-size: 3.5em;
     letter-spacing: 15px;
-    margin: 0 0 -12px 20px;
-    width: 10%;
-    height: 100px;
     font-family: $roboto-condensed;
-    position: absolute;
-    top: 5%;
-    left: 5%;
     color: $base-red-color;
-    // text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  
-    @include breakpoint-medium {
-      margin: 0 0 -12px 30px;
-      top: 10%;
-      left: 0;
-    }
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 
+    // @include breakpoint-medium {
+    // }
   }
   
   .about-content {
     @include straight-column;
     justify-content: center;
     align-items: center;
-    // background: #F8F8FC;
     background: $base-background-color;
   
     @include breakpoint-large {
-      @include straight-row;
-      height: 600px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-image-wrapper {
-        position: relative;
-
-        @include breakpoint-large {
-          height: 600px;
-          flex: 1 1 0;
-          padding-top: 0;
-        }
-    }
+  }
   
-    .profile-img {
-      width: 100%;
+  .about-image-wrapper {
+      position: relative;
+
+      @include breakpoint-large {
+
+      }
+  }
+
+  .profile-img {
       height: 100%;
       object-fit: cover;
-      padding-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
   
       @include breakpoint-large {
-        object-fit: cover;
         padding-top: 0;
+        width: 100%;
+        margin-left: 0;
+
       }
     }
 
@@ -84,7 +78,7 @@
       font-weight: lighter;
       padding: 20px 0;
       text-align: center;
-      margin: 30px 20px 0 20px;
+      margin: 0 20px 0 20px;
       flex: 1 1 0;
   
       @include breakpoint-medium {
@@ -96,8 +90,6 @@
         color: $base-red-color;
       }
     }
-
-  }
 
   .highlight {
     font-size: 36px;

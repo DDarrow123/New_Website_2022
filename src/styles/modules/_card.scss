@@ -75,6 +75,10 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
+
+    & .card-desc {
+      position: unset;
+    }
   }
 
   @media screen and (min-width: 768px) {

@@ -20,15 +20,21 @@
     left: 10px;
     top: 8px;
 
-    & button:focus {
+    & button {
+      &:focus {
         outline: none;
-    }
+      }
+    }   
+}
+
+.react-icon.burger-icon:hover {
+    color: rgb(240, 56, 15);;
 }
 
 .bm-cross-button {
     width: auto !important;
     height: auto !important;
-    top: 0px !important;
+    top: 10px !important;
     right: 16px !important;
 }
 
@@ -46,24 +52,24 @@
         --h: 5.2em;
         line-height: var(--h);
         color: $base-color-red;
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.3),
-          rgba(0, 0, 0, 0.3)
-        )
-        bottom/50% calc(50% - var(--_i,1)*100%) no-repeat;
+        // background: 
+        // linear-gradient(
+        //   rgba(0, 0, 0, 0.3),
+        //   rgba(0, 0, 0, 0.3)
+        // )
+        // bottom/50% calc(50% - var(--_i,1)*100%) no-repeat;
         overflow: hidden;
         transition: 0.3s;
-
+        font-family: LabGrotesque, Helvetica, Arial, sans-serif;
         flex: .5;
         text-align: center;
         width: 100%;
         letter-spacing: 15px;
-        font-weight: 900;
+        font-weight: 600;
         text-decoration: none;
         outline: none;
         position: relative;
-        font-size: 2em;
+        font-size: 1.5em;
 
         &:hover {
             --_i: 0;
@@ -92,6 +98,19 @@
     background-position: left bottom !important;
     top: 0;
     left: 0;
+
+    &:after {
+      content: '';
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        );
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 .bm-overlay .bm-burger-button {

@@ -14,13 +14,21 @@ const ExpandableMenu = () => {
 
   const handleOnOpen = () => {
     const burgerIcon = document.querySelector('.bm-burger-button');
+    const body = document.querySelector('body');
+
     burgerIcon.style = 'z-index: 0';
+    body.style = 'overflow: hidden';
+
     setMenuOpen(true);
   }
 
   const handleOnClose = () => {
     const burgerIcon = document.querySelector('.bm-burger-button');
+    const body = document.querySelector('body');
+
     burgerIcon.style = 'z-index: 1000';
+    body.style = 'overflow: auto';
+    
     setMenuOpen(false);
   }
 
@@ -32,9 +40,9 @@ const ExpandableMenu = () => {
         onClose={handleOnClose}
         customBurgerIcon={<div>
           <IconContext.Provider
-            value={{ color: "#000", className: "react-icon", size: 40 }}
+            value={{ color: "#f0380f", className: "react-icon", size: 40 }}
           >
-            <VscMenu />
+            <VscMenu className="burger-icon" />
           </IconContext.Provider>
         </div>}
         customCrossIcon={
@@ -55,7 +63,7 @@ const ExpandableMenu = () => {
           key={1}
           onClick={handleOnClose}
         >
-          Home
+          HOME
         </Link>
         <Link
           id="about"
@@ -64,16 +72,7 @@ const ExpandableMenu = () => {
           key={2}
           onClick={handleOnClose}
         >
-          About
-        </Link>
-        <Link
-          id="contact"
-          className="menu-item"
-          to="/contact"
-          key={3}
-          onClick={handleOnClose}
-        >
-          Contact
+          ABOUT
         </Link>
         <Link
           id="work"
@@ -82,7 +81,16 @@ const ExpandableMenu = () => {
           key={4}
           onClick={handleOnClose}
         >
-          Work
+          WORK
+        </Link>
+        <Link
+          id="contact"
+          className="menu-item"
+          to="/contact"
+          key={3}
+          onClick={handleOnClose}
+        >
+          CONTACT
         </Link>
       </Menu>
     </div>

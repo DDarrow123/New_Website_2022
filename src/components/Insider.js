@@ -11,9 +11,9 @@ import hamburger_menu from "../assets/media/hamburger-menu.mp4";
 const Insider = () => {
     return (
       <section className="l-main-content-insider">
-        <header className="top-header">
+        {/* <header className="top-header">
           <div className='top-header__name'>Devon Darrow</div>
-        </header>
+        </header> */}
         <div className="headline-bold intro">Work at <span className="intro-subtext">Insider</span></div>
         <section className="insider">
           <div className="insider-item">

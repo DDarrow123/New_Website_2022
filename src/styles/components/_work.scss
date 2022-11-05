@@ -1,21 +1,22 @@
 //// WORK PAGE ////
 
 .left-work-bar {
-    padding-top: 80px;
     width: 100%;
 }
 
 .right-work-bar {
-    margin-top: 20px;
     padding: 0 20px;
 }
   
 .work-title {
     position: absolute;
-    top: 5%;
-    left: 5%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
     z-index: 2;
-    margin: 15px 0 0 15px;
+    // margin: 0 0 0 15px;
     display: flex;
     font-weight: 900;
     justify-content: center;
@@ -60,7 +61,18 @@
     & .headline-bold {
         color: $base-white-color;
         margin-left: 10px;
-        text-shadow: rgb(0 0 0 / 10%) 0 0 20px
+        text-shadow: rgb(0 0 0 / 10%) 0 0 20px;
+        --h: 1.2em;
+        line-height: var(--h);
+        background: 
+        linear-gradient(rgba(245,242,242,.5),rgba(245,242,242,.5)) bottom/100% calc(100% - var(--_i, 1)*100%) no-repeat;
+        overflow: hidden;
+        transition: .3s;
+
+        &:hover {
+            --_i: 0;
+            color: $base-white-color;
+        }
     }
 }
 
@@ -80,7 +92,6 @@
         height: 100%;
         width: 100%;
         background-color: #fff;
-        border-radius: 5px;
     }
 
     a {
@@ -98,7 +109,6 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                border-radius: 5px;
             }
     }
 

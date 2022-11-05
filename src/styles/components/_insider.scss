@@ -1,11 +1,10 @@
 .l-main-content-insider {
-    padding: 80px 20px 60px 20px;
+    padding: 60px 20px 60px 20px;
 }
 
 .headline-bold.intro {
     padding-left: 0;
-    font-size: 4.5em;
-    border-bottom: $border;
+    font-size: 3.5em;
 
     @include breakpoint-medium {
         padding-left: 40px;
@@ -19,7 +18,7 @@
     height: 100vh;
     background-color: $base-white-color;
     row-gap: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
 
     @include breakpoint-medium {
       grid-template-columns: repeat(2, 1fr);
@@ -93,5 +92,5 @@
 }
 
 .intro-subtext {
-    color: #096ffa;
+    color: $base-color-black;
 }

@@ -1,17 +1,17 @@
-.vertical-text-bar {
-    position: absolute;
-    bottom: 0px;
-    top: 25%;
-    left: 50%;
-    white-space: nowrap;
-    transform: translate(-50%, -50%);
-    height: 10px;
-    display: block;
+// .vertical-text-bar {
+//     position: absolute;
+//     bottom: 0px;
+//     top: 25%;
+//     left: 50%;
+//     white-space: nowrap;
+//     transform: translate(-50%, -50%);
+//     height: 10px;
+//     display: block;
 
-    @include breakpoint-medium {
-      display: none;
-    }
-}
+//     @include breakpoint-medium {
+//       display: none;
+//     }
+// }
 
 .dates {
   margin: 0 0 40px 0;
@@ -42,7 +42,6 @@
     }
 
     .festival-topics {
-        // flex-basis: 70%;
         margin-left: 0;
         font-size: 1.5em;
         margin-bottom: 30px;
@@ -58,7 +57,6 @@
     }
 
     .festival-cities {
-        // flex-basis: 20%;
         margin-right: 0;
         font-size: 1.25em;
         text-align: center;
@@ -71,12 +69,3 @@
         }
     }
 }
-
-
-  @include breakpoint-medium {
-      .dates {
-        margin-bottom: 50px;
-        margin-left: 50px;
-        align-self: flex-start;
-      }
-    }

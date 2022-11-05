@@ -16,9 +16,9 @@ const Work = () => {
 
   return (
     <div key={'work'}>
-      <header className="top-header">
+      {/* <header className="top-header">
         <div className='top-header__name'>Devon Darrow</div>
-      </header>
+      </header> */}
       <div className="work-container">
         <div className="left-work-bar">
           <div className="image-wrapper">
@@ -67,25 +67,6 @@ const Work = () => {
                     />
                     <div className="card-desc">
                       <span className="headline-bold">Front-end work at Insider</span>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="carousel-item-wrapper">
-                <div className="card">
-                  <Link
-                    id="festival"
-                    to="/festival"
-                  >
-                    <img 
-                      className="work-image" 
-                      src={ festival } 
-                      alt=""
-                    />
-                    <div className="card-desc">
-                      <span className="headline-bold">Festival Site</span>
                     </div>
                   </Link>
                 </div>
@@ -148,6 +129,25 @@ const Work = () => {
                 </div>
               </div>
             </SwiperSlide>            
+            <SwiperSlide>
+              <div className="carousel-item-wrapper">
+                <div className="card">
+                  <Link
+                    id="festival"
+                    to="/festival"
+                  >
+                    <img 
+                      className="work-image" 
+                      src={ festival } 
+                      alt=""
+                    />
+                    <div className="card-desc">
+                      <span className="headline-bold">Festival Site</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
             <SwiperSlide>
             <div className="carousel-item-wrapper">
                 <div className="card">

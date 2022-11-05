@@ -3,9 +3,9 @@ import React from "react";
 const BottomNavBar = () => {
   return (
     <>
-      <div className="vertical-text-bar">
+      {/* <div className="vertical-text-bar">
         the arts - one minimal art festival
-      </div>
+      </div> */}
       <footer className="bottom-nav">
         <h3 className="dates">15-16 of April</h3>
         <div className="festival-info">

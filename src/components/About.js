@@ -27,7 +27,7 @@ class About extends Component {
   render() {
     return (
       <div key={'about'}>
-        <header className="App-header top-header">
+        {/* <header className="App-header top-header">
           <div className="general-btn-container">
             <img
               className="site-btn"
@@ -49,7 +49,7 @@ class About extends Component {
             />
           </div>
           <div className='top-header__name'>Devon Darrow</div>
-        </header>
+        </header> */}
         <div className="about-wrapper">
           <div className="about-content">
            <div className="about-image-wrapper">

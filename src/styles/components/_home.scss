@@ -120,8 +120,7 @@
 
         @include breakpoint-large {
             grid-template-columns: repeat(2, 1fr);
-            padding: 20px 20px 15px 20px;
-            // height: 100vh;
+            padding: 20px 20px 20px 20px;
         }
     }
 
@@ -221,7 +220,7 @@
 
         @include breakpoint-medium {
           font-size: 1.5em ;
-          top: 54%;
+          top: 74%;
 
           &:hover {
             font-size: 2em;

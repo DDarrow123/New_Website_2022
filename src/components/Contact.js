@@ -54,7 +54,7 @@ class Contact extends Component {
   render() {
     return (
       <div key={'contact'}>
-        <header className="top-header">
+        {/* <header className="top-header"> */}
           {/* <div className="general-btn-container">
             <img
               className="site-btn"
@@ -75,12 +75,12 @@ class Contact extends Component {
               onClick={() => this.tl.reverse()}
             />
           </div> */}
-          <div className='top-header__name'>Devon Darrow</div>
-        </header>
+          {/* <div className='top-header__name'>Devon Darrow</div> */}
+        {/* </header> */}
         <div className="contact">
           <div className="contact-wrapper">
-            <div className="contact-title">CONTACT</div>
             <div className="contact-image-wrapper">
+              <div className="contact-title">CONTACT</div>
               <img 
                 className="image"
                 src={ oculus }
