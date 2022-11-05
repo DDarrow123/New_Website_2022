@@ -1,11 +1,17 @@
 
-# New_Website_2022
+# Personal Website 2022
  
 Hello! 
 
-My site is currently in progress... 
+Welcome to my personal site and portfolio. 
 
-## Inspiration from around the web: 
+## To run the site locally: 
+1. Clone the repository from github to your machine.
+2. From the repository root run `npm i` to install dependencies.
+3. Then use `npm start` to start the development server.
+4. Point your browser to `http://localhost:3000`.
+
+### Inspiration for the site from around the web. I'm endlessly inspired by the creative work out there: 
 https://www.artsy.net/ 
 
 https://knr.paris/?utm_source=topinteraciveagencies.com&utm_medium=referral&utm_campaign=click 
