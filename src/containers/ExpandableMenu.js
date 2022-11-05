@@ -27,7 +27,7 @@ const ExpandableMenu = () => {
     const body = document.querySelector('body');
 
     burgerIcon.style = 'z-index: 1000';
-    body.style = 'overflow: auto';
+    body.style = 'overflow: visible';
     
     setMenuOpen(false);
   }
